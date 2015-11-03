@@ -1,0 +1,8 @@
+2015-11-02 18:01:48 - PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/store/admin/controller/module/featured.php on line 124
+2015-11-02 20:26:40 - PHP Notice:  Undefined index: sort_order in /var/www/html/store/admin/model/design/banner.php on line 12
+2015-11-02 20:26:40 - PHP Notice:  Undefined index: sort_order in /var/www/html/store/admin/model/design/banner.php on line 12
+2015-11-02 20:26:40 - PHP Notice:  Undefined index: sort_order in /var/www/html/store/admin/model/design/banner.php on line 12
+2015-11-02 21:26:54 - PHP Notice:  Undefined index: sort_order in /var/www/html/store/admin/model/design/banner.php on line 12
+2015-11-02 22:03:50 - PHP Notice:  Undefined index: sort_order in /var/www/html/store/admin/model/design/banner.php on line 12
+2015-11-02 22:28:58 - PHP Notice:  Undefined index: sort_order in /var/www/html/store/admin/model/design/banner.php on line 12
+2015-11-03 0:47:18 - PHP Notice:  Undefined index: sort_order in /var/www/html/store/admin/model/design/banner.php on line 37

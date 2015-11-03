@@ -1,1 +1,1 @@
-# teststore
+# teststore developer version
