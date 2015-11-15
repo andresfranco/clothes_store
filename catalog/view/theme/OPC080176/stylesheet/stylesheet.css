@@ -621,6 +621,23 @@ footer a:hover {
     height: 35px;
     width: 35px;
 }
+#socialpayment ul li.pinterest a:before{   background-color: #2B2B2B;
+    border-radius: 50%;
+    content: "\f0d2";
+    float: left;
+    font-family: FontAwesome;
+    font-size: 14px;
+    height: 35px;
+    padding: 6px 0 0 13px;
+    width: 35px;
+}
+#socialpayment ul li.pinterest:hover a:before { background-color:#656565;}
+#socialpayment ul li {    list-style: none outside none;}
+#socialpayment .social_block li a{
+    display: block;
+    height: 35px;
+    width: 35px;
+}
 #socialpayment ul li.twitter a:before {    
  background-color: #2B2B2B;
     border-radius: 50%;
@@ -668,10 +685,10 @@ footer a:hover {
     margin: 0 4px 4px 0;
     width: 35px;
 }
-#socialpayment li.visa {    background: url(../image/megnor/pay1.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);    width: 50px;}
-#socialpayment li.master { background: url(../image/megnor/pay2.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);    width: 50px;}
-#socialpayment li.express {  background: url(../image/megnor/pay3.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);    width: 50px;}
-#socialpayment li.credit { background: url(../image/megnor/pay4.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);    width: 50px;}
+#socialpayment li.visa {    background: url(../image/megnor/pay5.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);    width: 50px;}
+#socialpayment li.master { background: url(../image/megnor/pay6.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);    width: 50px;}
+#socialpayment li.express {  background: url(../image/megnor/pay7.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);    width: 50px;}
+#socialpayment li.credit { background: url(../image/megnor/pay8.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);    width: 50px;}
 
 @media (max-width: 979px) {
 #footer .column ul {

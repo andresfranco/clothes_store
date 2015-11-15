@@ -1,5 +1,5 @@
 <div id="carousel-<?php echo $module; ?>" class="banners-slider-carousel">
-<div class="box-heading"> Our Clients</div>
+<div class="box-heading"> Our Stores</div>
 	<div class="customNavigation">
 		<a class="prev fa fa-angle-left">&nbsp;</a>
 		<a class="next fa fa-angle-right">&nbsp;</a>

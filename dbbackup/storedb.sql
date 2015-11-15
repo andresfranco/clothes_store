@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 02, 2015 at 10:39 PM
+-- Generation Time: Nov 15, 2015 at 06:41 PM
 -- Server version: 5.6.27-0ubuntu1
 -- PHP Version: 5.6.11-1ubuntu3.1
 
@@ -39,7 +39,14 @@ CREATE TABLE IF NOT EXISTS `oc_address` (
   `country_id` int(11) NOT NULL DEFAULT '0',
   `zone_id` int(11) NOT NULL DEFAULT '0',
   `custom_field` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_address`
+--
+
+INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, `company`, `address_1`, `address_2`, `city`, `postcode`, `country_id`, `zone_id`, `custom_field`) VALUES
+(1, 1, 'Andres', 'Franco', '', 'Panama', '', 'Panama', '', 164, 2486, '');
 
 -- --------------------------------------------------------
 
@@ -288,7 +295,7 @@ CREATE TABLE IF NOT EXISTS `oc_banner` (
   `banner_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `status` tinyint(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_banner`
@@ -300,7 +307,8 @@ INSERT INTO `oc_banner` (`banner_id`, `name`, `status`) VALUES
 (8, 'Manufacturers', 1),
 (9, 'Home Page Slideshow', 1),
 (11, 'sub_banner1', 1),
-(12, 'sub_banner2', 1);
+(12, 'sub_banner2', 1),
+(13, 'Stores', 1);
 
 -- --------------------------------------------------------
 
@@ -314,7 +322,7 @@ CREATE TABLE IF NOT EXISTS `oc_banner_image` (
   `link` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=132 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=149 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_banner_image`
@@ -332,14 +340,18 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`, 
 (88, 8, '', 'catalog/demo/manufacturer/harley.png', 0),
 (89, 8, '', 'catalog/demo/manufacturer/dell.png', 0),
 (90, 8, '', 'catalog/demo/manufacturer/disney.png', 0),
-(129, 10, '#', 'catalog/subbanners/subbanner1.jpg', 0),
+(148, 10, '#', 'catalog/subbanners/subbanner1.jpg', 0),
 (97, 8, '', 'catalog/demo/manufacturer/starbucks.png', 0),
 (98, 8, '', 'catalog/demo/manufacturer/nintendo.png', 0),
 (124, 9, 'http://hopedreamsdesigns.com/', 'catalog/banners/mainbanner2.jpg', 0),
 (131, 12, '#', 'catalog/subbanners/subbanner3.jpg', 0),
 (126, 9, 'http://www.cancerapparelgifts.com', 'catalog/banners/mainbanner1.jpg', 0),
 (125, 9, 'http://www.missionwecandoit.com/', 'catalog/banners/mainbanner3.jpg', 0),
-(127, 9, 'http://www.giftsforawareness.com/', 'catalog/banners/mainbanner4.jpg', 0);
+(127, 9, 'http://www.giftsforawareness.com/', 'catalog/banners/mainbanner4.jpg', 0),
+(146, 13, '#', 'catalog/stores_carousel/carousel3.png', 3),
+(145, 13, '#', 'catalog/stores_carousel/carousel2.png', 2),
+(144, 13, '#', 'catalog/stores_carousel/carousel1.png', 1),
+(147, 13, '#', 'catalog/stores_carousel/carousel4.png', 4);
 
 -- --------------------------------------------------------
 
@@ -366,7 +378,7 @@ INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `ba
 (91, 1, 8, 'Coca Cola'),
 (90, 1, 8, 'Disney'),
 (89, 1, 8, 'Dell'),
-(129, 1, 10, 'sub_banner'),
+(148, 1, 10, 'sub_banner'),
 (88, 1, 8, 'Harley Davidson'),
 (94, 1, 8, 'NFL'),
 (95, 1, 8, 'RedBull'),
@@ -377,7 +389,11 @@ INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `ba
 (125, 1, 9, 'mainbanner2'),
 (124, 1, 9, 'mainbanner3'),
 (131, 1, 12, 'sub_banner2'),
-(127, 1, 9, 'mainbanner4');
+(127, 1, 9, 'mainbanner4'),
+(147, 1, 13, 'item4'),
+(146, 1, 13, 'item3'),
+(145, 1, 13, 'item2'),
+(144, 1, 13, 'item1');
 
 -- --------------------------------------------------------
 
@@ -394,7 +410,14 @@ CREATE TABLE IF NOT EXISTS `oc_cart` (
   `option` text NOT NULL,
   `quantity` int(5) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_cart`
+--
+
+INSERT INTO `oc_cart` (`cart_id`, `customer_id`, `session_id`, `product_id`, `recurring_id`, `option`, `quantity`, `date_added`) VALUES
+(4, 1, 'cd4cllnct1k0abn19rc36gcrm3', 50, 0, '[]', 2, '2015-11-03 21:05:38');
 
 -- --------------------------------------------------------
 
@@ -412,20 +435,39 @@ CREATE TABLE IF NOT EXISTS `oc_category` (
   `status` tinyint(1) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=90 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_category`
 --
 
 INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
-(62, '', 0, 1, 1, 0, 1, '2015-11-02 13:31:07', '2015-11-02 14:00:16'),
-(63, '', 0, 1, 1, 0, 1, '2015-11-02 13:31:42', '2015-11-02 14:00:53'),
-(61, '', 0, 1, 1, 0, 1, '2015-11-02 13:30:33', '2015-11-02 14:23:07'),
-(64, '', 0, 1, 1, 0, 1, '2015-11-02 13:32:20', '2015-11-02 14:01:11'),
-(65, '', 0, 0, 1, 0, 1, '2015-11-02 14:13:13', '2015-11-02 14:13:13'),
-(60, '', 0, 1, 1, 0, 1, '2015-11-02 13:29:14', '2015-11-02 13:59:38'),
-(59, '', 0, 1, 1, 0, 1, '2015-11-02 13:21:48', '2015-11-02 13:59:59');
+(85, '', 0, 1, 1, 0, 1, '2015-11-15 16:41:28', '2015-11-15 16:59:01'),
+(87, '', 0, 0, 1, 0, 1, '2015-11-15 17:02:58', '2015-11-15 17:02:58'),
+(88, '', 0, 0, 1, 0, 1, '2015-11-15 17:03:14', '2015-11-15 17:03:14'),
+(89, '', 0, 0, 1, 0, 1, '2015-11-15 17:03:27', '2015-11-15 17:03:27'),
+(86, '', 0, 1, 1, 0, 1, '2015-11-15 16:41:47', '2015-11-15 16:59:10'),
+(65, '', 0, 1, 1, 0, 1, '2015-11-02 14:13:13', '2015-11-15 16:54:18'),
+(66, '', 0, 1, 1, 0, 1, '2015-11-15 16:33:55', '2015-11-15 16:52:43'),
+(83, '', 0, 1, 1, 0, 1, '2015-11-15 16:40:34', '2015-11-15 16:58:37'),
+(82, '', 0, 0, 1, 0, 1, '2015-11-15 16:39:56', '2015-11-15 16:39:56'),
+(81, '', 0, 1, 1, 0, 1, '2015-11-15 16:39:37', '2015-11-15 16:58:27'),
+(80, '', 0, 1, 1, 0, 1, '2015-11-15 16:39:22', '2015-11-15 16:58:17'),
+(79, '', 0, 1, 1, 0, 1, '2015-11-15 16:39:05', '2015-11-15 16:57:04'),
+(78, '', 0, 1, 1, 0, 1, '2015-11-15 16:38:47', '2015-11-15 16:56:51'),
+(77, '', 0, 1, 1, 0, 1, '2015-11-15 16:38:31', '2015-11-15 16:56:41'),
+(84, '', 0, 1, 1, 0, 1, '2015-11-15 16:41:13', '2015-11-15 16:58:51'),
+(76, '', 0, 1, 1, 0, 1, '2015-11-15 16:38:15', '2015-11-15 16:56:30'),
+(75, '', 0, 1, 1, 0, 1, '2015-11-15 16:38:00', '2015-11-15 16:56:20'),
+(74, '', 0, 1, 1, 0, 1, '2015-11-15 16:37:43', '2015-11-15 16:56:07'),
+(73, '', 0, 1, 1, 0, 1, '2015-11-15 16:37:19', '2015-11-15 16:55:30'),
+(72, '', 0, 1, 1, 0, 1, '2015-11-15 16:36:59', '2015-11-15 16:55:11'),
+(71, '', 0, 1, 1, 0, 1, '2015-11-15 16:36:39', '2015-11-15 16:54:48'),
+(70, '', 0, 1, 1, 0, 1, '2015-11-15 16:36:15', '2015-11-15 16:54:01'),
+(69, '', 0, 1, 1, 0, 1, '2015-11-15 16:35:42', '2015-11-15 16:53:36'),
+(68, '', 0, 1, 1, 0, 1, '2015-11-15 16:35:15', '2015-11-15 16:53:25'),
+(67, '', 0, 1, 1, 0, 1, '2015-11-15 16:34:17', '2015-11-15 16:52:53'),
+(60, '', 0, 1, 1, 0, 1, '2015-11-02 13:29:14', '2015-11-15 16:53:02');
 
 -- --------------------------------------------------------
 
@@ -448,13 +490,32 @@ CREATE TABLE IF NOT EXISTS `oc_category_description` (
 --
 
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(60, 1, 'Breast Cancer Awareness', 'Breast Cancer Awareness', 'Breast Cancer', 'Breast Cancer', 'Breast Cancer'),
-(61, 1, 'Lymphoma Awareness', '&lt;p&gt;Lymphoma Awareness&lt;br&gt;&lt;/p&gt;', 'Lymphoma', 'Lymphoma', 'Lymphoma'),
-(62, 1, 'Disease Awareness', '&lt;p&gt;Disease Awareness&lt;br&gt;&lt;/p&gt;', 'Disease Awareness', 'Disease Awareness', 'Disease Awareness'),
-(63, 1, 'Leukemia Awareness', '&lt;p&gt;Leukemia Awareness&lt;br&gt;&lt;/p&gt;', 'Leukemia', 'Leukemia', 'Leukemia'),
-(64, 1, 'Liver Cancer Awareness', '&lt;p&gt;Liver Cancer Awareness&lt;br&gt;&lt;/p&gt;', 'Liver Cancer', 'Liver Cancer', 'Liver Cancer'),
+(77, 1, 'Melanoma', '&lt;p&gt;Melanoma&lt;br&gt;&lt;/p&gt;', 'Melanoma', '', ''),
+(87, 1, 'Ladies', '&lt;p&gt;Ladies&lt;br&gt;&lt;/p&gt;', 'Ladies', '', ''),
+(76, 1, 'Lymphoma', '&lt;p&gt;Lymphoma&lt;br&gt;&lt;/p&gt;', 'Lymphoma', '', ''),
+(88, 1, 'Men', '&lt;p&gt;Men&lt;br&gt;&lt;/p&gt;', 'Men', '', ''),
+(89, 1, 'Kids', '&lt;p&gt;Kids&lt;br&gt;&lt;/p&gt;', 'Kids', '', ''),
 (65, 1, 'Endometriosis', '&lt;p&gt;Endometriosis&lt;/p&gt;', 'Endometriosis', 'Endometriosis', ''),
-(59, 1, 'Cancer Awareness', '&lt;p&gt;Cancer Awareness&lt;br&gt;&lt;/p&gt;', 'Cancer Awareness', 'Cancer', 'Cancer');
+(66, 1, 'Blood Cancer', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Blood Cancer', '', ''),
+(67, 1, 'Brain Cancer', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Brain Cancer', '', ''),
+(68, 1, 'Cervical Cancer ', '&lt;p&gt;Cervical Cancer &lt;br&gt;&lt;/p&gt;', 'Cervical Cancer ', '', ''),
+(69, 1, 'Childhood Cancer', '&lt;p&gt;Childhood Cancer&lt;br&gt;&lt;/p&gt;', 'Childhood Cancer', '', ''),
+(70, 1, 'Colon Cancer', '&lt;p&gt;Colon Cancer&lt;br&gt;&lt;/p&gt;', 'Colon Cancer', '', ''),
+(71, 1, 'Hodgkin''s Lymphoma', '&lt;p&gt;Hodgkin''s Lymphoma&lt;br&gt;&lt;/p&gt;', 'Hodgkin''s Lymphoma', '', ''),
+(72, 1, 'Kidney Cancer', '&lt;p&gt;Kidney Cancer&lt;br&gt;&lt;/p&gt;', 'Kidney Cancer', '', ''),
+(73, 1, 'Leukemia', '&lt;p&gt;Leukemia&lt;br&gt;&lt;/p&gt;', 'Leukemia', '', ''),
+(74, 1, 'Liver Cancer', '&lt;p&gt;Liver Cancer&lt;br&gt;&lt;/p&gt;', 'Liver Cancer', '', ''),
+(75, 1, 'Lung Cancer', '&lt;p&gt;Lung Cancer&lt;br&gt;&lt;/p&gt;', 'Lung Cancer', '', ''),
+(60, 1, 'Breast Cancer', 'Breast Cancer', 'Breast Cancer', 'Breast Cancer', 'Breast Cancer'),
+(78, 1, 'Multiple Myeloma', '&lt;p&gt;Multiple Myeloma&lt;br&gt;&lt;/p&gt;', 'Multiple Myeloma', '', ''),
+(79, 1, 'Non Hodgkins Lymphoma', '&lt;p&gt;Non Hodgkins Lymphoma&lt;br&gt;&lt;/p&gt;', 'Non Hodgkins Lymphoma', '', ''),
+(80, 1, 'Ovarian Cancer', '&lt;p&gt;Ovarian Cancer&lt;br&gt;&lt;/p&gt;', 'Ovarian Cancer', '', ''),
+(81, 1, 'Pancreatic Cancer', '&lt;p&gt;Pancreatic Cancer&lt;br&gt;&lt;/p&gt;', 'Pancreatic Cancer', '', ''),
+(82, 1, 'Prostate Cancer', '&lt;p&gt;Prostate Cancer&lt;br&gt;&lt;/p&gt;', 'Prostate Cancer', '', ''),
+(83, 1, 'Sarcoma', '&lt;p&gt;Sarcoma&lt;br&gt;&lt;/p&gt;', 'Sarcoma', '', ''),
+(84, 1, 'Skin Cancer', '&lt;p&gt;Skin Cancer&lt;br&gt;&lt;/p&gt;', 'Skin Cancer', '', ''),
+(85, 1, 'Thyroid Cancer', '&lt;p&gt;Thyroid Cancer&lt;br&gt;&lt;/p&gt;', 'Thyroid Cancer', '', ''),
+(86, 1, 'Uterine Cancer', '&lt;p&gt;Uterine Cancer&lt;br&gt;&lt;/p&gt;', 'Uterine Cancer', '', '');
 
 -- --------------------------------------------------------
 
@@ -484,13 +545,32 @@ CREATE TABLE IF NOT EXISTS `oc_category_path` (
 --
 
 INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
-(62, 62, 0),
-(61, 61, 0),
+(87, 87, 0),
+(89, 89, 0),
+(86, 86, 0),
+(85, 85, 0),
+(84, 84, 0),
+(83, 83, 0),
+(82, 82, 0),
+(81, 81, 0),
+(80, 80, 0),
+(79, 79, 0),
+(78, 78, 0),
+(77, 77, 0),
+(76, 76, 0),
+(75, 75, 0),
+(74, 74, 0),
+(73, 73, 0),
+(72, 72, 0),
+(71, 71, 0),
+(70, 70, 0),
+(69, 69, 0),
+(68, 68, 0),
+(67, 67, 0),
+(66, 66, 0),
 (65, 65, 0),
-(64, 64, 0),
-(63, 63, 0),
 (60, 60, 0),
-(59, 59, 0);
+(88, 88, 0);
 
 -- --------------------------------------------------------
 
@@ -509,13 +589,32 @@ CREATE TABLE IF NOT EXISTS `oc_category_to_layout` (
 --
 
 INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VALUES
-(59, 0, 0),
+(88, 0, 0),
 (60, 0, 0),
-(61, 0, 0),
-(62, 0, 0),
-(63, 0, 0),
-(64, 0, 0),
-(65, 0, 0);
+(89, 0, 0),
+(87, 0, 0),
+(65, 0, 0),
+(66, 0, 0),
+(67, 0, 0),
+(68, 0, 0),
+(69, 0, 0),
+(70, 0, 0),
+(71, 0, 0),
+(72, 0, 0),
+(73, 0, 0),
+(74, 0, 0),
+(75, 0, 0),
+(76, 0, 0),
+(77, 0, 0),
+(78, 0, 0),
+(79, 0, 0),
+(80, 0, 0),
+(81, 0, 0),
+(82, 0, 0),
+(83, 0, 0),
+(84, 0, 0),
+(85, 0, 0),
+(86, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -533,13 +632,32 @@ CREATE TABLE IF NOT EXISTS `oc_category_to_store` (
 --
 
 INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
-(59, 0),
 (60, 0),
-(61, 0),
-(62, 0),
-(63, 0),
-(64, 0),
-(65, 0);
+(65, 0),
+(66, 0),
+(67, 0),
+(68, 0),
+(69, 0),
+(70, 0),
+(71, 0),
+(72, 0),
+(73, 0),
+(74, 0),
+(75, 0),
+(76, 0),
+(77, 0),
+(78, 0),
+(79, 0),
+(80, 0),
+(81, 0),
+(82, 0),
+(83, 0),
+(84, 0),
+(85, 0),
+(86, 0),
+(87, 0),
+(88, 0),
+(89, 0);
 
 -- --------------------------------------------------------
 
@@ -909,7 +1027,7 @@ CREATE TABLE IF NOT EXISTS `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2015-11-03 01:48:06');
+(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2015-11-15 20:59:39');
 
 -- --------------------------------------------------------
 
@@ -939,7 +1057,14 @@ CREATE TABLE IF NOT EXISTS `oc_customer` (
   `safe` tinyint(1) NOT NULL,
   `token` text NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_customer`
+--
+
+INSERT INTO `oc_customer` (`customer_id`, `customer_group_id`, `store_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `password`, `salt`, `cart`, `wishlist`, `newsletter`, `address_id`, `custom_field`, `ip`, `status`, `approved`, `safe`, `token`, `date_added`) VALUES
+(1, 1, 0, 'Andres', 'Franco', 'koloinotzente@gmail.com', '3902669', '', 'eb7e4d491d5b21c26efb74498de07ceb50f0c53d', 'bpLMlb9Rp', NULL, NULL, 0, 1, '', '127.0.0.1', 1, 1, 0, '', '2015-11-03 20:49:55');
 
 -- --------------------------------------------------------
 
@@ -954,7 +1079,14 @@ CREATE TABLE IF NOT EXISTS `oc_customer_activity` (
   `data` text NOT NULL,
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_customer_activity`
+--
+
+INSERT INTO `oc_customer_activity` (`activity_id`, `customer_id`, `key`, `data`, `ip`, `date_added`) VALUES
+(1, 1, 'register', '{"customer_id":1,"name":"Andres Franco"}', '127.0.0.1', '2015-11-03 20:49:55');
 
 -- --------------------------------------------------------
 
@@ -1019,7 +1151,14 @@ CREATE TABLE IF NOT EXISTS `oc_customer_ip` (
   `customer_id` int(11) NOT NULL,
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_customer_ip`
+--
+
+INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added`) VALUES
+(1, 1, '127.0.0.1', '2015-11-03 20:49:55');
 
 -- --------------------------------------------------------
 
@@ -1034,7 +1173,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_login` (
   `total` int(4) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1360,10 +1499,10 @@ CREATE TABLE IF NOT EXISTS `oc_information_description` (
 --
 
 INSERT INTO `oc_information_description` (`information_id`, `language_id`, `title`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(4, 1, 'About Us', '&lt;p&gt;\r\n	About Us&lt;/p&gt;\r\n', '', '', ''),
+(4, 1, 'About Us', '&lt;p&gt;Ribbon Revolution showcases an array of cancer, disease, syndrome and health awareness shirts, apparel, merchandise and original gifts to take a stand for your cause brought to you by survivors and advocates.&amp;nbsp; Shop our variety of shops located on the banners to your right.&lt;/p&gt;\r\n', 'About Us', '', ''),
 (5, 1, 'Terms &amp; Conditions', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&lt;/p&gt;\r\n', '', '', ''),
 (3, 1, 'Privacy Policy', '&lt;p&gt;\r\n	Privacy Policy&lt;/p&gt;\r\n', '', '', ''),
-(6, 1, 'Delivery Information', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;\r\n', '', '', '');
+(6, 1, 'Shipping Information', '&lt;p&gt;After you payment has cleared and the 24 hour cancellation period has expired, we will then proceed to process your order then print your shirt.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt; We ship between 3 to 5 Business Days after payment clearance. We utilize USPS First Class Mail with delivery confirmation. We do not ship weekends and certain holidays. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;NOTE: At this time, we do not offer expedited shipping.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;', 'Shipping Information', '', '');
 
 -- --------------------------------------------------------
 
@@ -1376,6 +1515,14 @@ CREATE TABLE IF NOT EXISTS `oc_information_to_layout` (
   `store_id` int(11) NOT NULL,
   `layout_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_information_to_layout`
+--
+
+INSERT INTO `oc_information_to_layout` (`information_id`, `store_id`, `layout_id`) VALUES
+(6, 0, 0),
+(4, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1464,7 +1611,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout_module` (
   `code` varchar(64) NOT NULL,
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=130 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=230 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_layout_module`
@@ -1476,13 +1623,21 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (20, 5, '0', 'column_left', 2),
 (69, 10, 'affiliate', 'column_right', 1),
 (68, 6, 'account', 'column_right', 1),
-(127, 1, 'featured.37', 'content_bottom', 4),
 (72, 3, 'category', 'column_left', 1),
 (73, 3, 'banner.30', 'column_left', 2),
-(126, 1, 'banner.40', 'content_bottom', 2),
-(125, 1, 'banner.39', 'content_bottom', 1),
-(128, 1, 'slideshow.38', 'content_top', 1),
-(129, 1, 'banner.41', 'content_bottom', 3);
+(229, 1, 'html.45', 'footertop', 0),
+(228, 1, 'html.44', 'footerbottom', 0),
+(227, 1, 'latest.33', 'content_bottom', 6),
+(226, 1, 'banner.41', 'content_bottom', 2),
+(225, 1, 'banner.39', 'content_bottom', 1),
+(224, 1, 'slideshow.38', 'content_top', 1),
+(223, 1, 'carousel.42', 'content_bottom', 8),
+(222, 1, 'html.47', 'content_bottom', 7),
+(221, 1, 'banner.40', 'content_bottom', 3),
+(219, 1, 'html.43', 'footerright', 0),
+(220, 1, 'featured.37', 'content_bottom', 4),
+(218, 1, 'html.46', 'headertop', 0),
+(217, 1, 'html.48', 'content_bottom', 5);
 
 -- --------------------------------------------------------
 
@@ -1495,7 +1650,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout_route` (
   `layout_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=75 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=83 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_layout_route`
@@ -1505,7 +1660,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (38, 6, 0, 'account/%'),
 (17, 10, 0, 'affiliate/%'),
 (44, 3, 0, 'product/category'),
-(74, 1, 0, 'common/home'),
+(82, 1, 0, 'common/home'),
 (20, 2, 0, 'product/product'),
 (24, 11, 0, 'information/information'),
 (23, 7, 0, 'checkout/%'),
@@ -1644,7 +1799,7 @@ CREATE TABLE IF NOT EXISTS `oc_module` (
   `name` varchar(64) NOT NULL,
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_module`
@@ -1660,12 +1815,19 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (33, 'home_latest', 'latest', '{"name":"home_latest","limit":"7","width":"230","height":"280","status":"1"}'),
 (34, 'Latest_Column_left', 'latest', '{"name":"Latest_Column_left","limit":"3","width":"100","height":"100","status":"1"}'),
 (35, 'Special_Column_left', 'special', '{"name":"Special_Column_left","limit":"3","width":"100","height":"100","status":"1"}'),
-(36, 'Special_Column_left', 'special', '{"name":"Special_Column_left","limit":"3","width":"100","height":"100","status":"1"}'),
+(36, 'Special_Column_left', 'special', '{"name":"Special_Column_left","limit":"3","width":"100","height":"100","status":"0"}'),
 (37, 'Featured - Home Page', 'featured', '{"name":"Featured - Home Page","product":["53","51","50","54"],"limit":"7","width":"230","height":"280","status":"1"}'),
 (38, 'Slideshow - Home Page', 'slideshow', '{"name":"Slideshow - Home Page","banner_id":"9","width":"1903","height":"641","status":"1"}'),
 (39, 'sub_banner', 'banner', '{"name":"sub_banner","banner_id":"10","width":"624","height":"295","status":"1"}'),
 (40, 'sub_banner1', 'banner', '{"name":"sub_banner1","banner_id":"11","width":"312","height":"295","status":"1"}'),
-(41, 'sub_banner2', 'banner', '{"name":"sub_banner2","banner_id":"12","width":"312","height":"295","status":"1"}');
+(41, 'sub_banner2', 'banner', '{"name":"sub_banner2","banner_id":"12","width":"312","height":"295","status":"1"}'),
+(42, 'Stores', 'carousel', '{"name":"Stores","banner_id":"13","width":"137","height":"25","status":"1"}'),
+(43, 'Footer_Right_CMS', 'html', '{"name":"Footer_Right_CMS","module_description":{"1":{"title":"","description":"&lt;div class=&quot;block_contact column&quot; id=&quot;contact_us&quot;&gt;&lt;h5&gt;Contact us&lt;\\/h5&gt;\\r\\n&lt;ul&gt;\\r\\n&lt;li class=&quot;company&quot;&gt;Awareness Ribbon Revolution&lt;\\/li&gt;\\r\\n&lt;li&gt;P.O. Box 4041&lt;\\/li&gt;\\r\\n&lt;li&gt;Covina, CA 91723&lt;\\/li&gt;\\r\\n&lt;li class=&quot;phoneno&quot;&gt;&lt;\\/li&gt;\\r\\n&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;div class=&quot;column&quot; id=&quot;socialpayment&quot;&gt;&lt;div class=&quot;social&quot;&gt;&lt;h5&gt;Stay Connected&lt;\\/h5&gt;\\r\\n&lt;ul class=&quot;social_block&quot;&gt;\\r\\n&lt;li class=&quot;facebook&quot;&gt;&lt;a href=&quot;https:\\/\\/www.facebook.com\\/awarenessribbonrevolution\\/?ref=bookmarks&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n&lt;li class=&quot;twitter&quot;&gt;&lt;a href=&quot;https:\\/\\/twitter.com\\/RibbnRevolution&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n&lt;li class=&quot;pinterest&quot;&gt;&lt;a href=&quot;https:\\/\\/www.pinterest.com\\/awarenessgear\\/&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;div calss=&quot;payment&quot;&gt;&lt;h5&gt;Payment Method&lt;\\/h5&gt;\\r\\n&lt;ul class=&quot;payment_block&quot;&gt;\\r\\n&lt;li class=&quot;visa&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n&lt;li class=&quot;master&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n&lt;li class=&quot;express&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n&lt;li class=&quot;credit&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;"}},"status":"1"}'),
+(44, 'Footer_Bottom_CMS', 'html', '{"name":"Footer_Bottom_CMS","module_description":{"1":{"title":"","description":"&lt;div id=&quot;bottomfooter_link&quot;&gt;&lt;ul&gt;\\r\\n &lt;li class=&quot;first&quot;&gt;&lt;span&gt;CLOTHES:&lt;\\/span&gt;&lt;\\/li&gt;\\r\\n&lt;li&gt;&lt;a href=&quot;#&quot;&gt;T-Shirts&lt;\\/a&gt;&lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n&lt;div class=&quot;discription&quot;&gt;&lt;p&gt;&lt;br&gt;&lt;\\/p&gt;\\r\\n&lt;\\/div&gt;\\r\\n&lt;\\/div&gt;"}},"status":"1"}'),
+(45, 'Footer_Top_CMS', 'html', '{"name":"Footer_Top_CMS","module_description":{"1":{"title":"","description":"&lt;div class=&quot;subbanner3_block&quot;&gt;&lt;div class=&quot;subbanner3&quot;&gt;&lt;div class=&quot;subbanner3_1&quot;&gt;&lt;ul&gt;&lt;li class=&quot;first&quot;&gt;Customare care 24\\/7&lt;\\/li&gt;&lt;li class=&quot;second&quot;&gt;Hours : - 14.0123456789&lt;\\/li&gt;&lt;\\/ul&gt;&lt;div class=&quot;img&quot;&gt;&amp;nbsp;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;subbanner3_2&quot;&gt;&lt;ul&gt;&lt;li class=&quot;first&quot;&gt;Money Back Guarantee&lt;\\/li&gt;&lt;li class=&quot;second&quot;&gt;At vero et accusamas et&lt;\\/li&gt;&lt;\\/ul&gt;&lt;div class=&quot;img&quot;&gt;&amp;nbsp;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;subbanner3_3&quot;&gt;&lt;ul&gt;&lt;li class=&quot;first&quot;&gt;Special Gift Cart&lt;\\/li&gt;&lt;li class=&quot;second&quot;&gt;At vero et accusamas et&lt;\\/li&gt;&lt;\\/ul&gt;&lt;div class=&quot;img&quot;&gt;&amp;nbsp;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;subbanner3_4&quot;&gt;&lt;ul&gt;&lt;li class=&quot;first&quot;&gt;Free Shipping&lt;\\/li&gt;&lt;li class=&quot;second&quot;&gt;On order over $99&lt;\\/li&gt;&lt;\\/ul&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;"}},"status":"1"}'),
+(46, 'Header_Top_CMS', 'html', '{"name":"Header_Top_CMS","module_description":{"1":{"title":"","description":"&lt;div class=&quot;header_call&quot;&gt;\\r\\n&lt;ul&gt;\\r\\n&lt;li class=&quot;contact&quot;&gt;(+91)123 456 789&lt;\\/li&gt;\\r\\n&lt;li class=&quot;email&quot;&gt;&lt;a href=&quot;#&quot;&gt;info@templatemela.com &lt;\\/a&gt; &lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n&lt;\\/div&gt;"}},"status":"1"}'),
+(47, 'Homepage_Blog_CMS', 'html', '{"name":"Homepage_Blog_CMS","module_description":{"1":{"title":"","description":"&lt;div class=&quot;homepage-testimonial-block&quot;&gt;&lt;div class=&quot;homepage-testimonial-block-inner&quot;&gt;&lt;div class=&quot;homepage-testimonials-inner&quot; id=&quot;testimonial&quot;&gt;&lt;div class=&quot;box-heading&quot;&gt;&lt;div class=&quot;static-blog&quot;&gt;News&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;customNavigation&quot;&gt;&lt;a class=&quot;btn prev&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;a class=&quot;btn next&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;products product-carousel&quot; id=&quot;testimonial-carousel&quot;&gt;&lt;div class=&quot;slider-item&quot;&gt;&lt;div class=&quot;product-block&quot;&gt;&lt;div class=&quot;img&quot;&gt;&lt;div class=&quot;img_inner&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;...\\/image\\/catalog\\/blogimg.jpg&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;content-wrapper&quot;&gt;&lt;div class=&quot;content1&quot;&gt;&lt;a href=&quot;#&quot;&gt;The Standard chunk ipspum&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;author&quot;&gt;by admin- March28,2014&lt;\\/div&gt;&lt;div class=&quot;comment&quot;&gt;5 comments &lt;\\/div&gt;&lt;div class=&quot;desc&quot;&gt;Vestibulum ante ipsum primis urna risus suscipit leo Cras eget augue vitae neque euismod congue quis non erat.&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;slider-item&quot;&gt;&lt;div class=&quot;product-block&quot;&gt;&lt;div class=&quot;img&quot;&gt;&lt;div class=&quot;img_inner&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;...\\/image\\/catalog\\/blogimg1.jpg&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;content-wrapper&quot;&gt;&lt;div class=&quot;content1&quot;&gt;&lt;a href=&quot;#&quot;&gt;The Standard chunk ipspum&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;author&quot;&gt;by admin- March28,2014&lt;\\/div&gt;&lt;div class=&quot;comment&quot;&gt;5 comments&lt;\\/div&gt;&lt;div class=&quot;desc&quot;&gt;Vestibulum ante ipsum primis urna risus suscipit leo Cras eget augue vitae neque euismod congue quis non erat.&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;slider-item&quot;&gt;&lt;div class=&quot;product-block&quot;&gt;&lt;div class=&quot;img&quot;&gt;&lt;div class=&quot;img_inner&quot;&gt;&lt;a href=&quot;#&quot;&gt; &lt;img alt=&quot;&quot; src=&quot;...\\/image\\/catalog\\/blogimg2.jpg&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;content-wrapper&quot;&gt;&lt;div class=&quot;content1&quot;&gt;&lt;a href=&quot;#&quot;&gt;The Standard chunk ipspum&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;author&quot;&gt;by admin- March28,2014&lt;\\/div&gt;&lt;div class=&quot;comment&quot;&gt;5 comments&lt;\\/div&gt;&lt;div class=&quot;desc&quot;&gt;Vestibulum ante ipsum primis urna risus suscipit leo Cras eget augue vitae neque euismod congue quis non erat.&lt;\\/div&gt; &lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;slider-item&quot;&gt;&lt;div class=&quot;product-block&quot;&gt;&lt;div class=&quot;img&quot;&gt;&lt;div class=&quot;img_inner&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;...\\/image\\/catalog\\/blogimg3.jpg&quot;&gt; &lt;\\/a&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;content-wrapper&quot;&gt;&lt;div class=&quot;content1&quot;&gt;&lt;a href=&quot;#&quot;&gt;The Standard chunk ipspum&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;author&quot;&gt;by admin- March28,2014&lt;\\/div&gt;&lt;div class=&quot;comment&quot;&gt;5 comments&lt;\\/div&gt;&lt;div class=&quot;desc&quot;&gt;Vestibulum ante ipsum primis urna risus suscipit leo Cras eget augue vitae neque euismod congue quis non erat.&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;viewmore&quot;&gt;&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;View More&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;testimonial_default_width&quot; style=&quot;display: none; visibility: hidden;&quot;&gt;&amp;nbsp;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;"}},"status":"1"}'),
+(48, 'Homepage_Banner_CMS', 'html', '{"name":"Homepage_Banner_CMS","module_description":{"1":{"title":"","description":"&lt;div class=&quot;tmcmsblock clear&quot; id=&quot;tmcmsblock&quot;&gt;&lt;div class=&quot;subbanner2&quot;&gt;&lt;div class=&quot;subbanner2_1&quot;&gt;&lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http:\\/\\/opencart-demos.org\\/OPC08\\/OPC080176\\/image\\/catalog\\/logo2.png&quot;&gt; &lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;subtext&quot;&gt;Vestibulum ante ipsum primis urna risus suscipit leo Cras eget augue vitae neque euismod congue quis non erat. Praesent eget eros felis. Cras elementum pulvinar . &lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;subbanner2_2&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http:\\/\\/opencart-demos.org\\/OPC08\\/OPC080176\\/image\\/catalog\\/cms_banner.jpg&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;subbanner2_3&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http:\\/\\/opencart-demos.org\\/OPC08\\/OPC080176\\/image\\/catalog\\/sub-banner4.jpg&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;"}},"status":"1"}');
 
 -- --------------------------------------------------------
 
@@ -2093,17 +2255,6 @@ CREATE TABLE IF NOT EXISTS `oc_product` (
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `oc_product`
---
-
-INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`) VALUES
-(54, 'Chemo Brain Cancer Shirts gray and white letters', '', '', '', '', '', '', '', 1, 6, 'catalog/il_570xN.860336250_to14.jpg', 0, 1, 19.9900, 0, 0, '2015-11-02', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 1, '2015-11-02 14:27:04', '2015-11-02 14:27:14'),
-(50, 'Pink Strong Breast Cancer Shirts', '', '', '', '', '', '', '', 1, 6, 'catalog/il_570xN.833031462_9ga2.jpg', 0, 1, 20.9900, 0, 0, '2015-11-02', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, 6, '2015-11-02 13:38:36', '2015-11-02 14:09:58'),
-(51, 'Pink Hope Breast Cancer Shirt ', '', '', '', '', '', '', '', 1, 6, 'catalog/il_570xN.833029892_bqjw.jpg', 0, 1, 20.9900, 0, 0, '2015-11-02', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 11, '2015-11-02 14:08:37', '2015-11-02 21:36:18'),
-(52, 'Cure Endometriosis Shirts yellow  and black letters', '', '', '', '', '', '', '', 1, 6, 'catalog/il_570xN.832715895_hmc6.jpg', 0, 1, 19.9900, 0, 0, '2015-11-02', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-11-02 14:16:56', '2015-11-02 14:17:10'),
-(53, 'Fight Lymphoma Shirt green and black letters', '', '', '', '', '', '', '', 1, 6, 'catalog/il_570xN.832919080_kv0d.jpg', 0, 1, 19.9900, 0, 0, '2015-11-02', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 5, '2015-11-02 14:20:35', '2015-11-02 14:23:31');
-
 -- --------------------------------------------------------
 
 --
@@ -2133,17 +2284,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_description` (
   `meta_description` varchar(255) NOT NULL,
   `meta_keyword` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_description`
---
-
-INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(50, 1, 'Hope Strong Breast Cancer Shirts', '&lt;p&gt;HOPE STRONG  is an empowering motto for all of us.  Get the shirt with \r\nthis bold HOPE STRONG slogan on Breast Cancer Awareness Shirts \r\nspotlighting our original heart white ribbon outline on a heliconia pink\r\n Gildan shirt that is attention getting for your cause. Ideal for walks,\r\n support events, and any occasion to wear your support.  October is \r\nNational Breast Cancer Awareness Month, so get your pink on!&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit t-shirt available from Small to size 3XL \r\nin styles for ladies and men. The shirt is made from preshrunk 100% \r\nCotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: \r\nShirt is printed on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. The Copyright notice on shirt will NOT appear on it.            \r\n        &lt;/p&gt;', '', 'Strong Breast Cancer Shirts', 'Strong Breast Cancer Shirts', 'Breast Cancer Shirts'),
-(51, 1, 'Hope Heart Ribbon Breast Cancer Shirt', '&lt;p&gt;HOPE Breast Cancer Shirts features a white heart ribbon on a heliconia \r\npink Gildan shirt that is attention getting while inspiring support and \r\nmost of all hope. Great way to support someone in your life batting \r\nBreast Cancer.  Ideal for walks, support events, and any occasion to \r\nwear your support.  October is National Breast Cancer Awareness Month, \r\nso get your pink on!&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies and men. The shirt\r\n is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has \r\ntaped neck and shoulders. NOTE: Shirt is printed on demand using direct \r\nto garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. The Copyright notice on shirt will NOT appear on it.            \r\n        &lt;/p&gt;', '', 'Ribbon Breast Cancer Shirt', 'Ribbon Breast Cancer Shirt', ''),
-(52, 1, 'Not Going Down Cure Endometriosis Shirts', '&lt;p&gt;Not Going Down Without a Fight Cure Endometriosis Shirts featuring a \r\nstand-out grunge design with our original yellow distressed ribbon.  \r\nMakes an empowering gift for anyone looking to take a stand against \r\nEndometriosis.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies and men. The shirt\r\n is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has \r\ntaped neck and shoulders. NOTE: Shirt is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews. Thank you\r\n for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. The Copyright notice on shirt will NOT appear on it.            \r\n        &lt;/p&gt;', '', 'Cure Endometriosis Shirts', '', ''),
-(53, 1, 'Not Going Down Without a Fight Lymphoma Shirt', '&lt;p&gt;Not Going Down Without a Fight Cure Lymphoma Shirts featuring a \r\nstand-out grunge design our original lime green grunge ribbon.  Makes an\r\n empowering gift for anyone looking to take a stand against Lymphoma. &lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit t-shirt available from Small to size 3XL.\r\n The shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception holidays and weekends). &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;NOTE:  Copyright notice will NOT appear on shirt.            \r\n        &lt;/p&gt;', '', 'Fight Lymphoma Shirt', '', ''),
-(54, 1, 'Straight Outta Chemo Brain Cancer Shirts', '&lt;p&gt;Straight Outta Chemo Brain Cancer Shirt is a bold and funny slogan \r\nperfect to wear during, before and after chemotherapy treatment.  Makes a\r\n great gift for the cancer warrior with a sense of humor.   The text in \r\nthe design is slightly distressed making it super-cool to wear.&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit t-shirt available from Small to size 3XL \r\nin styles for ladies and men. The white shirt is made from preshrunk \r\n100% Cotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. \r\nNOTE: Shirt is printed on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        &lt;/p&gt;', '', 'Chemo Brain Cancer Shirts', '', '');
 
 -- --------------------------------------------------------
 
@@ -2186,17 +2326,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_image` (
   `sort_order` int(3) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM AUTO_INCREMENT=2378 DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `oc_product_image`
---
-
-INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(2370, 54, 'catalog/il_570xN.860101593_92yh.jpg', 0),
-(2362, 50, 'catalog/il_570xN.833031462_9ga2.jpg', 1),
-(2363, 50, 'catalog/il_570xN.832804783_ctau.jpg', 2),
-(2377, 51, 'catalog/il_570xN.833029904_195s.jpg', 2),
-(2368, 53, 'catalog/il_570xN.832693981_tstr.jpg', 2);
-
 -- --------------------------------------------------------
 
 --
@@ -2210,14 +2339,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_option` (
   `value` text NOT NULL,
   `required` tinyint(1) NOT NULL
 ) ENGINE=MyISAM AUTO_INCREMENT=229 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_option`
---
-
-INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`, `value`, `required`) VALUES
-(227, 51, 11, '', 1),
-(228, 51, 13, '', 1);
 
 -- --------------------------------------------------------
 
@@ -2240,20 +2361,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_option_value` (
   `weight` decimal(15,8) NOT NULL,
   `weight_prefix` varchar(1) NOT NULL
 ) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_option_value`
---
-
-INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(25, 228, 51, 13, 50, 1, 0, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(24, 228, 51, 13, 49, 1, 0, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(19, 227, 51, 11, 47, 1, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
-(20, 227, 51, 11, 48, 1, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
-(18, 227, 51, 11, 46, 1, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
-(22, 227, 51, 11, 52, 1, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
-(21, 227, 51, 11, 51, 1, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
-(23, 227, 51, 11, 53, 1, 1, 22.9900, '+', 0, '+', 0.00000000, '+');
 
 -- --------------------------------------------------------
 
@@ -2318,17 +2425,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_to_category` (
   `category_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `oc_product_to_category`
---
-
-INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
-(50, 60),
-(51, 60),
-(52, 65),
-(53, 61),
-(54, 59);
-
 -- --------------------------------------------------------
 
 --
@@ -2352,17 +2448,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_to_layout` (
   `layout_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `oc_product_to_layout`
---
-
-INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUES
-(50, 0, 0),
-(51, 0, 0),
-(52, 0, 0),
-(53, 0, 0),
-(54, 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -2373,17 +2458,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_to_store` (
   `product_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_to_store`
---
-
-INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
-(50, 0),
-(51, 0),
-(52, 0),
-(53, 0),
-(54, 0);
 
 -- --------------------------------------------------------
 
@@ -2557,7 +2631,7 @@ CREATE TABLE IF NOT EXISTS `oc_setting` (
   `key` varchar(64) NOT NULL,
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=1668 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2242 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_setting`
@@ -2591,128 +2665,128 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (53, 0, 'reward', 'reward_sort_order', '2', 0),
 (54, 0, 'reward', 'reward_status', '1', 0),
 (1320, 0, 'category', 'category_status', '1', 0),
-(1322, 0, 'account', 'account_status', '1', 0),
-(1323, 0, 'affiliate', 'affiliate_status', '1', 0),
+(1784, 0, 'account', 'account_status', '1', 0),
+(1785, 0, 'affiliate', 'affiliate_status', '1', 0),
 (1667, 0, 'filter', 'filter_status', '0', 0),
-(1665, 0, 'config', 'config_error_filename', 'error.log', 0),
-(1664, 0, 'config', 'config_error_log', '1', 0),
-(1663, 0, 'config', 'config_error_display', '1', 0),
-(1662, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
-(1653, 0, 'config', 'config_seo_url', '0', 0),
-(1654, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(1661, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
-(1660, 0, 'config', 'config_file_max_size', '300000', 0),
+(2238, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
+(2241, 0, 'config', 'config_error_filename', 'error.log', 0),
+(2240, 0, 'config', 'config_error_log', '1', 0),
+(2239, 0, 'config', 'config_error_display', '1', 0),
+(2230, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
 (94, 0, 'voucher', 'voucher_sort_order', '8', 0),
 (95, 0, 'voucher', 'voucher_status', '1', 0),
-(1658, 0, 'config', 'config_shared', '0', 0),
-(1659, 0, 'config', 'config_encryption', '3AchUvzrURzC1j8AdFccSfX5KsDKD7dh2XKqS6bnTsUFGK6fjA74hS7CNZy8hlGcuCEjmNvM28qSJwKdt82JDbMbApBtL1cl5srvCMo1QrYj6VXmo45FNQexgXRSMubQcxeQLUb7c0TZWq1AymyFNN6mHyEmEpGn8VGuDJtbtubrjrNGsVjvHdbFf3srSVd1FLXu6IV7IJZ8t22vaQqLcr7Ac5Im5uFtVi8wkUGgIgzxSXGOojhKmPF2IdQRIsdHVQJzsW47PPsPMT6Rz04p2PiSVZiXY4L6X8eP3cRHPVlpJBl7zRdo2pbUH7JHYfvf176SztgH0xj13KebPZE9JOmW5cYQYW7y6k0AXW6VxN3zTvt5DpF9mJHXv31sKOlMPTLSsX6WZxEGxJFKIVqYCcAwkoAzWsn44JhbpOlEqHoxL8bsvBDW2A6H6Y1qiyGHnc9NKtPIVqpOwGuzEIsiTtZ5CIKwRh3aJBszJsOeSBDJtbQDxNfMLDWxErWTVrfCd3d8Ux1SAnfI1U8uZkoBe55AL0BmvwNcXbECzAYrXDaWTIahXaSGhSVAa9V4941o2l3YgSPmsIdCKvxKQHxJF1qXHpb5JqQqxTh0Y4eDZWGvzcbOy2BGLU5y9YB8nu9o9LFljWlQNMC0qILrzUpzsfrDUscUyK0nPuF8fnc4xS8uSTgw6Owwrq3vqIVKFtZqzjVP8ODm8Xx3W9YbBe2iNlXmMYME78kLY18UGhTh9kX1xUn7ZioSSVTA5BxMaZWPr2G5cFOwcaMiO0L8Yoeli8ba1Qckb3NyywRljY7oXCEJfkMH3gxSjPqBAVWv5vtCSZBaQnBmP74yqtjphe9zGCNyeFZbqNCYa2LnC4TazSINqh99bnJKBx2Cy8TglX4SaMnpT8vBpKsy2u63YMprejkGERgbPcRYJFRq5Tj1Ym6DVpnlpXvVzLSpEO3ftzCDtzZhFzid0CzrsglrQhF95E7C81qo7O4VnRa4X66K6rf749CStkAvDmk6AHXoeXZF', 0),
 (103, 0, 'free_checkout', 'free_checkout_status', '1', 0),
 (104, 0, 'free_checkout', 'free_checkout_order_status_id', '1', 0),
-(1655, 0, 'config', 'config_compression', '0', 0),
-(1656, 0, 'config', 'config_secure', '0', 0),
-(1657, 0, 'config', 'config_password', '1', 0),
-(1652, 0, 'config', 'config_maintenance', '0', 0),
-(1651, 0, 'config', 'config_mail_alert', '', 0),
-(1650, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
-(1649, 0, 'config', 'config_mail_smtp_port', '25', 0),
-(1648, 0, 'config', 'config_mail_smtp_password', '', 0),
-(1647, 0, 'config', 'config_mail_smtp_username', '', 0),
-(1646, 0, 'config', 'config_mail_smtp_hostname', '', 0),
-(1645, 0, 'config', 'config_mail_parameter', '', 0),
-(1644, 0, 'config', 'config_mail_protocol', 'mail', 0),
-(1643, 0, 'config', 'config_ftp_status', '0', 0),
-(1642, 0, 'config', 'config_ftp_root', '', 0),
-(1641, 0, 'config', 'config_ftp_password', '', 0),
-(1640, 0, 'config', 'config_ftp_username', '', 0),
-(1639, 0, 'config', 'config_ftp_port', '21', 0),
-(1638, 0, 'config', 'config_ftp_hostname', 'localhost', 0),
-(1636, 0, 'config', 'config_image_location_width', '268', 0),
-(1637, 0, 'config', 'config_image_location_height', '115', 0),
-(1635, 0, 'config', 'config_image_cart_height', '47', 0),
-(1634, 0, 'config', 'config_image_cart_width', '47', 0),
-(1633, 0, 'config', 'config_image_wishlist_height', '47', 0),
-(1632, 0, 'config', 'config_image_wishlist_width', '47', 0),
-(1631, 0, 'config', 'config_image_compare_height', '90', 0),
-(1630, 0, 'config', 'config_image_compare_width', '90', 0),
-(1629, 0, 'config', 'config_image_related_height', '280', 0),
-(1628, 0, 'config', 'config_image_related_width', '230', 0),
-(1627, 0, 'config', 'config_image_additional_height', '460', 0),
-(1626, 0, 'config', 'config_image_additional_width', '380', 0),
-(1625, 0, 'config', 'config_image_product_height', '280', 0),
-(1624, 0, 'config', 'config_image_product_width', '230', 0),
-(1623, 0, 'config', 'config_image_popup_height', '500', 0),
-(1622, 0, 'config', 'config_image_popup_width', '500', 0),
-(1620, 0, 'config', 'config_image_thumb_width', '380', 0),
-(1621, 0, 'config', 'config_image_thumb_height', '460', 0),
-(1619, 0, 'config', 'config_image_category_height', '146', 0),
-(1618, 0, 'config', 'config_image_category_width', '965', 0),
-(1617, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
-(1616, 0, 'config', 'config_logo', 'catalog/logostore2.png', 0),
-(1615, 0, 'config', 'config_captcha_page', '["review","return","contact"]', 1),
-(1614, 0, 'config', 'config_captcha', '', 0),
-(1613, 0, 'config', 'config_return_status_id', '2', 0),
-(1612, 0, 'config', 'config_return_id', '0', 0),
-(1611, 0, 'config', 'config_affiliate_mail', '0', 0),
-(1609, 0, 'config', 'config_affiliate_commission', '5', 0),
-(1610, 0, 'config', 'config_affiliate_id', '4', 0),
-(1608, 0, 'config', 'config_affiliate_auto', '0', 0),
-(1607, 0, 'config', 'config_affiliate_approval', '0', 0),
-(1606, 0, 'config', 'config_stock_checkout', '0', 0),
-(1605, 0, 'config', 'config_stock_warning', '0', 0),
-(1604, 0, 'config', 'config_stock_display', '0', 0),
-(1603, 0, 'config', 'config_api_id', '1', 0),
-(1602, 0, 'config', 'config_order_mail', '0', 0),
-(1601, 0, 'config', 'config_fraud_status_id', '7', 0),
-(1600, 0, 'config', 'config_complete_status', '["5","3"]', 1),
-(1599, 0, 'config', 'config_processing_status', '["5","1","2","12","3"]', 1),
-(1598, 0, 'config', 'config_order_status_id', '1', 0),
-(1597, 0, 'config', 'config_checkout_id', '5', 0),
-(1596, 0, 'config', 'config_checkout_guest', '1', 0),
-(1595, 0, 'config', 'config_cart_weight', '1', 0),
-(1594, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
-(1593, 0, 'config', 'config_account_mail', '0', 0),
-(1592, 0, 'config', 'config_account_id', '3', 0),
-(1591, 0, 'config', 'config_login_attempts', '5', 0),
-(1590, 0, 'config', 'config_customer_price', '0', 0),
-(1589, 0, 'config', 'config_customer_group_display', '["1"]', 1),
-(1588, 0, 'config', 'config_customer_group_id', '1', 0),
-(1587, 0, 'config', 'config_customer_online', '0', 0),
-(1586, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(1585, 0, 'config', 'config_tax_default', 'shipping', 0),
-(1584, 0, 'config', 'config_tax', '1', 0),
-(1583, 0, 'config', 'config_voucher_max', '1000', 0),
-(1582, 0, 'config', 'config_voucher_min', '1', 0),
-(1581, 0, 'config', 'config_review_mail', '0', 0),
-(1580, 0, 'config', 'config_review_guest', '1', 0),
-(1579, 0, 'config', 'config_review_status', '1', 0),
-(1577, 0, 'config', 'config_product_description_length', '100', 0),
-(1578, 0, 'config', 'config_limit_admin', '20', 0),
-(1576, 0, 'config', 'config_product_limit', '15', 0),
-(1575, 0, 'config', 'config_product_count', '1', 0),
-(1574, 0, 'config', 'config_weight_class_id', '5', 0),
-(1573, 0, 'config', 'config_length_class_id', '3', 0),
-(1572, 0, 'config', 'config_currency_auto', '1', 0),
-(1571, 0, 'config', 'config_currency', 'USD', 0),
-(1570, 0, 'config', 'config_admin_language', 'en', 0),
-(1569, 0, 'config', 'config_language', 'en', 0),
-(1568, 0, 'config', 'config_zone_id', '3624', 0),
-(1567, 0, 'config', 'config_country_id', '223', 0),
-(1566, 0, 'config', 'config_comment', '', 0),
-(1565, 0, 'config', 'config_open', '', 0),
-(1564, 0, 'config', 'config_image', '', 0),
-(1563, 0, 'config', 'config_fax', '', 0),
-(1562, 0, 'config', 'config_telephone', '123456789', 0),
-(1561, 0, 'config', 'config_email', 'koloinotzente@gmail.com', 0),
-(1560, 0, 'config', 'config_geocode', '', 0),
-(1559, 0, 'config', 'config_address', 'Los Angeles California', 0),
-(1558, 0, 'config', 'config_owner', 'Your Name', 0),
-(1557, 0, 'config', 'config_name', 'Awareness Ribbon Revolution', 0),
-(1556, 0, 'config', 'config_layout_id', '1', 0),
-(1555, 0, 'config', 'config_template', 'OPC080176', 0),
-(1554, 0, 'config', 'config_meta_keyword', '', 0),
-(1553, 0, 'config', 'config_meta_description', 'Cancer an Health Shirts ,Apparel and Gifts', 0),
-(1552, 0, 'config', 'config_meta_title', 'Awaraness Ribbon Revolution', 0),
-(1321, 0, 'information', 'information_status', '1', 0);
+(2231, 0, 'config', 'config_compression', '0', 0),
+(2232, 0, 'config', 'config_secure', '0', 0),
+(2233, 0, 'config', 'config_password', '1', 0),
+(2234, 0, 'config', 'config_shared', '0', 0),
+(2235, 0, 'config', 'config_encryption', '3AchUvzrURzC1j8AdFccSfX5KsDKD7dh2XKqS6bnTsUFGK6fjA74hS7CNZy8hlGcuCEjmNvM28qSJwKdt82JDbMbApBtL1cl5srvCMo1QrYj6VXmo45FNQexgXRSMubQcxeQLUb7c0TZWq1AymyFNN6mHyEmEpGn8VGuDJtbtubrjrNGsVjvHdbFf3srSVd1FLXu6IV7IJZ8t22vaQqLcr7Ac5Im5uFtVi8wkUGgIgzxSXGOojhKmPF2IdQRIsdHVQJzsW47PPsPMT6Rz04p2PiSVZiXY4L6X8eP3cRHPVlpJBl7zRdo2pbUH7JHYfvf176SztgH0xj13KebPZE9JOmW5cYQYW7y6k0AXW6VxN3zTvt5DpF9mJHXv31sKOlMPTLSsX6WZxEGxJFKIVqYCcAwkoAzWsn44JhbpOlEqHoxL8bsvBDW2A6H6Y1qiyGHnc9NKtPIVqpOwGuzEIsiTtZ5CIKwRh3aJBszJsOeSBDJtbQDxNfMLDWxErWTVrfCd3d8Ux1SAnfI1U8uZkoBe55AL0BmvwNcXbECzAYrXDaWTIahXaSGhSVAa9V4941o2l3YgSPmsIdCKvxKQHxJF1qXHpb5JqQqxTh0Y4eDZWGvzcbOy2BGLU5y9YB8nu9o9LFljWlQNMC0qILrzUpzsfrDUscUyK0nPuF8fnc4xS8uSTgw6Owwrq3vqIVKFtZqzjVP8ODm8Xx3W9YbBe2iNlXmMYME78kLY18UGhTh9kX1xUn7ZioSSVTA5BxMaZWPr2G5cFOwcaMiO0L8Yoeli8ba1Qckb3NyywRljY7oXCEJfkMH3gxSjPqBAVWv5vtCSZBaQnBmP74yqtjphe9zGCNyeFZbqNCYa2LnC4TazSINqh99bnJKBx2Cy8TglX4SaMnpT8vBpKsy2u63YMprejkGERgbPcRYJFRq5Tj1Ym6DVpnlpXvVzLSpEO3ftzCDtzZhFzid0CzrsglrQhF95E7C81qo7O4VnRa4X66K6rf749CStkAvDmk6AHXoeXZF', 0),
+(2236, 0, 'config', 'config_file_max_size', '300000', 0),
+(2237, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
+(2229, 0, 'config', 'config_seo_url', '0', 0),
+(2228, 0, 'config', 'config_maintenance', '0', 0),
+(2227, 0, 'config', 'config_mail_alert', '', 0),
+(2226, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
+(2225, 0, 'config', 'config_mail_smtp_port', '25', 0),
+(2224, 0, 'config', 'config_mail_smtp_password', '', 0),
+(2223, 0, 'config', 'config_mail_smtp_username', '', 0),
+(2222, 0, 'config', 'config_mail_smtp_hostname', '', 0),
+(2221, 0, 'config', 'config_mail_parameter', '', 0),
+(2220, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(2219, 0, 'config', 'config_ftp_status', '0', 0),
+(2218, 0, 'config', 'config_ftp_root', '', 0),
+(2217, 0, 'config', 'config_ftp_password', '', 0),
+(2216, 0, 'config', 'config_ftp_username', '', 0),
+(2215, 0, 'config', 'config_ftp_port', '21', 0),
+(2214, 0, 'config', 'config_ftp_hostname', 'localhost', 0),
+(2213, 0, 'config', 'config_image_location_height', '115', 0),
+(2212, 0, 'config', 'config_image_location_width', '268', 0),
+(2211, 0, 'config', 'config_image_cart_height', '47', 0),
+(2210, 0, 'config', 'config_image_cart_width', '47', 0),
+(2209, 0, 'config', 'config_image_wishlist_height', '47', 0),
+(2208, 0, 'config', 'config_image_wishlist_width', '47', 0),
+(2207, 0, 'config', 'config_image_compare_height', '90', 0),
+(2206, 0, 'config', 'config_image_compare_width', '90', 0),
+(2205, 0, 'config', 'config_image_related_height', '280', 0),
+(2204, 0, 'config', 'config_image_related_width', '230', 0),
+(2203, 0, 'config', 'config_image_additional_height', '460', 0),
+(2202, 0, 'config', 'config_image_additional_width', '380', 0),
+(2201, 0, 'config', 'config_image_product_height', '280', 0),
+(2200, 0, 'config', 'config_image_product_width', '230', 0),
+(2199, 0, 'config', 'config_image_popup_height', '500', 0),
+(2198, 0, 'config', 'config_image_popup_width', '500', 0),
+(2197, 0, 'config', 'config_image_thumb_height', '460', 0),
+(2196, 0, 'config', 'config_image_thumb_width', '380', 0),
+(2195, 0, 'config', 'config_image_category_height', '146', 0),
+(2194, 0, 'config', 'config_image_category_width', '965', 0),
+(2193, 0, 'config', 'config_icon', 'catalog/icons/storeiconfav.png', 0),
+(2192, 0, 'config', 'config_logo', 'catalog/logo/logo.png', 0),
+(2191, 0, 'config', 'config_captcha_page', '["review","return","contact"]', 1),
+(2190, 0, 'config', 'config_captcha', '', 0),
+(2189, 0, 'config', 'config_return_status_id', '2', 0),
+(2188, 0, 'config', 'config_return_id', '0', 0),
+(2187, 0, 'config', 'config_affiliate_mail', '0', 0),
+(2186, 0, 'config', 'config_affiliate_id', '4', 0),
+(2185, 0, 'config', 'config_affiliate_commission', '5', 0),
+(2184, 0, 'config', 'config_affiliate_auto', '0', 0),
+(2183, 0, 'config', 'config_affiliate_approval', '0', 0),
+(2182, 0, 'config', 'config_stock_checkout', '0', 0),
+(2181, 0, 'config', 'config_stock_warning', '0', 0),
+(2180, 0, 'config', 'config_stock_display', '0', 0),
+(2179, 0, 'config', 'config_api_id', '1', 0),
+(2178, 0, 'config', 'config_order_mail', '0', 0),
+(2175, 0, 'config', 'config_processing_status', '["5","1","2","12","3"]', 1),
+(2177, 0, 'config', 'config_fraud_status_id', '7', 0),
+(2176, 0, 'config', 'config_complete_status', '["5","3"]', 1),
+(2174, 0, 'config', 'config_order_status_id', '1', 0),
+(2173, 0, 'config', 'config_checkout_id', '5', 0),
+(2172, 0, 'config', 'config_checkout_guest', '1', 0),
+(2170, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
+(2171, 0, 'config', 'config_cart_weight', '1', 0),
+(2169, 0, 'config', 'config_account_mail', '0', 0),
+(2168, 0, 'config', 'config_account_id', '3', 0),
+(2167, 0, 'config', 'config_login_attempts', '5', 0),
+(2166, 0, 'config', 'config_customer_price', '0', 0),
+(2165, 0, 'config', 'config_customer_group_display', '["1"]', 1),
+(2164, 0, 'config', 'config_customer_group_id', '1', 0),
+(2163, 0, 'config', 'config_customer_online', '0', 0),
+(2162, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(2161, 0, 'config', 'config_tax_default', 'shipping', 0),
+(2160, 0, 'config', 'config_tax', '1', 0),
+(2159, 0, 'config', 'config_voucher_max', '1000', 0),
+(2158, 0, 'config', 'config_voucher_min', '1', 0),
+(2157, 0, 'config', 'config_review_mail', '0', 0),
+(2156, 0, 'config', 'config_review_guest', '1', 0),
+(2153, 0, 'config', 'config_product_description_length', '100', 0),
+(2154, 0, 'config', 'config_limit_admin', '20', 0),
+(2155, 0, 'config', 'config_review_status', '1', 0),
+(2152, 0, 'config', 'config_product_limit', '15', 0),
+(2151, 0, 'config', 'config_product_count', '1', 0),
+(2150, 0, 'config', 'config_weight_class_id', '5', 0),
+(2149, 0, 'config', 'config_length_class_id', '3', 0),
+(2148, 0, 'config', 'config_currency_auto', '1', 0),
+(2147, 0, 'config', 'config_currency', 'USD', 0),
+(2146, 0, 'config', 'config_admin_language', 'en', 0),
+(2145, 0, 'config', 'config_language', 'en', 0),
+(2144, 0, 'config', 'config_zone_id', '3624', 0),
+(2143, 0, 'config', 'config_country_id', '223', 0),
+(2142, 0, 'config', 'config_comment', '', 0),
+(2141, 0, 'config', 'config_open', '', 0),
+(2140, 0, 'config', 'config_image', '', 0),
+(2139, 0, 'config', 'config_fax', '', 0),
+(2138, 0, 'config', 'config_telephone', '123456789', 0),
+(2135, 0, 'config', 'config_address', 'Covina, CA 91723', 0),
+(2137, 0, 'config', 'config_email', 'koloinotzente@gmail.com', 0),
+(2136, 0, 'config', 'config_geocode', '91723', 0),
+(2134, 0, 'config', 'config_owner', 'Awareness Ribbon Revolution', 0),
+(2133, 0, 'config', 'config_name', 'Awareness Ribbon Revolution', 0),
+(2132, 0, 'config', 'config_layout_id', '1', 0),
+(2131, 0, 'config', 'config_template', 'OPC080176', 0),
+(1782, 0, 'information', 'information_status', '1', 0),
+(2130, 0, 'config', 'config_meta_keyword', '', 0),
+(2129, 0, 'config', 'config_meta_description', 'Cancer an Health Shirts ,Apparel and Gifts', 0),
+(2128, 0, 'config', 'config_meta_title', 'Awaraness Ribbon Revolution', 0);
 
 -- --------------------------------------------------------
 
@@ -2862,16 +2936,19 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias` (
   `url_alias_id` int(11) NOT NULL,
   `query` varchar(255) NOT NULL,
   `keyword` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=856 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=883 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_url_alias`
 --
 
 INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
-(772, 'information_id=4', 'about_us'),
-(852, 'category_id=65', ''),
-(841, 'information_id=6', 'delivery'),
+(858, 'information_id=4', 'about_us'),
+(875, 'category_id=82', ''),
+(880, 'category_id=87', ''),
+(881, 'category_id=88', ''),
+(882, 'category_id=89', ''),
+(857, 'information_id=6', 'delivery'),
 (842, 'information_id=3', 'privacy'),
 (843, 'information_id=5', 'terms');
 
@@ -8090,7 +8167,7 @@ ALTER TABLE `oc_zone_to_geo_zone`
 -- AUTO_INCREMENT for table `oc_address`
 --
 ALTER TABLE `oc_address`
-  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_affiliate`
 --
@@ -8140,22 +8217,22 @@ ALTER TABLE `oc_attribute_group`
 -- AUTO_INCREMENT for table `oc_banner`
 --
 ALTER TABLE `oc_banner`
-  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=132;
+  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=149;
 --
 -- AUTO_INCREMENT for table `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `oc_category`
 --
 ALTER TABLE `oc_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=66;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=90;
 --
 -- AUTO_INCREMENT for table `oc_country`
 --
@@ -8185,12 +8262,12 @@ ALTER TABLE `oc_currency`
 -- AUTO_INCREMENT for table `oc_customer`
 --
 ALTER TABLE `oc_customer`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_customer_activity`
 --
 ALTER TABLE `oc_customer_activity`
-  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_customer_group`
 --
@@ -8205,12 +8282,12 @@ ALTER TABLE `oc_customer_history`
 -- AUTO_INCREMENT for table `oc_customer_ip`
 --
 ALTER TABLE `oc_customer_ip`
-  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_customer_login`
 --
 ALTER TABLE `oc_customer_login`
-  MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_customer_reward`
 --
@@ -8280,12 +8357,12 @@ ALTER TABLE `oc_layout`
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
-  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=130;
+  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=230;
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
-  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=75;
+  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=83;
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --
@@ -8320,7 +8397,7 @@ ALTER TABLE `oc_modification`
 -- AUTO_INCREMENT for table `oc_module`
 --
 ALTER TABLE `oc_module`
-  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=42;
+  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `oc_option`
 --
@@ -8455,7 +8532,7 @@ ALTER TABLE `oc_review`
 -- AUTO_INCREMENT for table `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1668;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2242;
 --
 -- AUTO_INCREMENT for table `oc_stock_status`
 --
@@ -8490,7 +8567,7 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=856;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=883;
 --
 -- AUTO_INCREMENT for table `oc_user`
 --

@@ -59,7 +59,7 @@
 			
 			<div class="right">
 		<div class="map">
- <script type="text/javascript" src="http://www.webestools.com/google_map_gen.js?lati=21.182785&long=72.831834&zoom=4&width=400&height=300&mapType=normal&map_btn_normal=yes&map_btn_satelite=yes&map_btn_mixte=yes&map_small=yes&marqueur=yes&info_bulle="></script>
+ <script type="text/javascript" src="http://www.webestools.com/google_map_gen.js?lati=34.090858&long=-117.889484&zoom=4&width=400&height=300&mapType=normal&map_btn_normal=yes&map_btn_satelite=yes&map_btn_mixte=yes&map_small=yes&marqueur=yes&info_bulle="></script>
  </div>
            
 			</div>
