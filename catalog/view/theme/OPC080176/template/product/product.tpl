@@ -535,7 +535,7 @@ function set_option_price()
     return total ; 
 }
 
-$('#input-option229').change(function() {
+$('.hasCustomSelect').change(function() {
     
     var total = set_option_price();
     $('.price').text('Price: '+'$'+total);
