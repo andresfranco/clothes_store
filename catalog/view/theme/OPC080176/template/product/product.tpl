@@ -494,6 +494,62 @@
     <?php echo $column_right; ?></div>
 	
 </div>
+
+<script type ="text/javascript">
+//Custom price -- allways takes option selected price.
+  $(document).ready(function() {
+
+ //Order t-shirt sizes   
+
+/* var selectList = $('#input-option229 option');
+
+selectList.sort(function(a,b){
+    a = a.value;
+    b = b.value;
+
+    return a-b;
+});
+
+$('#input-option229').html(selectList); */
+
+function set_option_price()
+{
+  
+    var total = 0;
+    var quantity = 0;
+   
+     
+    $("select option:selected").each(function() {
+        var value2 = $(this).text();
+        var position21 = value2.indexOf("$");
+        var position22 = value2.indexOf(")");
+        var pricevalue = value2.substring(position21+1, position22);
+        
+        if ($('#input-quantity').val())
+        {
+          quantity =$('#input-quantity').val();
+        }  
+         total = quantity *pricevalue; 
+       
+    });  
+    return total ; 
+}
+
+$('#input-option229').change(function() {
+    
+    var total = set_option_price();
+    $('.price').text('Price: '+'$'+total);
+});
+
+$('#input-quantity').change(function() {
+    
+    var total = set_option_price();
+    $('.price').text('Price: '+'$'+total);
+});
+
+});
+
+</script>
 <script type="text/javascript"><!--
 $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 	$.ajax({
