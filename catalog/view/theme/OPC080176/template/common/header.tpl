@@ -163,39 +163,40 @@
 
 <div class="nav-responsive"><span>Menu</span><div class="expandable"></div></div>
   <ul class="main-navigation">
+    <li><a>About us</a></li>
     <?php foreach ($categories as $category) { ?>
     <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
       <?php if ($category['children']) { ?>
-
-        <?php for ($i = 0; $i < count($category['children']);) { ?>
-        <ul>
-          <?php $j = $i + ceil(count($category['children']) / $category['column']); ?>
-         <?php for (; $i < count($category['children']); $i++) { ?>
-          <?php if (isset($category['children'][$i])) { ?>										
-				<li>
-				<?php if(count($category['children'][$i]['children_level2'])>0){ ?>
-					<a href="<?php echo $category['children'][$i]['href']; ?>" class="activSub" ><?php echo $category['children'][$i]['name'];?></a> 					
-				<?php } else { ?>				
-					<a href="<?php echo $category['children'][$i]['href']; ?>" ><?php echo $category['children'][$i]['name']; ?></a>
-				<?php } ?>
-				<?php if ($category['children'][$i]['children_level2']) { ?>
-				<ul class="col<?php echo $j; ?>">
-				<?php for ($wi = 0; $wi < count($category['children'][$i]['children_level2']); $wi++) { ?>
-					<li><a href="<?php echo $category['children'][$i]['children_level2'][$wi]['href']; ?>"  ><?php echo $category['children'][$i]['children_level2'][$wi]['name']; ?></a></li>
-				 <?php } ?>
-				</ul>
-			  <?php } ?>		  
-			</li>		
-          <?php } ?>
-          <?php } ?>
+        
+        <ul class="dropdown-menu multi-column columns-3">
+          <?php if ($category['children']) { ?>
+	                   <div class="row">
+                        
+		               <?php foreach ($category['children'] as $children) { ?>
+                         
+                         <div class="col-sm-4">
+				            <ul class="multi-column-dropdown">
+					            <li><a href="<?php echo $children['href']; ?>">
+					            <?php echo $children['name']?></a></li>
+				            </ul>
+			            </div>
+		               <?php } ?>
+		            </div>
+		            <?php } ?>
         </ul>
         <?php } ?>
-      <?php } ?>
     </li>
+
     <?php } ?>
+    <li><a>Special Offers</a></li>
+    <li><a>Contact us</a></li>
   </ul>
 </div>
+<!--/.navbar-->
 <?php } ?>
+
+
+
 <!-- ======= Menu Code END ========= -->
 </div>
 </div>
