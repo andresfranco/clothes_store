@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 14, 2015 at 09:56 PM
+-- Generation Time: Jan 08, 2016 at 07:28 PM
 -- Server version: 5.6.27-0ubuntu1
 -- PHP Version: 5.6.11-1ubuntu3.1
 
@@ -373,14 +373,15 @@ CREATE TABLE IF NOT EXISTS `oc_banner_image` (
   `link` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=157 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=161 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_banner_image`
 --
 
 INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`, `sort_order`) VALUES
-(154, 11, '#', 'catalog/subbanners/Ribbon Revolution T-Shirts Banner 2.png', 0),
+(160, 11, '#', 'catalog/subbanners/subbanner1.png', 0),
+(159, 12, '#', 'catalog/subbanners/subbanner2.png', 0),
 (99, 6, 'index.php?route=product/manufacturer/info&amp;manufacturer_id=7', 'catalog/demo/compaq_presario.jpg', 0),
 (94, 8, '', 'catalog/demo/manufacturer/nfl.png', 0),
 (95, 8, '', 'catalog/demo/manufacturer/redbull.png', 0),
@@ -391,18 +392,17 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`, 
 (88, 8, '', 'catalog/demo/manufacturer/harley.png', 0),
 (89, 8, '', 'catalog/demo/manufacturer/dell.png', 0),
 (90, 8, '', 'catalog/demo/manufacturer/disney.png', 0),
-(153, 10, '#', 'catalog/subbanners/Ribbon Revolution T-Shirts Banner 1.png', 0),
 (97, 8, '', 'catalog/demo/manufacturer/starbucks.png', 0),
 (98, 8, '', 'catalog/demo/manufacturer/nintendo.png', 0),
 (151, 9, '', 'catalog/banners/Main Banner 3.png', 3),
 (152, 9, '', 'catalog/banners/Main Banner 4.png', 4),
+(157, 10, '#', 'catalog/subbanners/subbanner.png', 0),
 (150, 9, '', 'catalog/banners/Main Banner 2.png', 2),
 (149, 9, '', 'catalog/banners/Main Banner 1.png', 1),
 (146, 13, '#', 'catalog/stores_carousel/carousel3.png', 3),
 (145, 13, '#', 'catalog/stores_carousel/carousel2.png', 2),
 (144, 13, '#', 'catalog/stores_carousel/carousel1.png', 1),
-(147, 13, '#', 'catalog/stores_carousel/carousel4.png', 4),
-(156, 12, '#', 'catalog/subbanners/Ribbon Revolution T-Shirts Banner 3.png', 0);
+(147, 13, '#', 'catalog/stores_carousel/carousel4.png', 4);
 
 -- --------------------------------------------------------
 
@@ -422,14 +422,14 @@ CREATE TABLE IF NOT EXISTS `oc_banner_image_description` (
 --
 
 INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `banner_id`, `title`) VALUES
-(154, 1, 11, 'sub_banner1'),
+(160, 1, 11, 'sub_banner1'),
 (99, 1, 6, 'HP Banner'),
 (93, 1, 8, 'Canon'),
 (92, 1, 8, 'Burger King'),
 (91, 1, 8, 'Coca Cola'),
 (90, 1, 8, 'Disney'),
 (89, 1, 8, 'Dell'),
-(153, 1, 10, 'sub_banner'),
+(157, 1, 10, 'sub_banner'),
 (88, 1, 8, 'Harley Davidson'),
 (94, 1, 8, 'NFL'),
 (95, 1, 8, 'RedBull'),
@@ -439,7 +439,7 @@ INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `ba
 (152, 1, 9, 'mainbanner4'),
 (151, 1, 9, 'mainbanner2'),
 (150, 1, 9, 'mainbanner1'),
-(156, 1, 12, 'sub_banner2'),
+(159, 1, 12, 'sub_banner2'),
 (149, 1, 9, 'mainbanner3'),
 (147, 1, 13, 'item4'),
 (146, 1, 13, 'item3'),
@@ -486,7 +486,7 @@ CREATE TABLE IF NOT EXISTS `oc_category` (
   `status` tinyint(1) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_category`
@@ -516,13 +516,16 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (68, '', 90, 0, 0, 4, 1, '2015-11-15 16:35:15', '2015-12-10 21:40:33'),
 (67, '', 90, 0, 0, 2, 1, '2015-11-15 16:34:17', '2015-12-10 21:55:24'),
 (60, '', 90, 0, 0, 3, 1, '2015-11-02 13:29:14', '2015-12-10 21:39:48'),
-(90, '', 0, 1, 4, 7, 1, '2015-12-10 20:01:01', '2015-12-13 19:51:07'),
+(90, '', 0, 1, 4, 7, 1, '2015-12-10 20:01:01', '2015-12-16 18:44:00'),
 (91, '', 0, 0, 1, 0, 1, '2015-12-12 11:32:01', '2015-12-12 11:32:01'),
 (92, '', 0, 0, 1, 0, 1, '2015-12-12 11:54:02', '2015-12-12 11:54:02'),
 (93, '', 0, 0, 1, 0, 1, '2015-12-12 14:35:00', '2015-12-12 14:35:00'),
 (94, '', 90, 1, 1, 0, 1, '2015-12-12 16:25:04', '2015-12-13 19:34:38'),
 (95, '', 90, 0, 1, 0, 1, '2015-12-12 16:33:10', '2015-12-13 19:36:43'),
-(96, '', 90, 0, 0, 0, 1, '2015-12-12 16:41:03', '2015-12-14 21:50:24');
+(96, '', 90, 0, 0, 0, 1, '2015-12-12 16:41:03', '2015-12-14 21:50:24'),
+(97, '', 90, 0, 1, 0, 1, '2016-01-04 11:24:20', '2016-01-04 11:24:20'),
+(98, '', 90, 0, 1, 0, 1, '2016-01-04 15:15:20', '2016-01-04 15:15:20'),
+(99, '', 90, 0, 1, 0, 1, '2016-01-04 15:45:25', '2016-01-04 15:45:25');
 
 -- --------------------------------------------------------
 
@@ -549,10 +552,11 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (78, 1, 'Multiple Myeloma', '&lt;p&gt;Multiple Myeloma&lt;br&gt;&lt;/p&gt;', 'Multiple Myeloma', '', ''),
 (68, 1, 'Cervical Cancer ', '&lt;p&gt;Cervical Cancer &lt;br&gt;&lt;/p&gt;', 'Cervical Cancer ', '', ''),
 (96, 1, 'Appendix Cancer', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Appendix Cancer', '', ''),
+(97, 1, 'Carcinoid Cancer', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Carcinoid Cancer', '', ''),
 (76, 1, 'Lymphoma', '&lt;p&gt;Lymphoma&lt;br&gt;&lt;/p&gt;', 'Lymphoma', '', ''),
 (94, 1, 'Bone Cancer', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bone Cancer', '', ''),
 (95, 1, 'Bile Duct Cancer ', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Bile Duct Cancer ', '', ''),
-(90, 1, 'Cancer T-Shirts', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Cancer T-Shirts', '', ''),
+(90, 1, 'T-Shirts', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Cancer T-Shirts', '', ''),
 (91, 1, 'Spina Bifida', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Spina Bifida', '', ''),
 (92, 1, 'Chiari Malformation', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Chiari Malformation', '', ''),
 (65, 1, 'Endometriosis', '&lt;p&gt;Endometriosis&lt;/p&gt;', 'Endometriosis', 'Endometriosis', ''),
@@ -574,7 +578,9 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (83, 1, 'Sarcoma', '&lt;p&gt;Sarcoma&lt;br&gt;&lt;/p&gt;', 'Sarcoma', '', ''),
 (84, 1, 'Skin Cancer', '&lt;p&gt;Skin Cancer&lt;br&gt;&lt;/p&gt;', 'Skin Cancer', '', ''),
 (85, 1, 'Thyroid Cancer', '&lt;p&gt;Thyroid Cancer&lt;br&gt;&lt;/p&gt;', 'Thyroid Cancer', '', ''),
-(86, 1, 'Uterine Cancer', '&lt;p&gt;Uterine Cancer&lt;br&gt;&lt;/p&gt;', 'Uterine Cancer', '', '');
+(86, 1, 'Uterine Cancer', '&lt;p&gt;Uterine Cancer&lt;br&gt;&lt;/p&gt;', 'Uterine Cancer', '', ''),
+(98, 1, 'Cancer Awareness', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Cancer Awareness', '', ''),
+(99, 1, 'Esophageal Cancer', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Esophageal Cancer', '', '');
 
 -- --------------------------------------------------------
 
@@ -604,6 +610,12 @@ CREATE TABLE IF NOT EXISTS `oc_category_path` (
 --
 
 INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
+(99, 99, 1),
+(99, 90, 0),
+(98, 98, 1),
+(98, 90, 0),
+(97, 97, 1),
+(97, 90, 0),
 (66, 90, 0),
 (94, 90, 0),
 (96, 90, 0),
@@ -707,7 +719,10 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 (85, 0, 0),
 (86, 0, 0),
 (95, 0, 0),
-(96, 0, 0);
+(96, 0, 0),
+(97, 0, 0),
+(98, 0, 0),
+(99, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -754,7 +769,10 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (93, 0),
 (94, 0),
 (95, 0),
-(96, 0);
+(96, 0),
+(97, 0),
+(98, 0),
+(99, 0);
 
 -- --------------------------------------------------------
 
@@ -1124,7 +1142,7 @@ CREATE TABLE IF NOT EXISTS `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2015-12-15 02:47:03');
+(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2016-01-07 23:44:30');
 
 -- --------------------------------------------------------
 
@@ -1928,7 +1946,7 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (45, 'Footer_Top_CMS', 'html', '{"name":"Footer_Top_CMS","module_description":{"1":{"title":"","description":"&lt;div class=&quot;subbanner3_block&quot;&gt;&lt;div class=&quot;subbanner3&quot;&gt;&lt;div class=&quot;subbanner3_1&quot;&gt;&lt;ul&gt;&lt;li class=&quot;first&quot;&gt;Customare care 24\\/7&lt;\\/li&gt;&lt;li class=&quot;second&quot;&gt;Hours : - 14.0123456789&lt;\\/li&gt;&lt;\\/ul&gt;&lt;div class=&quot;img&quot;&gt;&amp;nbsp;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;subbanner3_2&quot;&gt;&lt;ul&gt;&lt;li class=&quot;first&quot;&gt;Money Back Guarantee&lt;\\/li&gt;&lt;li class=&quot;second&quot;&gt;At vero et accusamas et&lt;\\/li&gt;&lt;\\/ul&gt;&lt;div class=&quot;img&quot;&gt;&amp;nbsp;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;subbanner3_3&quot;&gt;&lt;ul&gt;&lt;li class=&quot;first&quot;&gt;Special Gift Cart&lt;\\/li&gt;&lt;li class=&quot;second&quot;&gt;At vero et accusamas et&lt;\\/li&gt;&lt;\\/ul&gt;&lt;div class=&quot;img&quot;&gt;&amp;nbsp;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;subbanner3_4&quot;&gt;&lt;ul&gt;&lt;li class=&quot;first&quot;&gt;Free Shipping&lt;\\/li&gt;&lt;li class=&quot;second&quot;&gt;On order over $99&lt;\\/li&gt;&lt;\\/ul&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;"}},"status":"1"}'),
 (46, 'Header_Top_CMS', 'html', '{"name":"Header_Top_CMS","module_description":{"1":{"title":"","description":"&lt;div class=&quot;header_call&quot;&gt;\\r\\n&lt;ul&gt;\\r\\n&lt;li class=&quot;contact&quot;&gt;(+91)123 456 789&lt;\\/li&gt;\\r\\n&lt;li class=&quot;email&quot;&gt;&lt;a href=&quot;#&quot;&gt;info@templatemela.com &lt;\\/a&gt; &lt;\\/li&gt;\\r\\n&lt;\\/ul&gt;\\r\\n&lt;\\/div&gt;"}},"status":"1"}'),
 (47, 'Homepage_Blog_CMS', 'html', '{"name":"Homepage_Blog_CMS","module_description":{"1":{"title":"","description":"&lt;div class=&quot;homepage-testimonial-block&quot;&gt;&lt;div class=&quot;homepage-testimonial-block-inner&quot;&gt;&lt;div class=&quot;homepage-testimonials-inner&quot; id=&quot;testimonial&quot;&gt;&lt;div class=&quot;box-heading&quot;&gt;&lt;div class=&quot;static-blog&quot;&gt;News&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;customNavigation&quot;&gt;&lt;a class=&quot;btn prev&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;a class=&quot;btn next&quot;&gt;&amp;nbsp;&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;products product-carousel&quot; id=&quot;testimonial-carousel&quot;&gt;&lt;div class=&quot;slider-item&quot;&gt;&lt;div class=&quot;product-block&quot;&gt;&lt;div class=&quot;img&quot;&gt;&lt;div class=&quot;img_inner&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;...\\/image\\/catalog\\/blogimg.jpg&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;content-wrapper&quot;&gt;&lt;div class=&quot;content1&quot;&gt;&lt;a href=&quot;#&quot;&gt;The Standard chunk ipspum&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;author&quot;&gt;by admin- March28,2014&lt;\\/div&gt;&lt;div class=&quot;comment&quot;&gt;5 comments &lt;\\/div&gt;&lt;div class=&quot;desc&quot;&gt;Vestibulum ante ipsum primis urna risus suscipit leo Cras eget augue vitae neque euismod congue quis non erat.&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;slider-item&quot;&gt;&lt;div class=&quot;product-block&quot;&gt;&lt;div class=&quot;img&quot;&gt;&lt;div class=&quot;img_inner&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;...\\/image\\/catalog\\/blogimg1.jpg&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;content-wrapper&quot;&gt;&lt;div class=&quot;content1&quot;&gt;&lt;a href=&quot;#&quot;&gt;The Standard chunk ipspum&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;author&quot;&gt;by admin- March28,2014&lt;\\/div&gt;&lt;div class=&quot;comment&quot;&gt;5 comments&lt;\\/div&gt;&lt;div class=&quot;desc&quot;&gt;Vestibulum ante ipsum primis urna risus suscipit leo Cras eget augue vitae neque euismod congue quis non erat.&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;slider-item&quot;&gt;&lt;div class=&quot;product-block&quot;&gt;&lt;div class=&quot;img&quot;&gt;&lt;div class=&quot;img_inner&quot;&gt;&lt;a href=&quot;#&quot;&gt; &lt;img alt=&quot;&quot; src=&quot;...\\/image\\/catalog\\/blogimg2.jpg&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;content-wrapper&quot;&gt;&lt;div class=&quot;content1&quot;&gt;&lt;a href=&quot;#&quot;&gt;The Standard chunk ipspum&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;author&quot;&gt;by admin- March28,2014&lt;\\/div&gt;&lt;div class=&quot;comment&quot;&gt;5 comments&lt;\\/div&gt;&lt;div class=&quot;desc&quot;&gt;Vestibulum ante ipsum primis urna risus suscipit leo Cras eget augue vitae neque euismod congue quis non erat.&lt;\\/div&gt; &lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;slider-item&quot;&gt;&lt;div class=&quot;product-block&quot;&gt;&lt;div class=&quot;img&quot;&gt;&lt;div class=&quot;img_inner&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;...\\/image\\/catalog\\/blogimg3.jpg&quot;&gt; &lt;\\/a&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;content-wrapper&quot;&gt;&lt;div class=&quot;content1&quot;&gt;&lt;a href=&quot;#&quot;&gt;The Standard chunk ipspum&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;author&quot;&gt;by admin- March28,2014&lt;\\/div&gt;&lt;div class=&quot;comment&quot;&gt;5 comments&lt;\\/div&gt;&lt;div class=&quot;desc&quot;&gt;Vestibulum ante ipsum primis urna risus suscipit leo Cras eget augue vitae neque euismod congue quis non erat.&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;viewmore&quot;&gt;&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;View More&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;testimonial_default_width&quot; style=&quot;display: none; visibility: hidden;&quot;&gt;&amp;nbsp;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;"}},"status":"1"}'),
-(48, 'Homepage_Banner_CMS', 'html', '{"name":"Homepage_Banner_CMS","module_description":{"1":{"title":"","description":"&lt;div class=&quot;tmcmsblock clear&quot; id=&quot;tmcmsblock&quot;&gt;&lt;div class=&quot;subbanner2&quot;&gt;&lt;div class=&quot;subbanner2_1&quot;&gt;&lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http:\\/\\/opencart-demos.org\\/OPC08\\/OPC080176\\/image\\/catalog\\/logo2.png&quot;&gt; &lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;subtext&quot;&gt;Vestibulum ante ipsum primis urna risus suscipit leo Cras eget augue vitae neque euismod congue quis non erat. Praesent eget eros felis. Cras elementum pulvinar . &lt;\\/div&gt;&lt;\\/div&gt;&lt;div class=&quot;subbanner2_2&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http:\\/\\/opencart-demos.org\\/OPC08\\/OPC080176\\/image\\/catalog\\/cms_banner.jpg&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;&lt;div class=&quot;subbanner2_3&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http:\\/\\/opencart-demos.org\\/OPC08\\/OPC080176\\/image\\/catalog\\/sub-banner4.jpg&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;&lt;\\/div&gt;&lt;\\/div&gt;"}},"status":"1"}');
+(48, 'Homepage_Banner_CMS', 'html', '{"name":"Homepage_Banner_CMS","module_description":{"1":{"title":"","description":"&lt;div class=&quot;tmcmsblock clear&quot; id=&quot;tmcmsblock&quot;&gt;&lt;div class=&quot;subbanner2&quot;&gt;&lt;div class=&quot;subbanner2_1&quot;&gt;&lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;subtext&quot;&gt; &lt;\\/div&gt;\\r\\n\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;subbanner2_2&quot;&gt;&lt;img src=&quot;http:\\/\\/localhost\\/store\\/image\\/catalog\\/sub_banner2\\/268x252banner.png&quot;&gt;&lt;br&gt;&lt;\\/div&gt;\\r\\n\\r\\n&lt;div class=&quot;subbanner2_3&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http:\\/\\/localhost\\/store\\/image\\/catalog\\/sub_banner2\\/699x252banner.png&quot;&gt;&lt;\\/a&gt;&lt;\\/div&gt;\\r\\n\\r\\n&lt;\\/div&gt;\\r\\n\\r\\n&lt;\\/div&gt;"}},"status":"1"}');
 
 -- --------------------------------------------------------
 
@@ -1940,7 +1958,7 @@ CREATE TABLE IF NOT EXISTS `oc_option` (
   `option_id` int(11) NOT NULL,
   `type` varchar(32) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_option`
@@ -1958,7 +1976,8 @@ INSERT INTO `oc_option` (`option_id`, `type`, `sort_order`) VALUES
 (10, 'datetime', 9),
 (11, 'select', 12),
 (12, 'date', 11),
-(13, 'select', 0);
+(13, 'select', 0),
+(14, 'select', 0);
 
 -- --------------------------------------------------------
 
@@ -1988,7 +2007,8 @@ INSERT INTO `oc_option_description` (`option_id`, `language_id`, `name`) VALUES
 (10, 1, 'Date &amp; Time'),
 (12, 1, 'Delivery Date'),
 (11, 1, 'Size'),
-(13, 1, 'Style');
+(13, 1, 'Style'),
+(14, 1, 'Color');
 
 -- --------------------------------------------------------
 
@@ -2001,7 +2021,7 @@ CREATE TABLE IF NOT EXISTS `oc_option_value` (
   `option_id` int(11) NOT NULL,
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_option_value`
@@ -2032,7 +2052,10 @@ INSERT INTO `oc_option_value` (`option_value_id`, `option_id`, `image`, `sort_or
 (46, 11, '', 4),
 (58, 11, '', 3),
 (59, 11, '', 2),
-(60, 11, '', 1);
+(60, 11, '', 1),
+(61, 14, '', 0),
+(62, 14, '', 0),
+(63, 14, '', 0);
 
 -- --------------------------------------------------------
 
@@ -2076,7 +2099,10 @@ INSERT INTO `oc_option_value_description` (`option_value_id`, `language_id`, `op
 (59, 1, 11, 'M-Ladies'),
 (60, 1, 11, 'S-Ladies'),
 (56, 1, 11, 'XXL-Men'),
-(57, 1, 11, '3XL-Men');
+(57, 1, 11, '3XL-Men'),
+(61, 1, 14, 'White'),
+(62, 1, 14, 'Black'),
+(63, 1, 14, 'Navy Blue');
 
 -- --------------------------------------------------------
 
@@ -2366,7 +2392,7 @@ CREATE TABLE IF NOT EXISTS `oc_product` (
   `viewed` int(5) NOT NULL DEFAULT '0',
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=200 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=241 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product`
@@ -2382,16 +2408,17 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (57, 'Uterine Cancer Strongest Among Us T-Shirt', 'TS-UC-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/Uterine Cancer Strongest Among Us T-Shirt/il_570xN.873592184_f81f.jpg', 0, 1, 19.9900, 0, 0, '2015-11-29', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 3, '2015-11-29 16:44:03', '2015-12-06 12:02:19'),
 (58, 'Straight Outta Chemo Breast Cancer Shirts', 'TS-BC-W-00007', '', '', '', '', '', '', 360, 6, 'catalog/TS-BC-W-00007/il_570xN.860203482_adi3.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 12:10:07', '2015-12-06 15:13:22'),
 (59, 'Straight Outta Chemo Light Pink Shirts', 'TS-BC-P-00001', '', '', '', '', '', '', 360, 6, 'catalog/Straight Outta Chemo Light Pink Shirts/il_570xN.859024083_2q5g.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 12:17:27', '2015-12-06 12:18:19'),
-(61, 'Straight Outta Cancer Heliconia Pink Shirts', 'TS-BC-P-00002', '', '', '', '', '', '', 360, 6, 'catalog/Straight Outta Cancer Heliconia Pink Shirts/il_570xN.881916330_c3ur.jpg', 0, 1, 0.0000, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 12:25:55', '0000-00-00 00:00:00'),
+(233, 'Breast Cancer Hope Love Cure Light Pink Shirts', '', '', '', '', '', '', '', 360, 6, 'catalog/TS-BC-P-00004/il_570xN.860353194_jma0.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2016-01-07 18:51:34', '0000-00-00 00:00:00'),
+(234, 'Straight Outta Cancer Black Shirts', 'TS-CAA-B-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-CAA-B-00001/il_570xN.881675327_dskk.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2016-01-07 18:57:03', '2016-01-07 19:21:50'),
 (62, 'Never Underestimate a Breast Cancer Survivor Shirt', 'TS-BC-W-00003', '', '', '', '', '', '', 360, 6, 'catalog/Never Underestimate a Breast Cancer Survivor Shirt/il_570xN.849808777_dqvl.jpg', 0, 1, 0.0000, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 360, 1, 1, 0, '2015-12-06 12:30:46', '2015-12-06 12:32:43'),
 (63, 'Breast Cancer Yes They''re Fake Shirts', 'TS-BC-W-00004', '', '', '', '', '', '', 360, 6, 'catalog/Breast Cancer Yes They''re Fake Shirts/il_570xN.857063315_rg67.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 12:37:21', '2015-12-06 12:38:11'),
 (64, 'Breast Cancer I Will Never Ever Give Up Shirts', 'TS-BC-P-00003', '', '', '', '', '', '', 360, 6, 'catalog/TS-BC-P-00002/il_570xN.848476028_7u15.jpg', 0, 1, 20.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 13:12:53', '2015-12-06 15:30:47'),
 (69, 'Breast Cancer Strongest Among Us T-Shirt', 'TS-BC-W-00006', '', '', '', '', '', '', 360, 6, 'catalog/TS-BC-W-00006/il_570xN.873352193_lq8n.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 15:05:52', '0000-00-00 00:00:00'),
 (71, 'Cancer Picked The Wrong Diva Breast Cancer Shirt', 'TS-BC-W-00008', '', '', '', '', '', '', 360, 6, 'catalog/TS-BC-W-00008/il_570xN.832225729_6zjj.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 15:10:00', '2015-12-06 15:17:26'),
-(72, 'Breast Cancer Chemo Grad Shirts', '', '', '', '', '', '', '', 360, 6, 'catalog/Breast Cancer Chemo Grad Shirts/il_570xN.850041202_7ndx.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 15:14:50', '2015-12-10 20:51:00'),
+(200, 'Prostate Cancer I''m Not a Super Hero', 'TS-PRC-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-PRC-W-00001/il_570xN.897167281_7pzz.jpg', 0, 1, 20.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 10:33:38', '2016-01-04 10:37:18'),
 (73, 'Yes They''re Fake Breast Cancer Shirts', 'TS-BC-W-00009', '', '', '', '', '', '', 360, 6, 'catalog/TS-BC-W-00009/il_570xN.857060967_pl7w.jpg', 0, 1, 19.9900, 0, 0, '2015-11-29', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 15:18:56', '2015-12-06 15:21:08'),
 (74, 'Personalize I Wear a Pink Ribbon Shirt', 'TS-BC-W-00010', '', '', '', '', '', '', 360, 6, 'catalog/TS-BC-W-00009/il_570xN.857060967_pl7w.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 15:22:41', '2015-12-06 15:24:39'),
-(75, 'Breast Cancer Hope Love Cure Light Pink Shirts', 'TS-BC-P-00004', '', '', '', '', '', '', 360, 6, 'catalog/TS-BC-P-00004/il_570xN.860353194_jma0.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 15:25:21', '2015-12-06 15:29:55'),
+(75, 'Straight Outta Chemo Light Blue Shirts', 'TS-CAA-BL-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-CAA-BL-00001/il_570xN.881917020_5qei.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 15:25:21', '2016-01-07 18:56:17'),
 (76, 'Breast Cancer Hope Love Cure Shrits', 'TS-BC-P-00005', '', '', '', '', '', '', 360, 6, 'catalog/TS-BC-P-00005/il_570xN.860113961_c4dz.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 20:24:23', '2015-12-06 20:26:18'),
 (77, 'Straight Outta Chemo Leukemia Shirts', 'TS-LEU-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-LEU-W-00001/il_570xN.859969657_t9xa.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 20:28:12', '2015-12-06 20:31:15'),
 (78, 'Straight Outta Chemo Heliconia Pink Shirts', 'TS-BC-P-00006', '', '', '', '', '', '', 360, 6, 'catalog/TS-BC-P-00006/il_570xN.859253082_f2jx.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-06 20:32:18', '2015-12-06 20:35:22'),
@@ -2464,7 +2491,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (147, 'Hodgkin''s Lymphoma Tribal Warrior Shorts', 'TS-HL-W-00013', '', '', '', '', '', '', 360, 6, 'catalog/TS-HL-W-00013/il_570xN.857351198_37zh.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 09:08:26', '2015-12-12 09:22:08'),
 (148, 'Hodgkin''s Lymphoma I Fought Back and Won Shirt', 'TS-HL-W-00012', '', '', '', '', '', '', 360, 6, 'catalog/TS-HL-W-00012/il_570xN.859126605_6p89.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 09:11:59', '2015-12-12 09:13:42'),
 (149, 'Lime Green Tribal Ribbon Warrior Black T-Shirts', 'TS-L-B-00002', '', '', '', '', '', '', 360, 6, 'catalog/TS-L-B-00002/il_570xN.857141705_dtcn.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 09:14:58', '2015-12-12 09:17:48'),
-(150, 'Hodgkin''s Lymphoma Being Strong Shirts', '', '', '', '', '', '', '', 360, 6, 'catalog/TS-HL-W-00011/il_570xN.859942067_1d4w.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 09:18:50', '0000-00-00 00:00:00'),
+(150, 'Hodgkin''s Lymphoma Being Strong Shirts', 'TS-HL-W-00011', '', '', '', '', '', '', 360, 6, 'catalog/TS-HL-W-00011/il_570xN.859942067_1d4w.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 09:18:50', '2015-12-16 19:18:06'),
 (151, 'Lime Green Tribal Ribbon Warrior Shirts', 'TS-L-W-00009', '', '', '', '', '', '', 360, 6, 'catalog/TS-L-W-00009/il_570xN.857346506_mygq.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 09:23:20', '2015-12-12 09:28:06'),
 (153, 'Hodgkin''s Disease Heart Ribbon Shirt', 'TS-HL-W-00014', '', '', '', '', '', '', 360, 6, 'catalog/TS-HL-W-00014/il_570xN.849226038_i532.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 09:30:45', '2015-12-12 09:34:10'),
 (154, 'Hodgkin''s Lymphoma Heart Ribbon Shirt', 'TS-HL-P-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-HL-P-00001/il_570xN.848994007_ffuz.jpg', 0, 1, 20.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 09:36:48', '2015-12-12 09:39:23'),
@@ -2481,35 +2508,73 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (166, 'Ready to Win Lymphoma Shirts', 'TS-L-W-00018', '', '', '', '', '', '', 360, 6, 'catalog/TS-L-W-00018/il_570xN.832245919_671a.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 10:49:13', '2015-12-12 10:50:24'),
 (167, 'Strength of a Lymphoma Survivor Shirt', 'TS-L-W-00019', '', '', '', '', '', '', 360, 6, 'catalog/TS-L-W-00019/il_570xN.832246671_arpk.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 10:52:25', '2015-12-12 10:54:32'),
 (168, 'Being Strong Only Choice Lymphoma Shirts', 'TS-L-W-00020', '', '', '', '', '', '', 360, 6, 'catalog/TS-L-W-00020/il_570xN.885329984_pb2f.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 10:57:00', '2015-12-12 11:00:24'),
-(169, 'I Love Someone With Spina Bifida Shirts', 'TS-SB-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-SB-B-00001/il_570xN.883497006_fckq.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 11:32:48', '2015-12-12 11:36:10'),
+(169, 'I Love Someone With Spina Bifida Shirts', 'TS-SB-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-SB-B-00001/il_570xN.883497006_fckq.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 11:32:48', '2015-12-12 11:36:10'),
 (170, 'Gray Tribal Warrior Ribbon Shirts', 'TS-BRC-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-BRC-W-00001/il_570xN.857348094_meic.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 11:38:51', '2015-12-12 11:41:12'),
 (171, 'Non-Hodgkins Lymphoma Wrong Chick Shirt', 'TS-L-W-00021', '', '', '', '', '', '', 360, 6, 'catalog/TS-L-W-00021/il_570xN.849654675_fuxj.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 11:42:44', '2015-12-12 11:44:26'),
 (173, 'Stronger Than Cancer Blue Ribbon Shirt', 'TS-COL-BL-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-COL-BL-00001/il_570xN.838265765_immj.jpg', 0, 1, 20.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 11:46:14', '2015-12-12 12:00:38'),
 (174, 'Cervical Cancer Strongest Among Us T-Shirt', 'TS-CEC-W-00002', '', '', '', '', '', '', 360, 6, 'catalog/TS-CEC-W-00002/il_570xN.873586616_3gj3.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 11:48:37', '2015-12-12 11:52:25'),
-(175, 'Not Going Down Chiari Malformation Shirt', 'TS-CM-P-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-CM-P-00001/il_570xN.837259919_mrpj.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 11:54:17', '2015-12-12 11:56:33'),
+(175, 'Not Going Down Chiari Malformation Shirt', 'TS-CM-P-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-CM-P-00001/il_570xN.837259919_mrpj.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 11:54:17', '2015-12-12 11:56:33'),
 (176, 'Stronger Blue Ribbon Shirt', 'TS-COL-BL-00002', '', '', '', '', '', '', 360, 6, 'catalog/TS-COL-BL-00002/il_570xN.838488570_br9h.jpg', 0, 1, 20.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 11:58:35', '2015-12-12 12:00:15'),
 (177, 'I Love Someone With Skin Cancer To The Moon and Back', 'TS-SC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-SC-B-00001/il_570xN.884270978_6gsn.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 12:01:54', '2015-12-12 12:04:04'),
-(178, 'I Love Someone With Ovarian Cancer To The Moon and Back', 'TS-OC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-OC-B-00001/il_570xN.884033777_mnb6.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 13:48:19', '2015-12-12 14:00:25'),
+(178, 'I Love Someone With Ovarian Cancer To The Moon and Back', 'TS-OC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-OC-B-00001/il_570xN.884033777_mnb6.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 13:48:19', '2015-12-12 14:00:25'),
 (179, 'I Love Someone With Non-Hodgkin''s Lymphoma To The Moon and Back', 'TS-L-B-00003', '', '', '', '', '', '', 360, 5, 'catalog/TS-L-B-00003/il_570xN.884269138_hbvf.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 14:01:32', '2015-12-12 14:05:40'),
 (180, 'I Love Someone With Melanoma Cancer To The Moon and Back', 'TS-MC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-MC-B-00001/il_570xN.884032149_iycq.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 14:06:39', '2015-12-12 14:11:20'),
 (181, 'I Love Someone With Lymphoma Cancer To The Moon and Back', 'TS-L-B-00004', '', '', '', '', '', '', 360, 5, 'catalog/TS-L-B-00004/il_570xN.884031439_1uea.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 14:13:44', '2015-12-12 14:15:59'),
 (182, 'I Love Someone With Lung Cancer To The Moon and Back', 'TS-LUC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-LUC-B-00001/il_570xN.884266584_6go7.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 14:16:47', '2015-12-12 14:20:50'),
 (183, 'I Love Someone With Liver Cancer To The Moon and Back', 'TS-LIVC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-LIVC-B-00001/il_570xN.884029671_g0o9.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 14:23:06', '2015-12-12 14:25:17'),
 (184, 'I Love Someone With Kidney Cancer To The Moon and Back', 'TS-KC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-KC-B-00001/il_570xN.884264466_asf9.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 14:27:01', '2015-12-12 14:30:08'),
-(185, 'I Love Someone With Hodgkins Lymphoma To The Moon and Back', 'TS-HL-B-00003', '', '', '', '', '', '', 360, 5, 'catalog/TS-HL-B-00003/il_570xN.884263746_cm69.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 14:31:29', '2015-12-12 14:34:15'),
+(185, 'I Love Someone With Hodgkins Lymphoma To The Moon and Back', 'TS-HL-B-00003', '', '', '', '', '', '', 360, 5, 'catalog/TS-HL-B-00003/il_570xN.884263746_cm69.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 14:31:29', '2015-12-12 14:34:15'),
 (186, 'I Love Someone With Heart Disease To The Moon and Back', 'TS-HD-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-HD-B-00001/il_570xN.884019005_a5r7.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 14:35:17', '2015-12-12 14:38:53'),
-(187, 'I Love Someone With Ewing''s Sarcoma To The Moon and Back', 'TS-SAR-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-SAR-B-00001/il_570xN.884018103_p3f2.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 14:40:36', '2015-12-12 14:43:20'),
-(188, 'I Love Someone With Childhood Cancer To The Moon and Back', 'TS-CHC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-CHC-B-00001/il_570xN.884017217_be7p.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 14:45:08', '2015-12-12 14:47:04'),
+(187, 'I Love Someone With Ewing''s Sarcoma To The Moon and Back', 'TS-SAR-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-SAR-B-00001/il_570xN.884018103_p3f2.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 14:40:36', '2015-12-12 14:43:20'),
+(188, 'I Love Someone With Childhood Cancer To The Moon and Back', 'TS-CHC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-CHC-B-00001/il_570xN.884017217_be7p.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 14:45:08', '2015-12-12 14:47:04'),
 (189, 'I Love Someone With Cervical Cancer To The Moon and Back', 'TS-CEC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-CEC-B-00001/il_570xN.884014941_fv9m.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 16:09:17', '2015-12-12 16:13:46'),
 (190, 'I Love Someone With Breast Cancer To The Moon and Back', 'TS-BC-B-00003', '', '', '', '', '', '', 360, 5, 'catalog/TS-BC-B-00003/il_570xN.884014125_2uki.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 16:16:29', '2015-12-12 16:19:04'),
 (191, 'I Love Someone With Brain Cancer To The Moon and Back', 'TS-BRC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-BRC-B-00001/il_570xN.884013003_2p99.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 16:21:21', '2015-12-12 16:24:16'),
-(192, 'I Love Someone With Bone Cancer To The Moon and Back', 'TS-BOC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-BOC-B-00001/il_570xN.884248758_agn1.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 16:25:20', '2015-12-12 16:28:10'),
-(193, 'I Love Someone With Blood Cancer To The Moon and Back', 'TS-BLC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-BLC-B-00001/il_570xN.884247846_4yw8.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 16:30:31', '2015-12-12 16:32:37'),
-(194, 'I Love Someone With Bile Duct Cancer To The Moon and Back', 'TS-BDC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-BDC-B-00001/il_570xN.884246846_9s78.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 16:34:19', '2015-12-12 16:36:53'),
-(195, 'I Love Someone With Appendix Cancer To The Moon and Back', 'TS-APC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-APC-B-00001/il_570xN.884242178_tkti.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 16:38:17', '2015-12-12 17:00:24'),
+(192, 'I Love Someone With Bone Cancer To The Moon and Back', 'TS-BOC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-BOC-B-00001/il_570xN.884248758_agn1.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 16:25:20', '2015-12-12 16:28:10'),
+(193, 'I Love Someone With Blood Cancer To The Moon and Back', 'TS-BLC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-BLC-B-00001/il_570xN.884247846_4yw8.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 16:30:31', '2015-12-12 16:32:37'),
+(194, 'I Love Someone With Bile Duct Cancer To The Moon and Back', 'TS-BDC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-BDC-B-00001/il_570xN.884246846_9s78.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 16:34:19', '2015-12-12 16:36:53'),
+(195, 'I Love Someone With Appendix Cancer To The Moon and Back', 'TS-APC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-APC-B-00001/il_570xN.884242178_tkti.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 16:38:17', '2015-12-12 17:00:24'),
 (196, 'I Wear a Violet Ribbon Hodgkins Lymphoma Shirt', 'TS-HL-W-00017', '', '', '', '', '', '', 360, 6, 'catalog/TS-HL-W-00017/il_570xN.863659228_6lpb.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 16:44:12', '2015-12-12 16:45:51'),
 (197, 'Personalize I Wear Lime Green Ribbon Shirt', 'TS-L-W-00022', '', '', '', '', '', '', 360, 6, 'catalog/TS-L-W-00022/il_570xN.884811803_fs8z.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 16:47:02', '2015-12-12 16:49:01'),
-(198, 'Appendix Cancer Awareness Heart Ribbon Shirts', 'TS-APC-B-00002', '', '', '', '', '', '', 360, 5, 'catalog/TS-APC-B-00002/il_570xN.883923038_gxjq.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2015-12-12 16:56:44', '2015-12-12 16:59:20');
+(198, 'Appendix Cancer Awareness Heart Ribbon Shirts', 'TS-APC-B-00002', '', '', '', '', '', '', 360, 5, 'catalog/TS-APC-B-00002/il_570xN.883923038_gxjq.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2015-12-12 16:56:44', '2015-12-12 16:59:20'),
+(201, 'Melanoma Strongest Among Us T-Shirt', 'TS-ME-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-ME-W-00001/il_570xN.873355505_117c.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 10:40:00', '2016-01-04 10:43:06'),
+(202, 'Melanoma and Skin Cancer Awareness Heart Ribbon Shirts', 'TS-ME-SC-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-ME-SC-W-00001/il_570xN.894646049_1z2t.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 10:46:01', '2016-01-04 10:48:52'),
+(203, 'Colon Cancer Heart Ribbon Shirts', 'TS-COL-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-COL-W-00001/il_570xN.894628677_ivbe.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 10:54:41', '2016-01-04 10:57:28'),
+(204, 'Heart Ribbon Shirts Blood Cancer', 'TS-BLC-B-00002', '', '', '', '', '', '', 360, 5, 'catalog/TS-BLC-B-00002/il_570xN.894853436_jafu.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 10:58:33', '2016-01-04 11:04:36'),
+(205, 'Lung Cancer Heart Ribbon Shirts', 'TS-LUC-B-00002', '', '', '', '', '', '', 360, 5, 'catalog/TS-LUC-B-00002/il_570xN.894609989_20wy.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 11:13:04', '2016-01-04 11:15:35'),
+(206, 'Brain Cancer Heart Ribbon Shirts', 'TS-BRC-B-00002', '', '', '', '', '', '', 360, 5, 'catalog/TS-BRC-B-00002/il_570xN.894608921_dmsw.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 11:17:44', '2016-01-04 11:19:40'),
+(207, 'Brain Cancer Picked The Wrong Chick Shirt', 'TS-BRC-W-00002', '', '', '', '', '', '', 360, 6, 'catalog/TS-BRC-W-00002/il_570xN.849874628_c9qq.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 11:20:40', '2016-01-04 11:22:55'),
+(208, 'Carcinoid Cancer For My Hero Shirts', 'TS-CAC-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-CAC-W-00001/il_570xN.894043019_eds6.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 11:25:25', '2016-01-04 11:31:13'),
+(209, 'Brain Cancer For My Hero Shirts ', 'TS-BRC-W-00003', '', '', '', '', '', '', 360, 6, 'catalog/TS-BRC-W-00003/il_570xN.894038891_lq4a.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 11:33:04', '2016-01-04 11:35:36'),
+(210, 'Lung Cancer For My Hero Shirts ', 'TS-LUC-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-LUC-W-00001/il_570xN.894274214_q9de.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 11:37:36', '2016-01-04 11:47:10'),
+(211, 'I''ll Never Give Up I''m Fighting To Win Shirts for Blood Cancer', 'TS-BLC-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-BLC-W-00001/il_570xN.894029491_lu0r.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 12:00:16', '2016-01-04 12:02:33'),
+(212, 'Colon Cancer For My Hero Shirts', 'TS-COL-W-00002', '', '', '', '', '', '', 360, 6, 'catalog/TS-COL-W-00002/il_570xN.894272368_goso.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 12:04:19', '2016-01-04 12:07:04'),
+(213, 'Ovarian Cancer For My Hero Shirts', 'TS-OC-W-00002', '', '', '', '', '', '', 360, 6, 'catalog/TS-OC-W-00002/il_570xN.894263006_fr2u.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 12:08:37', '2016-01-04 12:11:28'),
+(214, 'Ovarian Cancer I''ll Never Give Up I''m Fighting To Win Shirts', 'TS-OC-W-00003', '', '', '', '', '', '', 360, 6, 'catalog/TS-OC-W-00003/il_570xN.893874465_jxi4.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 12:12:12', '2016-01-04 12:14:32'),
+(215, 'Colon Cancer I''ll Never Give Up I''m Fighting To Win Shirts', 'TS-COL-W-00003', '', '', '', '', '', '', 360, 6, 'catalog/TS-COL-W-00003/il_570xN.894096656_gipg.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 12:15:57', '2016-01-04 12:19:09'),
+(216, 'Lung Cancer I''ll Never Give Up I''m Fighting To Win Shirts', 'TS-LUC-W-00002', '', '', '', '', '', '', 360, 6, 'catalog/TS-LUC-W-00002/il_570xN.893844809_bquz.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 12:20:45', '2016-01-04 12:23:27'),
+(217, 'I''ll Never Give Up I''m Fighting To Win Shirts for Blood Cancer', 'TS-BLC-W-00002', '', '', '', '', '', '', 360, 6, 'catalog/TS-BLC-W-00002/il_570xN.893842407_it37.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 12:26:33', '2016-01-04 12:28:12'),
+(218, 'Brain Cancer Shirts I''ll Never Give Up I''m Fighting To Win', 'TS-BRC-W-00004', '', '', '', '', '', '', 360, 6, 'catalog/TS-BRC-W-00004/il_570xN.893841165_iep1.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 12:29:32', '2016-01-04 12:31:46'),
+(219, 'Melanoma and Skin Cancer Shirts I''ll Never Give Up', 'TS-ME-W-00002', '', '', '', '', '', '', 360, 6, 'catalog/TS-ME-W-00002/il_570xN.893839387_gjl2.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 12:38:12', '2016-01-04 12:40:07'),
+(220, 'Straight Outta Chemo Purple Shirts', 'TS-CAA-P-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-CAA-P-00001/il_570xN.859258952_g0dk.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 15:16:01', '2016-01-04 15:21:11'),
+(221, 'Colon Cancer Picked The Wrong Chick Shirt', 'TS-COL-W-00004', '', '', '', '', '', '', 360, 6, 'catalog/TS-COL-W-00004/il_570xN.849647067_h8kq.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 15:23:39', '2016-01-04 15:25:31'),
+(222, 'Red Ribbon For My Hero Shirts', 'TS-BLC-R-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-BLC-R-00001/il_570xN.837306012_6651.jpg', 0, 1, 20.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 15:27:21', '2016-01-04 15:31:44'),
+(223, 'Melanoma Cancer Wrong Chick Shirt', 'TS-ME-W-00003', '', '', '', '', '', '', 360, 6, 'catalog/TS-ME-W-00003/il_570xN.849882538_p5sa.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 15:32:34', '2016-01-04 15:37:06'),
+(224, 'Multiple Myeloma Strongest Among Us T-Shirt', 'TS-MM-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-MM-W-00001/il_570xN.873588948_g0qm.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 15:39:14', '2016-01-04 15:43:45');
+INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`) VALUES
+(225, 'Esophageal Cancer Strongest Among Us T-Shirt', 'TS-EC-W-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-EC-W-00001/il_570xN.873353171_6m3t.jpg', 0, 1, 19.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 15:46:01', '2016-01-04 15:51:35'),
+(226, 'I Love Someone With Skin Cancer To The Moon', 'TS-SC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-SKC-B-00001/il_570xN.884270978_6gsn.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 15:53:32', '2016-01-04 15:58:15'),
+(227, 'Teal Tribal Warrior Ribbon Shirts', 'TS-OC-B-00002', '', '', '', '', '', '', 360, 5, 'catalog/TS-OC-B-00002/il_570xN.883919286_nbut.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 19:22:34', '2016-01-04 19:24:49'),
+(228, 'Grey Awareness Ribbon Heart Shirts', 'TS-BRC-B-00003', '', '', '', '', '', '', 360, 5, 'catalog/TS-BRC-B-00003/il_570xN.883682321_3pdy.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 19:30:05', '2016-01-04 19:33:36'),
+(229, 'Thyroid Cancer Awareness Heart Ribbon Shirts', 'TS-TIC-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-TIC-B-00001/il_570xN.883916232_hypw.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 19:34:26', '2016-01-04 19:37:54'),
+(230, 'Yellow Awareness Heart Ribbon Shirts for Endometriosis', 'TS-END-B-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-END-B-00001/il_570xN.883674275_j9m6.jpg', 0, 1, 22.9900, 0, 0, '2015-11-21', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 0, '2016-01-04 19:40:15', '2016-01-04 19:42:18'),
+(231, 'Straight Outta Chemo Tall Shirts For Men', 'TS-CAA-G-00001', '', '', '', '', '', '', 360, 5, 'catalog/TS-CAA-G-00001/il_570xN.883880952_cczh.jpg', 0, 1, 24.9900, 0, 0, '2016-01-04', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 1, 1, '2016-01-04 20:01:23', '2016-01-04 20:21:32'),
+(232, 'Straight Outta Cancer Tall Shirts', 'TS-CAA-G-00002', '', '', '', '', '', '', 360, 5, 'catalog/TS-CAA-G-00002/il_570xN.883874026_9z7q.jpg', 0, 1, 24.9900, 0, 0, '2016-01-04', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2016-01-04 20:26:52', '2016-01-04 20:36:02'),
+(235, 'Straight Outta Cancer Colon Cancer and Rectal Cancer Shirts', 'TS-COL-BL-00003', '', '', '', '', '', '', 360, 6, 'catalog/TS-COL-BL-00003/il_570xN.881649131_42el.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2016-01-07 19:22:25', '2016-01-07 19:28:19'),
+(238, 'Straight Outta Cancer Yellow Shirts for Sarcoma Survivors', 'TS-CAA-Y-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-CAA-Y-00001/il_570xN.881884378_46jb.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2016-01-07 20:08:40', '2016-01-07 20:11:19'),
+(237, 'Straight Outta Cancer Shirts for Blood Cancer Survivors', 'TS-CAA-R-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-CAA-R-00001/il_570xN.881676061_32ht.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2016-01-07 20:01:54', '2016-01-07 20:06:08'),
+(239, 'Straight Outta Cancer Light Gray Shirts', 'TS-CAA-G-00003', '', '', '', '', '', '', 360, 6, 'catalog/TS-CAA-G-00003/il_570xN.881676527_8b4t.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2016-01-07 20:13:58', '2016-01-07 20:17:15'),
+(240, 'Straight Outta Cancer Green Shirts', 'TS-CAA-GR-00001', '', '', '', '', '', '', 360, 6, 'catalog/TS-CAA-GR-00001/il_570xN.881881842_fjc3.jpg', 0, 1, 21.9900, 0, 0, '2015-12-06', 0.00000000, 5, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 1, 0, 0, '2016-01-07 20:21:30', '2016-01-07 20:32:17');
 
 -- --------------------------------------------------------
 
@@ -2549,22 +2614,21 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (68, 1, 'Cervical Cancer Strongest Among Us T-Shirt', '&lt;p&gt;Cervical Cancer Awareness T-Shirt With Powerful Quote:  The Strongest \r\nAmong Us Are The Ones Who Smile Through The Silent Pain, Cry Behind The \r\nClosed Doors and Fight Battles Nobody Knows About.  Design features an \r\nawareness ribbon with eye-catching text.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Cervical Cancer', '', ''),
 (69, 1, 'Breast Cancer Strongest Among Us T-Shirt', '&lt;p&gt;Breast Cancer Awareness T-Shirt With Powerful Quote:  The Strongest \r\nAmong Us Are The Ones Who Smile Through The Silent Pain, Cry Behind The \r\nClosed Doors and Fight Battles Nobody Knows About.  Design features an \r\nawareness ribbon with eye-catching text.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration. &lt;/p&gt;', '', 'Breast Cancer', '', ''),
 (71, 1, 'Cancer Picked The Wrong Diva Breast Cancer Shirt', 'Cancer Picked The Wrong Diva Breast Cancer Shirt featuring our original \r\ndesign with a pink distressed ribbon to signify advocacy. This shirt is a\r\n Gildan classic fit ladies t-shirt available from Small to size 3XL. The\r\n shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders. NOTE: It is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception holidays and weekends). &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        ', '', 'Breast Cancer ', '', ''),
-(72, 1, 'Breast Cancer Chemo Grad Shirts', '&lt;p&gt;Breast Cancer Chemo Grad Shirts featuring a figurine wearing a cap, gown\r\n and holding a diploma to signify end of chemo treatment.  Great gift \r\nfor Breast Cancer survivors completing treatment.  &lt;br&gt;&lt;br&gt;This shirt is\r\n a Gildan classic fit ladies t-shirt (feminine inspired pattern) \r\navailable from size small to size 3XL.  The shirt is made from preshrunk\r\n 100% Cotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. \r\n NOTE: It is printed on demand in the USA.&lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', ''),
 (66, 1, 'Ovarian Cancer Strongest Among Us T-Shirt', '&lt;p&gt;Ovarian Cancer Awareness T-Shirt With Powerful Quote:  The Strongest \r\nAmong Us Are The Ones Who Smile Through The Silent Pain, Cry Behind The \r\nClosed Doors and Fight Battles Nobody Knows About.  Design features an \r\nawareness ribbon with eye-catching text.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Ovarian Cancer', '', ''),
 (67, 1, 'Cervical Cancer Strongest Among Us T-Shirt', '&lt;p&gt;Cervical Cancer Awareness T-Shirt With Powerful Quote:  The Strongest \r\nAmong Us Are The Ones Who Smile Through The Silent Pain, Cry Behind The \r\nClosed Doors and Fight Battles Nobody Knows About.  Design features an \r\nawareness ribbon with eye-catching text.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Cervical Cancer', '', ''),
 (64, 1, 'Breast Cancer I Will Never Ever Give Up Shirts', '&lt;p&gt;Breast Cancer I Will Never Ever Give Up Shirt featuring our exclusive \r\ngrunge ribbon printed on a pink shirt. Ideal for awareness walks, \r\nawareness events, and any occasion to take a stand.&lt;br&gt;&lt;br&gt;This shirt is\r\n a Gildan classic fit t-shirt available from Small to size 3XL in styles\r\n for ladies and men. The shirt is made from preshrunk 100% Cotton Jersey\r\n and weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   Awareness Ribbon is © Copyrighted. All Rights Reserved.            \r\n        &lt;/p&gt;', '', 'Breast Cancer', '', ''),
 (65, 1, 'Yes They''re Fake Breast Cancer Grunge Shirts', '&lt;p&gt;Yes, They''re Fake...The Real Ones Tried To Kill Me Breast Cancer shirts \r\nfeaturing our original pink grunge ribbon to make a strong impact for \r\nadvocacy.Ideal for Breast Cancer Awareness month, awareness walks, \r\nsupport events, etc.  &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and unisex/men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews. Thank you\r\n for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. Pink Distressed Ribbon is Our Copyright.            \r\n        &lt;/p&gt;', '', 'Breast Cancer', '', ''),
 (62, 1, 'Never Underestimate a Breast Cancer Survivor Shirt', '&lt;p&gt;Never Underestimate The Strength and Power of a Breast Cancer Survivor \r\nempowering slogan on shirts featuring a pink ribbon to raise awareness \r\nand inspire hope.  Great slogan to wear during Breast Cancer Awareness \r\nMonth, support events, groups and more.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit ladies t-shirt (feminine inspired pattern) available from \r\nsize small to size 3XL.  The shirt is made from preshrunk 100% Cotton \r\nJersey and weighs 6.0 oz. It has taped neck and shoulders.  NOTE: It is \r\nprinted on demand in the USA.&lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Angel Wing Ribbon is Our Copyright.  All Rights Reserved. &lt;/p&gt;', '', 'Never Underestimate a Breast Cancer Survivor Shirt', '', ''),
+(233, 1, 'Breast Cancer Hope Love Cure Light Pink Shirts', '&lt;p&gt;Breast Cancer Hope Love Cure shirts to inspire and raise awareness.  \r\nIdeal for support events and more.  Design features distressed and \r\nscripted style text with an outline ribbon to highlight the color of the\r\n shirt.  The shirt color is light pink.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Black Shirt is \r\nprinted on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   Awareness Ribbon is © Copyrighted. All Rights Reserved.            \r\n        &lt;/p&gt;', '', 'Breast Cancer', '', ''),
 (63, 1, 'Breast Cancer Yes They''re Fake Shirts', '&lt;p&gt;Yes, They''re Fake...The Real Ones Tried To Kill Me Breast Cancer shirts \r\nfeaturing our original pink grunge ribbon to make a strong impact for \r\nadvocacy.Ideal for Breast Cancer Awareness month, awareness walks, \r\nsupport events, etc.  &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and unisex/men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews. Thank you\r\n for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. Pink Distressed Ribbon is Our Copyright.            \r\n        &lt;/p&gt;', '', 'Breast Cancer', '', ''),
 (55, 1, 'Yes They''re Fake Breast Cancer Shirt', 'Yes, They''re Fake...The Real Ones Tried To Kill Me Breast Cancer shirts \r\nfeaturing our original pink ribbon to make a strong impact for \r\nadvocacy.Ideal for Breast Cancer Awareness month, awareness walks, \r\nsupport events, etc.  October is National Breast Cancer Awareness Month,\r\n so get your pink on!&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies and unisex/men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews. Thank you\r\n for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. Pink Distressed Ribbon is Our Copyright.            \r\n        ', '', 'Straight Outta Chemo Light Pink Shirts', '', ''),
 (56, 1, 'Yes They''re Fake Breast Cancer Grunge Shirts', '&lt;p&gt;Yes, They''re Fake...The Real Ones Tried To Kill Me Breast Cancer shirts \r\nfeaturing our original pink grunge ribbon to make a strong impact for \r\nadvocacy.Ideal for Breast Cancer Awareness month, awareness walks, \r\nsupport events, etc.  &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and unisex/men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews. Thank you\r\n for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. Pink Distressed Ribbon is Our Copyright.            \r\n        &lt;/p&gt;', '', 'Yes They''re Fake Breast Cancer Grunge Shirts', '', ''),
 (57, 1, 'Uterine Cancer Strongest Among Us T-Shirt', '&lt;p&gt;Uterine Cancer Awareness T-Shirt With Powerful Quote:  The Strongest \r\nAmong Us Are The Ones Who Smile Through The Silent Pain, Cry Behind The \r\nClosed Doors and Fight Battles Nobody Knows About.  Design features an \r\nawareness ribbon with eye-catching text.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Uterine Cancer ', '', ''),
 (58, 1, 'Straight Outta Chemo Breast Cancer Shirts', 'A must have for cancer warriors! Straight Outta Chemo for Breast Cancer \r\nWarriors is a bold and funny slogan perfect to wear during, before and \r\nafter chemotherapy treatment.  Makes a great gift for the cancer warrior\r\n with a sense of humor.   The text in the design is slightly distressed \r\nmaking it super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand using \r\ndirect to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        ', '', 'Breast Cancer ', '', ''),
 (59, 1, 'Straight Outta Chemo Light Pink Shirts', '&lt;p&gt;A must have for cancer warriors! Straight Outta Chemo Light Pink Shirt \r\nis a bold and funny slogan perfect to wear during, before and after \r\nchemotherapy treatment.  Makes a great gift for the cancer warrior with a\r\n sense of humor.   The text in the design is slightly distressed making \r\nit super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and men. The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders. NOTE: Shirt is printed on demand using \r\ndirect to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        &lt;/p&gt;', '', 'Breast Cancer', '', ''),
-(61, 1, 'Straight Outta Cancer Heliconia Pink Shirts', '&lt;p&gt;A must have for cancer warriors! Straight Outta Cancer Heliconia Pink \r\nShirt is a bold and funny slogan perfect to wear during, before and \r\nafter chemotherapy treatment.  Makes a great gift for the cancer warrior\r\n with a sense of humor.   The text in the design is slightly distressed \r\nmaking it super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand using \r\ndirect to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        &lt;/p&gt;', '', 'Breast Cancer', '', ''),
 (73, 1, 'Yes They''re Fake Breast Cancer Shirts', '&lt;p&gt;Yes, They''re Fake...The Real Ones Tried To Kill Me Breast Cancer shirts \r\nfeaturing our original pink ribbon to make a strong impact for \r\nadvocacy.Ideal for Breast Cancer Awareness month, awareness walks, \r\nsupport events, etc.  &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and unisex/men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews. Thank you\r\n for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. Pink Distressed Ribbon is Our Copyright.            \r\n        &lt;/p&gt;', '', 'Breast Cancer', '', ''),
 (74, 1, 'Personalize I Wear a Pink Ribbon Shirt', '&lt;p&gt;Personalize I Wear a Pink Ribbon Breast Cancer shirts featuring our original draped style ribbon.&lt;br&gt;&lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;\r\n ADD a short name to this &quot;I Wear a Ribbon Design&quot; (e.g. Lisa, Jennifer,\r\n Susan, Maria etc) by requesting it when placing your order in the \r\n&quot;comment&quot; field&quot;. &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies. The shirt is made\r\n from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck \r\nand shoulders. NOTE: Shirt is printed on demand using direct to garment \r\nprinters. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   Awareness Ribbon is © Copyrighted. All Rights Reserved.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', ''),
-(75, 1, 'Breast Cancer Hope Love Cure Light Pink Shirts', '&lt;p&gt;Breast Cancer Hope Love Cure shirts to inspire and raise awareness.  \r\nIdeal for support events and more.  Design features distressed and \r\nscripted style text with an outline ribbon to highlight the color of the\r\n shirt.  The shirt color is light pink.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Black Shirt is \r\nprinted on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   Awareness Ribbon is © Copyrighted. All Rights Reserved.            \r\n        &lt;/p&gt;', '', 'Breast Cancer', '', ''),
+(75, 1, 'Straight Outta Chemo Light Blue Shirts', '&lt;p&gt;A must have for cancer warriors! Straight Outta Cancer Light  Blue Shirt\r\n is a bold and funny slogan perfect to wear during, before and after \r\nchemotherapy treatment.  Makes a great gift for the cancer warrior with a\r\n sense of humor.   The text in the design is slightly distressed making \r\nit super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for men. The shirt is made \r\nfrom preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck \r\nand shoulders. NOTE: Shirt is printed using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;\r\n SIZES/Printing:  Please check sizing chart prior to placing order. It \r\nis found in the image thumbnails above. You can also read about the \r\nprinting process found in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Two or more shirts get shipped by U.S. Priority \r\nmail.  Business days excludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message before placing order \r\nand prior to placing unfavorable reviews.  Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Cancer Awareness', '', ''),
 (76, 1, 'Breast Cancer Hope Love Cure Shrits', '&lt;p&gt;Breast Cancer Hope Love Cure shirts to inspire and raise awareness.  \r\nIdeal for support events and more.  Design features distressed and \r\nscripted style text with an outline ribbon to highlight the color of the\r\n shirt.  The shirt color is HELICONIA/pink colored shirt.&lt;br&gt;&lt;br&gt;This \r\nshirt is a Gildan classic fit t-shirt available from Small to size 3XL \r\nin styles for ladies and men. The shirt is made from preshrunk 100% \r\nCotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: \r\nBlack Shirt is printed on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   Awareness Ribbon is © Copyrighted. All Rights Reserved.            \r\n        &lt;/p&gt;', '', 'Breast Cancer', '', ''),
 (77, 1, 'Straight Outta Chemo Leukemia Shirts', 'A must have for cancer warriors! Straight Outta Chemo for Leukemia and \r\nKidney Cancer Warriors is a bold and funny slogan perfect to wear \r\nduring, before and after chemotherapy treatment.  Makes a great gift for\r\n the cancer warrior with a sense of humor.   The text in the design is \r\nslightly distressed making it super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a\r\n Gildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor ladies and men. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        ', '', 'Leukemia', '', ''),
 (78, 1, 'Straight Outta Chemo Heliconia Pink Shirts', 'A must have for cancer warriors! Straight Outta Chemo Heliconia Pink \r\nShirt is a bold and funny slogan perfect to wear during, before and \r\nafter chemotherapy treatment.  Makes a great gift for the cancer warrior\r\n with a sense of humor.   The text in the design is slightly distressed \r\nmaking it super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand using \r\ndirect to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        &lt;p&gt;           \r\n        &lt;/p&gt;', '', 'Breast Cancer', '', ''),
@@ -2573,9 +2637,9 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (81, 1, 'Breast Cancer Tribal Warrior Ribbon T-Shirts', 'Breast Cancer Warrior shirts featuring a tribal pink ribbon.  Perfect for the defiant, ready-to-fight warrior!&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit t-shirt available from Small to size 3XL \r\nin styles for ladies. The shirt is made from preshrunk 100% Cotton \r\nJersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: Black \r\nShirt is printed on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   Awareness Ribbon is © Copyrighted. All Rights Reserved.            \r\n        ', '', 'Breast Cancer', '', ''),
 (82, 1, 'Breast Cancer Tribal Warrior Ribbon Shirts', '&lt;p&gt;Breast Cancer Warrior shirts featuring a tribal pink ribbon.  Perfect for the defiant, ready-to-fight warrior!&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit t-shirt available from Small to size 3XL \r\nin styles for ladies. The shirt is made from preshrunk 100% Cotton \r\nJersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt \r\nis printed on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   Awareness Ribbon is © Copyrighted. All Rights Reserved.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', ''),
 (83, 1, 'I Wear Pink For My Hero Breast Cancer Shirt', '&lt;p&gt;I Wear Pink For My Hero Breast Cancer Awareness Shirt features an \r\noriginal pink ribbon created in draped style for support and advocacy. \r\nThis shirt is a Gildan classic fit ladies t-shirt available from Small \r\nto size 3XL. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: It is printed on \r\ndemand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews. Thank you\r\n for your consideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', ''),
-(84, 1, 'Breast Cancer Hope Butterfly Shirts', '&lt;p&gt;Breast Cancer Hope Shirts spotlighting a beautiful butterfly with a pink\r\n ribbon for support, hope and awareness.  A great gift to inspire those \r\naffected with Breast Cancer with a bit of hope.  &lt;br&gt;&lt;br&gt;This shirt is a\r\n Gildan classic fit ladies t-shirt (feminine inspired pattern) available\r\n from size small to size 3XL.  The shirt is made from preshrunk 100% \r\nCotton Jersey and weighs 6.0 oz. It has taped neck and shoulders.  NOTE:\r\n It is printed on demand in the USA.&lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Pink Ribbon is Our Copyright.  All Rights Reserved.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', '');
+(84, 1, 'Breast Cancer Hope Butterfly Shirts', '&lt;p&gt;Breast Cancer Hope Shirts spotlighting a beautiful butterfly with a pink\r\n ribbon for support, hope and awareness.  A great gift to inspire those \r\naffected with Breast Cancer with a bit of hope.  &lt;br&gt;&lt;br&gt;This shirt is a\r\n Gildan classic fit ladies t-shirt (feminine inspired pattern) available\r\n from size small to size 3XL.  The shirt is made from preshrunk 100% \r\nCotton Jersey and weighs 6.0 oz. It has taped neck and shoulders.  NOTE:\r\n It is printed on demand in the USA.&lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Pink Ribbon is Our Copyright.  All Rights Reserved.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', ''),
+(85, 1, 'Breast Cancer Being Strong Shirts', '&lt;p&gt;Breast Cancer Being Strong is The Only Choice Against Cancer shirt \r\nfeaturing the words &quot;Fight, Defy and Win&quot; and  a cool banner design with\r\n a pink ribbon for support and awareness.  Perfect to wear at your next \r\nawareness events, support groups and more.  A very powerful statement \r\nthat makes an impact.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit ladies \r\nt-shirt (feminine inspired pattern) available from size small to size \r\n3XL.  The shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0\r\n oz. It has taped neck and shoulders.  NOTE: It is printed on demand in \r\nthe USA.&lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', '');
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(85, 1, 'Breast Cancer Being Strong Shirts', '&lt;p&gt;Breast Cancer Being Strong is The Only Choice Against Cancer shirt \r\nfeaturing the words &quot;Fight, Defy and Win&quot; and  a cool banner design with\r\n a pink ribbon for support and awareness.  Perfect to wear at your next \r\nawareness events, support groups and more.  A very powerful statement \r\nthat makes an impact.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit ladies \r\nt-shirt (feminine inspired pattern) available from size small to size \r\n3XL.  The shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0\r\n oz. It has taped neck and shoulders.  NOTE: It is printed on demand in \r\nthe USA.&lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', ''),
 (86, 1, 'Breast Cancer Miss My Hero Shirt', 'Breast Cancer Every Day I Miss My Hero, My Angel remembrance shirt \r\nfeaturing our exclusive angel wings with a pink ribbon to raise \r\nawareness while paying tribute to a special hero in your life. &lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit ladies t-shirt (feminine inspired \r\npattern) available from size small to size 3XL.  The shirt is made from \r\npreshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck and \r\nshoulders.  NOTE: It is printed on demand in the USA.&lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Angel Wing Ribbon is Our Copyright.  All Rights Reserved.            \r\n        ', '', 'Breast Cancer ', '', ''),
 (87, 1, 'Breast Cancer Picked The Wrong Chick Shirt', 'Wear it with a fighter attitude with our line of Breast Cancer Picked \r\nThe Wrong Chick shirts featuring our originally illustrated \r\n(copyrighted) chick wearing a head scarf and an awareness ribbon to \r\nsupport her cause and raise awareness.  Makes a perfect gift for the \r\nwarrior in your life.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit ladies \r\nt-shirt (feminine inspired pattern) available from size small to size \r\n3XL.  The shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0\r\n oz. It has taped neck and shoulders.  NOTE: It is printed on demand in \r\nthe USA.&lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  © Chick Illustration is Our Copyright.  All Rights Reserved.            \r\n        ', '', 'Breast Cancer ', '', ''),
 (89, 1, 'Breast Cancer Believe Heart Ribbon T-Shirt', 'Inspiring Breast Cancer T-Shirt features a beautiful heart design with a\r\n pink ribbon, swirl accents and the word BELIEVE. This shirt is a Gildan\r\n classic fit ladies t-shirt available up from small to size 3XL.  The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders.  NOTE: It is printed on demand in the USA.&lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception holidays and weekends).  &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        ', '', 'Breast Cancer ', '', ''),
@@ -2603,9 +2667,9 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (112, 1, 'Breast Cancer Fighter Diva Shirt', '&lt;p&gt;Breast Cancer Fighter Diva Shirt featuring a female silhouette and a \r\npink ribbon to wear it with strength against Breast Cancer. Ideal for \r\nawareness walks, support events, etc.   Makes an inspiring gift. This \r\nshirt is a Gildan classic fit ladies t-shirt available from Small to \r\nsize 3XL. The shirt is made from preshrunk 100% Cotton Jersey and weighs\r\n 6.0 oz. It has taped neck and shoulders. NOTE: It is printed on demand.\r\n &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception holidays and weekends). &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', ''),
 (113, 1, 'I''m Wearing Pink For My Hero Breast Cancer Shirt', 'I''m Wearing Pink For My Hero Breast Cancer Awareness Shirt features an \r\neye-catching banner emblem design with stars and a pink ribbon to \r\nsingify support and advocacy. Ideal for awareness walks to wear your \r\nsupport. This shirt is a Gildan classic fit ladies t-shirt available \r\nfrom Small to size 3XL. The shirt is made from preshrunk 100% Cotton \r\nJersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: It is \r\nprinted on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception holidays and weekends). &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        ', '', 'Breast Cancer ', '', ''),
 (114, 1, 'Breast Cancer Love Courage Hope Shirt', '&lt;p&gt;Beautiful and inspiring Breast Cancer t-shirt with a pink ribbon \r\ncomprised of butterflies and flowers in shape of an awareness ribbon and\r\n the words Love, Courage and Hope.  Makes an inspiring gift. This shirt \r\nis a Gildan classic fit ladies t-shirt available from Small to size 3XL.\r\n The shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: It is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception holidays and weekends). &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', ''),
-(115, 1, 'Not Going Down Without a Fight Breast Cancer Shirt', 'Not Going Down Without a Fight...Cure Breast Cancer Shirts featuring our\r\n original design with a pink distressed ribbon to signify advocacy. This\r\n shirt is a Gildan classic fit ladies t-shirt available from Small to \r\nsize 3XL. The shirt is made from preshrunk 100% Cotton Jersey and weighs\r\n 6.0 oz. It has taped neck and shoulders. NOTE: It is printed on demand.\r\n &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XLarge 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception holidays and weekends). &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        ', '', 'Breast Cancer ', '', '');
+(115, 1, 'Not Going Down Without a Fight Breast Cancer Shirt', 'Not Going Down Without a Fight...Cure Breast Cancer Shirts featuring our\r\n original design with a pink distressed ribbon to signify advocacy. This\r\n shirt is a Gildan classic fit ladies t-shirt available from Small to \r\nsize 3XL. The shirt is made from preshrunk 100% Cotton Jersey and weighs\r\n 6.0 oz. It has taped neck and shoulders. NOTE: It is printed on demand.\r\n &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XLarge 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception holidays and weekends). &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        ', '', 'Breast Cancer ', '', ''),
+(123, 1, 'Personalize I Wear Lime Green Ribbon Shirt', 'Personalize I Wear a Lime Green Ribbon Shirt for Lymphoma, Lyme Disease,\r\n Muscular Dystrophy, Mental Health and CDKL5 Awareness causes. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;\r\n NOTE: ADD a short name to this &quot;I Wear a Ribbon Design&quot; (e.g. Lisa, \r\nJennifer, Bob, Michael, etc) by requesting it when placing your order in\r\n the &quot;comment&quot; field&quot;. &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand using \r\ndirect to garment printers (see about us for more info). &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;SIZES:  (Please check sizing chart located in the thumbnails above prior to placing order)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Awareness Ribbon is Our © Copyright. All Rights Reserved.            \r\n        ', '', 'Lymphoma', '', '');
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(123, 1, 'Personalize I Wear Lime Green Ribbon Shirt', 'Personalize I Wear a Lime Green Ribbon Shirt for Lymphoma, Lyme Disease,\r\n Muscular Dystrophy, Mental Health and CDKL5 Awareness causes. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;\r\n NOTE: ADD a short name to this &quot;I Wear a Ribbon Design&quot; (e.g. Lisa, \r\nJennifer, Bob, Michael, etc) by requesting it when placing your order in\r\n the &quot;comment&quot; field&quot;. &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand using \r\ndirect to garment printers (see about us for more info). &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;SIZES:  (Please check sizing chart located in the thumbnails above prior to placing order)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Awareness Ribbon is Our © Copyright. All Rights Reserved.            \r\n        ', '', 'Lymphoma', '', ''),
 (116, 1, 'Hope Breast Cancer Awareness Ribbon Shirt', 'HOPE Inspiring Breast Cancer T-Shirt features a beautiful pink ribbon \r\nwith floral accents. This shirt is a Gildan classic fit ladies t-shirt \r\navailable from Small to size 3XL. The shirt is made from preshrunk 100% \r\nCotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: \r\nIt is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception certain holidays and weekends). &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        ', '', 'Breast Cancer ', '', ''),
 (117, 1, 'Breast Cancer I Fight Back...I Fight Hard...I Fight To Win Shirts', 'I Fight Back....I Fight Hard...I Fight to Win slogan on Breast Cancer \r\nAwareness shirts featuring a pink ribbon and lots of defiance too! This \r\nshirt is a Gildan classic fit ladies t-shirt available from Small to \r\nsize 3XL. The shirt is made from preshrunk 100% Cotton Jersey and weighs\r\n 6.0 oz. It has taped neck and shoulders. NOTE: It is printed on demand.\r\n &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception holidays and weekends). &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        ', '', 'Breast Cancer ', '', ''),
 (118, 1, 'This Gal is a Survivor Breast Cancer Shirts', '&lt;p&gt;This Gal is a Survivor Breast Cancer T-Shirt featuring a pink ribbon for\r\n awareness. Show the world that you are a SURVIVOR! This shirt is a \r\nGildan classic fit ladies t-shirt available from Small to size 3XL. The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders. NOTE: It is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;We ship 3 to 5 business days after order is received (exception holidays and weekends). &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message BEFORE placing order \r\nand prior to placing unfavorable reviews. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;PINK Copyright notice will NOT appear on shirt.            \r\n        &lt;/p&gt;', '', 'Breast Cancer ', '', ''),
@@ -2633,14 +2697,14 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (141, 1, 'I Wear a Violet Ribbon For My Hero Hodgkin''s Lymphoma Shirts', 'I Wear a Violet Ribbon For My Hero Hodgkin''s Lymphoma Shirts features a \r\ncombination of scripted and distressed letters and our original draped \r\nstyle violet ribbon to raise awareness and inspire hope.  Wear it at \r\nyour next support cancer event or anytime to show your support to \r\nsomeone affected by Hodgkin''s Lymphoma aka Hodgkin''s Disease.&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit ladies and/or men t-shirt available from \r\nSmall to size 3XL. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: It is printed \r\non demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.', '', 'Hodgkin''s Lymphoma', '', ''),
 (142, 1, 'Hope Love Cure Hodgkin''s Lymphoma Shirts', 'Hope Love Cure Hodgkin''s Lymphoma Shirts features a cool combination of \r\nscripted and distressed letters and our original draped style violet \r\nribbon to raise awareness and inspire hope.  Makes an inspirational gift\r\n for anyone affected by Hodgkin''s Lymphoma aka Hodgkin''s Disease.&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit ladies and/or men t-shirt available from \r\nSmall to size 3XL. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: It is printed \r\non demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
 (143, 1, 'Fuck Hodgkin''s Lymphoma Shirts', 'Say it and mean it! F*ck Lymphoma shirts with a violet ribbon for \r\nHodgkin'' s Lymphoma to take a strong strand against cancer while raising\r\n awareness in a bold way.  This shirt is for the defiant cancer survivor\r\n who loves a bit of bold humor.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic \r\nfit ladies and/or men t-shirt available from Small to size 3XL. The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders. NOTE: It is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
-(144, 1, 'Fighting Hodgkins Lymphoma Cancer Now That''s a Bitch Shirt', 'Fighting Cancer Now That''s a Bitch Shirts with a violet ribbon to \r\nsignify activism and a bit of humor for Hodgkin''s Lymphoma. It features a\r\n bold text design to make a  strong but funny statement while raising \r\nawareness.   We understand the plight of a cancer warrior because we \r\nhave been there.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit ladies and/or\r\n men t-shirt available from Small to size 3XL. The shirt is made from \r\npreshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck and \r\nshoulders. NOTE: It is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', '');
+(144, 1, 'Fighting Hodgkins Lymphoma Cancer Now That''s a Bitch Shirt', 'Fighting Cancer Now That''s a Bitch Shirts with a violet ribbon to \r\nsignify activism and a bit of humor for Hodgkin''s Lymphoma. It features a\r\n bold text design to make a  strong but funny statement while raising \r\nawareness.   We understand the plight of a cancer warrior because we \r\nhave been there.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit ladies and/or\r\n men t-shirt available from Small to size 3XL. The shirt is made from \r\npreshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck and \r\nshoulders. NOTE: It is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
+(145, 1, 'Hodgkin''s Lymphoma Fight Support Shirts', 'Hodgkin''s Lymphoma FIGHT SUPPORT and CURE shirts features an ultra cool \r\ngrunge design with a distressed violet ribbon to raise awareness while \r\nshowing your support.   Makes an ideal gift for those looking to raise \r\nawareness for Hodgkin''s Lymphoma aka Hodgkin''s Disease.  We understand \r\nthe plight of a warrior because we have been there.&lt;br&gt;&lt;br&gt;This shirt is\r\n a Gildan classic fit ladies and/or men t-shirt available from Small to \r\nsize 3XL. The shirt is made from preshrunk 100% Cotton Jersey and weighs\r\n 6.0 oz. It has taped neck and shoulders. NOTE: It is printed on demand.\r\n &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', '');
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(145, 1, 'Hodgkin''s Lymphoma Fight Support Shirts', 'Hodgkin''s Lymphoma FIGHT SUPPORT and CURE shirts features an ultra cool \r\ngrunge design with a distressed violet ribbon to raise awareness while \r\nshowing your support.   Makes an ideal gift for those looking to raise \r\nawareness for Hodgkin''s Lymphoma aka Hodgkin''s Disease.  We understand \r\nthe plight of a warrior because we have been there.&lt;br&gt;&lt;br&gt;This shirt is\r\n a Gildan classic fit ladies and/or men t-shirt available from Small to \r\nsize 3XL. The shirt is made from preshrunk 100% Cotton Jersey and weighs\r\n 6.0 oz. It has taped neck and shoulders. NOTE: It is printed on demand.\r\n &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
 (146, 1, 'Hodgkin''s Lymphoma Butterfly Shirts', 'Hodgkin''s Lymphoma shirts features a butterfly tattoo style design with a\r\n violet ribbon.  Makes an ideal gift for those looking to raise \r\nawareness for Hodgkin''s Lymphoma aka Hodgkin''s Disease. &lt;br&gt;&lt;br&gt;This \r\nshirt is a Gildan classic fit ladies and/or men t-shirt available from \r\nSmall to size 3XL. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: It is printed \r\non demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
-(150, 1, 'Hodgkin''s Lymphoma Being Strong Shirts', 'Hodgkin''s Lymphoma Being Strong is The Only Choice Against Cancer \r\nshirts. It is the perfect gift for the defiant warrior.  Makes an \r\nempowering gift!  It features a banner design with a violet ribbon. \r\nFight on!&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit ladies and/or men \r\nt-shirt available from Small to size 3XL. The shirt is made from \r\npreshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck and \r\nshoulders. NOTE: It is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
 (147, 1, 'Hodgkin''s Lymphoma Tribal Warrior Shorts', 'Hodgkin''s Lymphoma Warrior shirts featuring a super-cool tribal \r\nawareness ribbon.  Perfect for the defiant, ready-to-fight warrior!&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit t-shirt available from Small to size 3XL \r\nin styles for ladies and men. The shirt is made from preshrunk 100% \r\nCotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: \r\nShirt is printed on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Awareness Ribbon is Our © Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
 (148, 1, 'Hodgkin''s Lymphoma I Fought Back and Won Shirt', 'Hodgkin''s Lymphoma I Fought Back...I Fought Hard and I Fought and Won \r\nvictory shirts featuring a violet ribbon to raise awareness for \r\nHodgkin''s Lymphoma while celebrating remission.  Makes an empowering \r\ngift for anyone looking to take a stand against Hodgkin''s Lymphoma. &lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit ladies and/or men t-shirt available from \r\nSmall to size 3XL. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: It is printed \r\non demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
 (149, 1, 'Lime Green Tribal Ribbon Warrior Black T-Shirts', 'Warrior shirts featuring a tribal ribbon  for Lymphoma, Lyme Disease, \r\nMuscular Dystrophy, Mental Health and CDKL5 Awareness causes. Perfect \r\nfor the defiant, ready-to-fight warrior!&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Awareness Ribbon is Our © Copyright. All Rights Reserved.            \r\n        ', '', 'Lymphoma', '', ''),
+(150, 1, 'Hodgkin''s Lymphoma Being Strong Shirts', 'Hodgkin''s Lymphoma Being Strong is The Only Choice Against Cancer \r\nshirts. It is the perfect gift for the defiant warrior.  Makes an \r\nempowering gift!  It features a banner design with a violet ribbon. \r\nFight on!&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit ladies and/or men \r\nt-shirt available from Small to size 3XL. The shirt is made from \r\npreshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck and \r\nshoulders. NOTE: It is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping: After the 24 hour cancellation period has expired, \r\nwe will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
 (151, 1, 'Lime Green Tribal Ribbon Warrior Shirts', 'Warrior shirts featuring a tribal ribbon  for Lymphoma, Lyme Disease, \r\nMuscular Dystrophy, Mental Health and CDKL5 Awareness causes. Perfect \r\nfor the defiant, ready-to-fight warrior!&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Awareness Ribbon is Our © Copyright. All Rights Reserved.            \r\n        ', '', 'Lymphoma', '', ''),
 (153, 1, 'Hodgkin''s Disease Heart Ribbon Shirt', 'Hodgkin''s Lymphoma Heart Ribbon Shirts featuring an inspirational design\r\n with empowering words of Hope, Faith, Cure, Believe, Win, Love,  \r\nAwareness, Strength, Support, Courage and Triumph. The violet awareness \r\nribbon is our exclusive handcrafted ribbon with a diamond-like stud and \r\nis printed on a white shirt.&lt;br&gt;&lt;br&gt;Get the shirt with this empowering \r\nmessage spotlighting our original heart awareness ribbon. Ideal for \r\nawareness walks, awareness events, and any occasion to wear your \r\nsupport.  Perfect as a gift to inspire hope.&lt;br&gt;&lt;br&gt;This shirt is a \r\nGildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor ladies and men. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Awareness Ribbon is Our © Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
 (154, 1, 'Hodgkin''s Lymphoma Heart Ribbon Shirt', 'Hodgkin''s Lymphoma Heart Ribbon Shirts featuring an inspirational design\r\n with empowering words of Hope, Faith, Cure, Believe, Win, Love,  \r\nAwareness, Strength, Support, Courage and Triumph. The violet awareness \r\nribbon is our exclusive handcrafted ribbon with a diamond-like stud and \r\nis printed on a purple shirt.&lt;br&gt;&lt;br&gt;Get the shirt with this empowering \r\nmessage spotlighting our original heart awareness ribbon. Ideal for \r\nawareness walks, awareness events, and any occasion to wear your \r\nsupport.  Perfect as a gift to inspire hope.&lt;br&gt;&lt;br&gt;This shirt is a \r\nGildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor ladies and men. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted on demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Awareness Ribbon is Our © Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
@@ -2663,9 +2727,9 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (173, 1, 'Stronger Than Cancer Blue Ribbon Shirt', 'Stronger Than Cancer Shirt for causes such as Anal Cancer, Colon Cancer,\r\n and Rectal Cancer awareness.  Get the shirt with this empowering \r\nmessage spotlighting our original heart white ribbon outline and printed\r\n on a blue shirt. Ideal for walks, awareness events, and any occasion to\r\n wear your support.  &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies and men. The shirt\r\n is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has \r\ntaped neck and shoulders. NOTE: Shirt is printed on demand using direct \r\nto garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. The Copyright notice on shirt will NOT appear on it.            \r\n        ', '', 'Colon Cancer', '', ''),
 (174, 1, 'Cervical Cancer Strongest Among Us T-Shirt', 'Cervical Cancer Awareness T-Shirt With Powerful Quote:  The Strongest \r\nAmong Us Are The Ones Who Smile Through The Silent Pain, Cry Behind The \r\nClosed Doors and Fight Battles Nobody Knows About.  Design features an \r\nawareness ribbon with eye-catching text.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        ', '', 'Cervical Cancer', '', ''),
 (175, 1, 'Not Going Down Chiari Malformation Shirt', '&lt;p&gt;Not Going Down Without a Fight Chiari Malformation Awareness Shirts \r\nfeaturing a stand-out grunge design with our original purple distressed \r\nribbon.  Printed on a purple shirt! Makes an empowering gift for anyone \r\nlooking to take a stand. Ideal for walks, support events, etc.&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit t-shirt available from Small to size 3XL \r\nin styles for ladies and men. The shirt is made from preshrunk 100% \r\nCotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: \r\nShirt is printed on demand. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews. Thank you\r\n for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. Purple Ribbon is Our Copyright.  Copyright will not appear on shirt.            \r\n        &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;', '', 'Chiari Malformation', '', ''),
-(176, 1, 'Stronger Blue Ribbon Shirt', 'STRONGER Shirt for causes such as Anal Cancer, Colon Cancer, Rectal \r\nCancer, Ankylosing Spondylitis, Arthritis, Dysautonomia, Erb''s Palsy, \r\nHistiocytosis, Huntington''s Disease, Myositis and Guillain Barre \r\nSyndrome awareness.  Get the shirt with this empowering message \r\nspotlighting our original heart white ribbon outline and printed on a \r\nblue shirt. Ideal for walks, awareness events, and any occasion to wear \r\nyour support.  &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies and men. The shirt\r\n is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has \r\ntaped neck and shoulders. NOTE: Shirt is printed on demand using direct \r\nto garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. The Copyright notice on shirt will NOT appear on it.            \r\n        ', '', 'Colon Cancer', '', '');
+(176, 1, 'Stronger Blue Ribbon Shirt', 'STRONGER Shirt for causes such as Anal Cancer, Colon Cancer, Rectal \r\nCancer, Ankylosing Spondylitis, Arthritis, Dysautonomia, Erb''s Palsy, \r\nHistiocytosis, Huntington''s Disease, Myositis and Guillain Barre \r\nSyndrome awareness.  Get the shirt with this empowering message \r\nspotlighting our original heart white ribbon outline and printed on a \r\nblue shirt. Ideal for walks, awareness events, and any occasion to wear \r\nyour support.  &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies and men. The shirt\r\n is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has \r\ntaped neck and shoulders. NOTE: Shirt is printed on demand using direct \r\nto garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. The Copyright notice on shirt will NOT appear on it.            \r\n        ', '', 'Colon Cancer', '', ''),
+(177, 1, 'I Love Someone With Skin Cancer To The Moon and Back and To Infinity and Beyond Shirts', 'Show and wear your support with I Love Someone With Skin Cancer To The \r\nMoon and Back and To Infinity and Beyond shirts featuring a unique \r\ndecorative design with hearts, a moon and a twist to our original black \r\nawareness ribbon.&lt;br&gt;&lt;br&gt;This black shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed after processing\r\n using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES:  (Please check sizing prior to placing order found in the image thumbnails above)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your shirt anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  Currently, rush shipping is not available, so please plan \r\nahead.&lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please send us a \r\nmessage BEFORE placing order and prior to placing unfavorable reviews.  \r\nOur goal is that you''re happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Skin Cancer', '', '');
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(177, 1, 'I Love Someone With Skin Cancer To The Moon and Back and To Infinity and Beyond Shirts', 'Show and wear your support with I Love Someone With Skin Cancer To The \r\nMoon and Back and To Infinity and Beyond shirts featuring a unique \r\ndecorative design with hearts, a moon and a twist to our original black \r\nawareness ribbon.&lt;br&gt;&lt;br&gt;This black shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed after processing\r\n using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES:  (Please check sizing prior to placing order found in the image thumbnails above)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your shirt anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  Currently, rush shipping is not available, so please plan \r\nahead.&lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please send us a \r\nmessage BEFORE placing order and prior to placing unfavorable reviews.  \r\nOur goal is that you''re happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Skin Cancer', '', ''),
 (178, 1, 'I Love Someone With Ovarian Cancer To The Moon and Back and To Infinity and Beyond Shirts', 'Show and wear your support with I Love Someone With Ovarian Cancer To \r\nThe Moon and Back and To Infinity and Beyond shirts featuring a unique \r\ndecorative design with hearts, a moon and a twist to our original teal \r\nawareness ribbon.&lt;br&gt;&lt;br&gt;This black shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed after processing\r\n using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES:  (Please check sizing prior to placing order found in the image thumbnails above)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your shirt anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  Currently, rush shipping is not available, so please plan \r\nahead.&lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please send us a \r\nmessage BEFORE placing order and prior to placing unfavorable reviews.  \r\nOur goal is that you''re happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Ovarian Cancer', '', ''),
 (179, 1, 'I Love Someone With Non-Hodgkin''s Lymphoma To The Moon and Back and To Infinity and Beyond Shirts', 'Show and wear your support with I Love Someone With Non-Hodgkin''s \r\nLymphoma To The Moon and Back and To Infinity and Beyond shirts \r\nfeaturing a unique decorative design with hearts, a moon and a twist to \r\nour original lime green awareness ribbon.&lt;br&gt;&lt;br&gt;This black shirt is a \r\nGildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor ladies and men. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted after processing using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES:  (Please check sizing prior to placing order found in the image thumbnails above)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your shirt anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  Currently, rush shipping is not available, so please plan \r\nahead.&lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please send us a \r\nmessage BEFORE placing order and prior to placing unfavorable reviews.  \r\nOur goal is that you''re happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Lymphoma', '', ''),
 (180, 1, 'I Love Someone With Melanoma Cancer To The Moon and Back and To Infinity and Beyond Shirts', 'Show and wear your support with I Love Someone With Melanoma Cancer To \r\nThe Moon and Back and To Infinity and Beyond shirts featuring a unique \r\ndecorative design with hearts, a moon and a twist to our original black \r\nawareness ribbon.&lt;br&gt;&lt;br&gt;This black shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed after processing\r\n using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES:  (Please check sizing prior to placing order found in the image thumbnails above)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your shirt anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  Currently, rush shipping is not available, so please plan \r\nahead.&lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please send us a \r\nmessage BEFORE placing order and prior to placing unfavorable reviews.  \r\nOur goal is that you''re happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Melanoma', '', ''),
@@ -2686,7 +2750,48 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (195, 1, 'I Love Someone With Appendix Cancer To The Moon and Back and To Infinity and Beyond Shirts', 'Show and wear your support with I Love Someone With Appendix Cancer  To \r\nThe Moon and Back and To Infinity and Beyond shirts featuring a unique \r\ndecorative design with hearts, a moon and a twist to our original amber \r\nawareness ribbon.&lt;br&gt;&lt;br&gt;This black shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed after processing\r\n using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES:  (Please check sizing prior to placing order found in the image thumbnails above)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your shirt anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  Currently, rush shipping is not available, so please plan \r\nahead.&lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please send us a \r\nmessage BEFORE placing order and prior to placing unfavorable reviews.  \r\nOur goal is that you''re happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Appendix Cancer', '', ''),
 (196, 1, 'I Wear a Violet Ribbon Hodgkins Lymphoma Shirt', 'I Wear a Violet Awareness Ribbon Hodgkin''s Lymphoma Shirt featuring our original draped style ribbon.&lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;\r\n ADD a short name to this &quot;I Wear a Ribbon Design&quot; (e.g. Lisa, Jennifer,\r\n Bob, Michael, etc) by requesting it when placing your order in the \r\n&quot;comment&quot; field&quot;. &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies and men. The shirt\r\n is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has \r\ntaped neck and shoulders. NOTE: Shirt is printed on demand using direct \r\nto garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 3 to 5 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Awareness Ribbon is Our © Copyright. All Rights Reserved.            \r\n        ', '', 'Hodgkin''s Lymphoma', '', ''),
 (197, 1, 'Personalize I Wear Lime Green Ribbon Shirt', 'Personalize I Wear a Lime Green Ribbon Shirt for Lymphoma, Lyme Disease,\r\n Muscular Dystrophy, Mental Health and CDKL5 Awareness causes. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;\r\n NOTE: ADD a short name to this &quot;I Wear a Ribbon Design&quot; (e.g. Lisa, \r\nJennifer, Bob, Michael, etc) by requesting it when placing your order in\r\n the &quot;comment&quot; field&quot;. &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed on demand using \r\ndirect to garment printers (see about us for more info). &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;SIZES:  (Please check sizing chart located in the thumbnails above prior to placing order)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  Awareness Ribbon is Our © Copyright. All Rights Reserved.            \r\n        ', '', 'Lymphoma', '', ''),
-(198, 1, 'Appendix Cancer Awareness Heart Ribbon Shirts', 'Appendix Cancer Awareness Heart Ribbon Shirts featuring an \r\ninspirational, original design with words like Faith, Peace, Courage, \r\nLove, Hope, Determination, Strength, Believe and Never Give Up in the \r\nshape of a heart with an amber ribbon.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\nafter processing using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES:  (Please check sizing prior to placing order found in the image thumbnails above)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  Currently rush shipping is not available.&lt;br&gt;&lt;br&gt;Any \r\nrequests, questions or concerns, please send us a message BEFORE placing\r\n order and prior to placing unfavorable reviews.  Our goal is that \r\nyou''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Heart Design is Copyrighted.            \r\n        ', '', 'Apendix Cancer', '', '');
+(201, 1, 'Melanoma Strongest Among Us T-Shirt', 'Melanoma Awareness T-Shirt With Powerful Quote:  The Strongest Among Us \r\nAre The Ones Who Smile Through The Silent Pain, Cry Behind The Closed \r\nDoors and Fight Battles Nobody Knows About.  Design features an \r\nawareness ribbon with eye-catching text.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing below prior to placing order)&lt;br&gt;Size Small 18&quot; Width, 25 Height and 13.75 Sleeve Center Back&lt;br&gt;Size Medium 20&quot; Width, 26 Height and 14.5 Sleeve Center Back&lt;br&gt;Size Large 22 Width, 27 Height and 15.5 Sleeve Center Back&lt;br&gt;Size XL 24&quot; Width, 28 Height and 16.5 Sleeve Center Back&lt;br&gt;Size 2XL 26&quot; Width, 29 Height and 17.5 Sleeve Center Back&lt;br&gt;Size 3XL 28&quot; Width, 30 Height and 18.5 Sleeve Center Back&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprint your order anywhere between 3 to 5 Business Days following payment\r\n clearance. We ship by USPS First Class Mail with delivery confirmation.\r\n Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message before placing order and\r\n prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        ', '', 'Melanoma', '', ''),
+(198, 1, 'Appendix Cancer Awareness Heart Ribbon Shirts', 'Appendix Cancer Awareness Heart Ribbon Shirts featuring an \r\ninspirational, original design with words like Faith, Peace, Courage, \r\nLove, Hope, Determination, Strength, Believe and Never Give Up in the \r\nshape of a heart with an amber ribbon.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\nafter processing using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES:  (Please check sizing prior to placing order found in the image thumbnails above)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  Currently rush shipping is not available.&lt;br&gt;&lt;br&gt;Any \r\nrequests, questions or concerns, please send us a message BEFORE placing\r\n order and prior to placing unfavorable reviews.  Our goal is that \r\nyou''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Heart Design is Copyrighted.            \r\n        ', '', 'Apendix Cancer', '', ''),
+(200, 1, 'Prostate Cancer I''m Not a Super Hero But I Beat Cancer So Close Enough Shirts', 'Prostate Cancer Shirt with slogan &quot;I''m Not a Super Hero But I Beat \r\nCancer So Close Enough&quot; featuring two light blue ribbons to support the \r\ncause while advocating for support.  Get the shirt with this humorous \r\nbut powerful message. Perfect gift for the defiant cancer survivor. \r\nIdeal for awareness walks, cancer events, etc.&lt;br&gt;&lt;br&gt;This shirt is a \r\nGildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor men. The shirt is made from preshrunk 100% Cotton Jersey and weighs \r\n6.0 oz. It has taped neck and shoulders. NOTE: Shirts are printed using \r\nthe direct to garment printing method.&lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  \r\nPlease check sizing chart *before* to placing order. It is found in the \r\nimage thumbnails above. You can also read about the printing process \r\nfound in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 \r\nhour cancellation period has expired, we will process and prepare your \r\norder for shipment anywhere between 5 to 7 Business Days following \r\npayment clearance. We ship by USPS First Class Mail with delivery \r\nconfirmation. Two or more shirts get shipped by U.S. Priority mail.  \r\nBusiness days excludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any \r\nquestions or concerns, please send us a message BEFORE placing order and\r\n prior to placing unfavorable reviews.  Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration. ', '', 'Prostate Cancer', '', ''),
+(202, 1, 'Melanoma and Skin Cancer Awareness Heart Ribbon Shirts', 'Melanoma and Skin Cancer shirts featuring an eye-catching heart ribbon \r\nwith a starburst. Ideal for awareness events, support groups or anytime \r\nto support your cause.&lt;br&gt;&lt;br&gt;This is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies and men. The shirt\r\n is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has \r\ntaped neck and shoulders. NOTE: Shirt is printed using direct to garment\r\n printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:  Please DOUBLE check sizing chart\r\n located in the image thumbnails prior to placing order as we do not \r\noffer refunds or exchanges for choosing the wrong size.  T-shirts are \r\nmade to order so study the chart and/or SIZE up as t-shirts may run a \r\nlittle small for some individuals.  You can also read about how we print\r\n the shirts in the image thumbnails. All information is also in the \r\npolicies section, so please read before you buy.&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 3 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. 2+ shirts get shipped by U.S. Priority Mail.  \r\nBusiness days excludes weekends and certain holidays.  - More info in \r\nthe policies section.&lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please\r\n send us a message BEFORE placing order and prior to placing unfavorable\r\n reviews.  Our goal is that you''re happy with your shirt. Thank you for \r\nyour consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted            \r\n        ', '', 'Melanoma', '', ''),
+(203, 1, 'Colon Cancer Heart Ribbon Shirts (Arthritis, Dysautonomia, Rectal Cancer, Huntington''s Disease)', 'Colon Cancer Shirts featuring an eye-catching heart ribbon with a \r\nstarburst.  This unique blue ribbon design signifies advocacy for \r\nAnkylosing Spondylitis, ARDS (Acute respiratory distress syndrome), \r\nArthritis, Chronic Fatigue Syndrome, Dysautonomia, Erb''s Palsy, Guillain\r\n Barre Syndrome, Histiocytosis, Huntington''s Disease, Myositis,  Rectal \r\nCancer, Reye''s Syndrome, Sjogren''s Syndrome, etc.  Ideal for awareness \r\nevents, support groups or any occasion.&lt;br&gt;&lt;br&gt;This is a Gildan classic \r\nfit t-shirt available from Small to size 3XL in styles for ladies and \r\nmen. The shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 \r\noz. It has taped neck and shoulders. NOTE: Shirt is printed using direct\r\n to garment printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:  Please DOUBLE check \r\nsizing chart located in the image thumbnails prior to placing order as \r\nwe do not offer refunds or exchanges for choosing the wrong size.  \r\nT-shirts are made to order so study the chart and/or SIZE up as t-shirts\r\n may run a little small for some individuals.  You can also read about \r\nhow we print the shirts in the image thumbnails. All information is also\r\n in the policies section, so please read before you buy.&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 3 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. 2+ shirts get shipped by U.S. Priority Mail.  \r\nBusiness days excludes weekends and certain holidays.  - More info in \r\nthe policies section.&lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please\r\n send us a message BEFORE placing order and prior to placing unfavorable\r\n reviews.  Our goal is that you''re happy with your shirt. Thank you for \r\nyour consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Colon Cancer', '', ''),
+(204, 1, 'Heart Ribbon Shirts Blood Cancer, Heart Disease, AIDS, Vasculitis and Stroke Awareness', 'Blood Cancer shirts featuring an eye-catching heart ribbon with a \r\nstarburst.  This unique red ribbon design also  signifies advocacy for \r\nother causes such as AIDS, Cardiovascular Disease, Epidermolysis \r\nBullosa, Heart Disease, Hemophilia, High Blood Pressure , HIV, \r\nMyeloproliferative Neoplasms, Pulmonary Embolism, Stroke Disease and \r\nVasculitis.  Ideal for awareness events, support groups or any occasion.\r\n &lt;br&gt;&lt;br&gt;This is a Gildan classic fit t-shirt available from Small to \r\nsize 3XL in styles for ladies and men. The shirt is made from preshrunk \r\n100% Cotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. \r\nNOTE: Shirt is printed using direct to garment printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:\r\n  Please DOUBLE check sizing chart located in the image thumbnails prior\r\n to placing order as we do not offer refunds or exchanges for choosing \r\nthe wrong size.  T-shirts are made to order so study the chart and/or \r\nSIZE up as t-shirts may run a little small for some individuals.  You \r\ncan also read about how we print the shirts in the image thumbnails. All\r\n information is also in the policies section, so please read before you \r\nbuy.&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation period \r\nhas expired, we will process and prepare your order for shipment \r\nanywhere between 3 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. 2+ shirts get \r\nshipped by U.S. Priority Mail.  Business days excludes weekends and \r\ncertain holidays.  - More info in the policies section.&lt;br&gt;&lt;br&gt;Any \r\nrequests, questions or concerns, please send us a message BEFORE placing\r\n order and prior to placing unfavorable reviews.  Our goal is that \r\nyou''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Blood Cancer', '', ''),
+(205, 1, 'Lung Cancer Heart Ribbon Shirts (Emphysema, Lung Disease, Mesothelioma, Retinoblastoma, SCID and Scoliosis)', 'Lung Cancer shirts featuring an eye-catching heart ribbon with a \r\nstarburst.  This unique white ribbon design also  signifies advocacy for\r\n other causes such as Bone Cancer, Bone Disease, Emphysema, Lung \r\nDisease, Mesothelioma, Osteoporosis, Postpartum Depression, \r\nRetinoblastoma, SCID (Severe combined immunodeficiency) and Scoliosis.  \r\nIdeal for awareness events, support groups or any occasion. &lt;br&gt;&lt;br&gt;This\r\n is a Gildan classic fit t-shirt available from Small to size 3XL in \r\nstyles for ladies and men. The shirt is made from preshrunk 100% Cotton \r\nJersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt \r\nis printed using direct to garment printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:\r\n  Please DOUBLE check sizing chart located in the image thumbnails prior\r\n to placing order as we do not offer refunds or exchanges for choosing \r\nthe wrong size.  T-shirts are made to order so study the chart and/or \r\nSIZE up as t-shirts may run a little small for some individuals.  You \r\ncan also read about how we print the shirts in the image thumbnails. All\r\n information is also in the policies section, so please read before you \r\nbuy.&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation period \r\nhas expired, we will process and prepare your order for shipment \r\nanywhere between 3 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. 2+ shirts get \r\nshipped by U.S. Priority Mail.  Business days excludes weekends and \r\ncertain holidays.  - More info in the policies section.&lt;br&gt;&lt;br&gt;Any \r\nrequests, questions or concerns, please send us a message BEFORE placing\r\n order and prior to placing unfavorable reviews.  Our goal is that \r\nyou''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted            \r\n        ', '', 'Lung Cancer', '', ''),
+(206, 1, 'Brain Cancer Heart Ribbon Shirts (Brain Tumor, Diabetes, Parkinson''s Disease)', 'Brain Cancer shirts featuring an eye-catching heart ribbon. This unique \r\ngrey ribbon signifies  advocacy for causes such as Asthma, Brain \r\nDisorders, Brain Tumor, Diabetes, Neurological Disorders and Parkinson''s\r\n Disease. Ideal for awareness events, support groups or any occasion.  &lt;br&gt;&lt;br&gt;This\r\n is a Gildan classic fit t-shirt available from Small to size 3XL in \r\nstyles for ladies and men. The shirt is made from preshrunk 100% Cotton \r\nJersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt \r\nis printed using direct to garment printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:\r\n  Please DOUBLE check sizing chart located in the image thumbnails prior\r\n to placing order as we do not offer refunds or exchanges for choosing \r\nthe wrong size.  T-shirts are made to order so study the chart and/or \r\nSIZE up as t-shirts may run a little small for some individuals.  You \r\ncan also read about how we print the shirts in the image thumbnails. All\r\n information is also in the policies section, so please read before you \r\nbuy.&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation period \r\nhas expired, we will process and prepare your order for shipment \r\nanywhere between 3 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. 2+ shirts get \r\nshipped by U.S. Priority Mail.  Business days excludes weekends and \r\ncertain holidays.  - More info in the policies section.&lt;br&gt;&lt;br&gt;Any \r\nrequests, questions or concerns, please send us a message BEFORE placing\r\n order and prior to placing unfavorable reviews.  Our goal is that \r\nyou''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted            \r\n        ', '', 'Brain Cancer', '', ''),
+(207, 1, 'Brain Cancer Picked The Wrong Chick Shirt', 'Wear it with a fighter attitude with our line of Brain Cancer Picked The\r\n Wrong Chick shirts featuring our originally illustrated (copyrighted) \r\nchick wearing a head scarf and a gray awareness ribbon to support her \r\ncause and raise awareness.  Makes a perfect gift for the warrior in your\r\n life.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit ladies t-shirt \r\n(feminine inspired pattern) available from size small to size 3XL.  The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders.  NOTE: Shirts are printed using the direct\r\n to garment printing method.&lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:  Please DOUBLE \r\ncheck sizing chart located in the image thumbnails prior to placing \r\norder as we do not offer refunds or exchanges for choosing the wrong \r\nsize.  T-shirts are made to order so study the chart and/or SIZE up as \r\nt-shirts may run a little small for some individuals.  You can also read\r\n about how we print the shirts in the image thumbnails. All information \r\nis also in the policies section, so please read before you buy.&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Two or more shirts get shipped by U.S. Priority \r\nmail.  Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message before placing order \r\nand prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  © Chick Illustration is Our Copyright.  All Rights Reserved.', '', 'Brain Cancer', '', '');
+INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+(208, 1, 'Carcinoid Cancer For My Hero Shirts (Ehlers-Danlos Syndrome and Neuroendocrine Cancer )', 'For My Hero Carcinoid Cancer Shirts featuring a zebra awareness ribbon \r\nwith floral accents and a butterfly.  This unique zebra ribbon design \r\nalso  signifies advocacy for other causes such as Ehlers-Danlos Syndrome\r\n and Neuroendocrine Cancer.&amp;nbsp; Ideal for awareness events, support groups \r\nor anytime to support your hero while raising awareness.&lt;br&gt;&lt;br&gt;This is a\r\n Gildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor ladies and men. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted using direct to garment printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:  \r\nPlease DOUBLE check sizing chart located in the image thumbnails prior \r\nto placing order as we do not offer refunds or exchanges for choosing \r\nthe wrong size.  T-shirts are made to order so study the chart and/or \r\nSIZE up as t-shirts may run a little small for some individuals.  You \r\ncan also read about how we print the shirts in the image thumbnails. All\r\n information is also in the policies section, so please read before you \r\nbuy.&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation period \r\nhas expired, we will process and prepare your order for shipment \r\nanywhere between 3 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. 2+ shirts get \r\nshipped by U.S. Priority Mail.  Business days excludes weekends and \r\ncertain holidays.   &lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please \r\nsend us a message BEFORE placing order and prior to placing unfavorable \r\nreviews.  Our goal is that you''re happy with your shirt. Thank you for \r\nyour consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Carcinoid Cancer', '', ''),
+(209, 1, 'Brain Cancer For My Hero Shirts (Brain Tumor, Diabetes, Parkinson''s Disease)', 'For My Hero Brain Cancer shirts featuring our original grey awareness \r\nribbon with floral accents and a butterfly.    This unique grey ribbon \r\nsignifies  advocacy for causes such as Asthma, Brain Disorders, Brain \r\nTumor, Diabetes, Neurological Disorders and Parkinson''s Disease. Ideal \r\nfor awareness events, support groups or anytime to support your hero and\r\n raise awareness.&lt;br&gt;&lt;br&gt;This is a Gildan classic fit t-shirt available \r\nfrom Small to size 3XL in styles for ladies and men. The shirt is made \r\nfrom preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck \r\nand shoulders. NOTE: Shirt is printed using direct to garment printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:\r\n  Please DOUBLE check sizing chart located in the image thumbnails prior\r\n to placing order as we do not offer refunds or exchanges for choosing \r\nthe wrong size.  T-shirts are made to order so study the chart and/or \r\nSIZE up as t-shirts may run a little small for some individuals.  You \r\ncan also read about how we print the shirts in the image thumbnails. All\r\n information is also in the policies section, so please read before you \r\nbuy.&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation period \r\nhas expired, we will process and prepare your order for shipment \r\nanywhere between 3 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. 2+ shirts get \r\nshipped by U.S. Priority Mail.  Business days excludes weekends and \r\ncertain holidays.   &lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please \r\nsend us a message BEFORE placing order and prior to placing unfavorable \r\nreviews.  Our goal is that you''re happy with your shirt. Thank you for \r\nyour consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Brain Cancer', '', ''),
+(210, 1, 'Lung Cancer For My Hero Shirts (Emphysema, Lung Disease, Mesothelioma, Retinoblastoma, SCID and Scoliosis)', 'For My Hero Lung Cancer shirts featuring our original awareness ribbon \r\nwith floral accents and a butterfly.  This unique white ribbon design \r\nalso  signifies advocacy for other causes such as Bone Cancer, Bone \r\nDisease, Emphysema, Lung Disease, Mesothelioma, Osteoporosis, Postpartum\r\n Depression, Retinoblastoma, SCID (Severe combined immunodeficiency) and\r\n Scoliosis.  Ideal for awareness events, support groups or anytime \r\nsupport your  hero.&lt;br&gt;&lt;br&gt;This is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies and men. The shirt\r\n is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has \r\ntaped neck and shoulders. NOTE: Shirt is printed using direct to garment\r\n printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:  Please DOUBLE check sizing chart\r\n located in the image thumbnails prior to placing order as we do not \r\noffer refunds or exchanges for choosing the wrong size.  T-shirts are \r\nmade to order so study the chart and/or SIZE up as t-shirts may run a \r\nlittle small for some individuals.  You can also read about how we print\r\n the shirts in the image thumbnails. All information is also in the \r\npolicies section, so please read before you buy.&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 3 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. 2+ shirts get shipped by U.S. Priority Mail.  \r\nBusiness days excludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any \r\nrequests, questions or concerns, please send us a message BEFORE placing\r\n order and prior to placing unfavorable reviews.  Our goal is that \r\nyou''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Lung Cancer', '', ''),
+(211, 1, 'I''ll Never Give Up I''m Fighting To Win Shirts for Blood Cancer, Heart Disease, AIDS, Vasculitis and Stroke Awareness', 'For My Hero Blood Cancer shirts featuring our original awareness ribbon \r\nwith floral accents and a butterfly.  This unique red ribbon design also\r\n  signifies advocacy for other causes such as AIDS, Cardiovascular \r\nDisease, Epidermolysis Bullosa, Heart Disease, Hemophilia, High Blood \r\nPressure , HIV, Myeloproliferative Neoplasms, Pulmonary Embolism, Stroke\r\n Disease and Vasculitis.  Ideal for awareness events, support groups or \r\nanytime to take a stand for your cause.  &lt;br&gt;&lt;br&gt;This is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\nusing direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  \r\nPlease check sizing chart prior to placing order. It is found in the \r\nimage thumbnails above. You can also read about the printing process \r\nfound in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 \r\nhour cancellation period has expired, we will process and prepare your \r\norder for shipment anywhere between 3 to 7 Business Days following \r\npayment clearance. We ship by USPS First Class Mail with delivery \r\nconfirmation. 2+ shirts get shipped by U.S. Priority Mail.  Business \r\ndays excludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any requests, \r\nquestions or concerns, please send us a message BEFORE placing order and\r\n prior to placing unfavorable reviews.  Our goal is that you''re happy \r\nwith your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Blood Cancer', '', ''),
+(212, 1, 'Colon Cancer For My Hero Shirts (Arthritis, Dysautonomia, Rectal Cancer, Huntington''s Disease)', 'For My Hero Colon Cancer Shirts featuring a blue awareness ribbon with \r\nfloral accents and a butterfly.  This unique blue ribbon design also  \r\nsignifies advocacy for other causes such as Ankylosing Spondylitis, ARDS\r\n (Acute respiratory distress syndrome), Arthritis, Chronic Fatigue \r\nSyndrome, Dysautonomia, Erb''s Palsy, Guillain Barre Syndrome, \r\nHistiocytosis, Huntington''s Disease, Myositis,  Rectal Cancer, Reye''s \r\nSyndrome, Sjogren''s Syndrome, etc.  Ideal for awareness events, support \r\ngroups or anytime to take a stand for your cause.  &lt;br&gt;&lt;br&gt;This is a \r\nGildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor ladies and men. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted using direct to garment printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:  \r\nPlease DOUBLE check sizing chart located in the image thumbnails prior \r\nto placing order as we do not offer refunds or exchanges for choosing \r\nthe wrong size.  T-shirts are made to order so study the chart and/or \r\nSIZE up as t-shirts may run a little small for some individuals.  You \r\ncan also read about how we print the shirts in the image thumbnails. All\r\n information is also in the policies section, so please read before you \r\nbuy.&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation period \r\nhas expired, we will process and prepare your order for shipment \r\nanywhere between 3 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. 2+ shirts get \r\nshipped by U.S. Priority Mail.  Business days excludes weekends and \r\ncertain holidays.   &lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please \r\nsend us a message BEFORE placing order and prior to placing unfavorable \r\nreviews.  Our goal is that you''re happy with your shirt. Thank you for \r\nyour consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Colon Cancer', '', ''),
+(213, 1, 'Ovarian Cancer For My Hero Shirts (Batten Disease, Myasthenia Gravis, PCOS, Peritoneal Cancer)', 'For My Hero Ovarian Cancer shirts featuring a teal ribbon with floral \r\naccents.  This unique teal ribbon design signifies awareness for causes \r\nsuch as Batten Disease, Gynecologic Cancer, Interstitial Cystitis, \r\nMyasthenia Gravis,  Ovarian Cancer,   PCOS (Polycystic ovary syndrome), \r\nPeritoneal Cancer, Polycystic Kidney Disease (PKD), PTSD (Posttraumatic \r\nStress Disorder), Scleroderma, etc.  Ideal for awareness events, support\r\n groups or anytime to take a stand for your cause.  &lt;br&gt;&lt;br&gt;This is a \r\nGildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor ladies and men. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted using direct to garment printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:  \r\nPlease DOUBLE check sizing chart located in the image thumbnails prior \r\nto placing order as we do not offer refunds or exchanges for choosing \r\nthe wrong size.  T-shirts are made to order so study the chart and/or \r\nSIZE up as t-shirts may run a little small for some individuals.  You \r\ncan also read about how we print the shirts in the image thumbnails. All\r\n information is also in the policies section, so please read before you \r\nbuy.&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation period \r\nhas expired, we will process and prepare your order for shipment \r\nanywhere between 3 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. 2+ shirts get \r\nshipped by U.S. Priority Mail.  Business days excludes weekends and \r\ncertain holidays.   &lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please \r\nsend us a message BEFORE placing order and prior to placing unfavorable \r\nreviews.  Our goal is that you''re happy with your shirt. Thank you for \r\nyour consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.', '', 'Ovarian Cancer', '', ''),
+(214, 1, 'Ovarian Cancer I''ll Never Give Up I''m Fighting To Win Shirts (Batten Disease, Myasthenia Gravis, PCOS, Peritoneal Cancer)', 'Stand defiant against Ovarian Cancer and other teal ribbon causes with  \r\n&quot;I''ll Never Give Up I''m Fighting To Win&quot; shirts featuring our original \r\nbraided style awareness ribbon.  This unique teal ribbon design \r\nsignifies advocacy for causes such as Batten Disease, Gynecologic \r\nCancer, Interstitial Cystitis, Myasthenia Gravis,  Ovarian Cancer,   \r\nPCOS (Polycystic ovary syndrome), Peritoneal Cancer, Polycystic Kidney \r\nDisease (PKD), PTSD (Posttraumatic Stress Disorder), Scleroderma, etc.  \r\nIdeal for awareness events, support groups or anytime to take a stand \r\nfor your cause.  &lt;br&gt;&lt;br&gt;This is a Gildan classic fit t-shirt available \r\nfrom Small to size 3XL in styles for ladies and men. The shirt is made \r\nfrom preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck \r\nand shoulders. NOTE: Shirt is printed using direct to garment printers. &lt;br&gt;&lt;br&gt;✔️✔️SIZES/Printing:\r\n  Please DOUBLE check sizing chart located in the image thumbnails prior\r\n to placing order as we do not offer refunds or exchanges for choosing \r\nthe wrong size.  T-shirts are made to order so study the chart and/or \r\nSIZE up as t-shirts may run a little small for some individuals.  You \r\ncan also read about how we print the shirts in the image thumbnails. All\r\n information is also in the policies section, so please read before you \r\nbuy.&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation period \r\nhas expired, we will process and prepare your order for shipment \r\nanywhere between 3 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. 2+ shirts get \r\nshipped by U.S. Priority Mail.  Business days excludes weekends and \r\ncertain holidays.   &lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please \r\nsend us a message BEFORE placing order and prior to placing unfavorable \r\nreviews.  Our goal is that you''re happy with your shirt. Thank you for \r\nyour consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Ovarian Cancer', '', ''),
+(215, 1, 'Colon Cancer I''ll Never Give Up I''m Fighting To Win Shirts (Arthritis, Dysautonomia, Rectal Cancer, Huntington''s Disease)', 'Stand defiant against Colon Cancer and other blue ribbon causes with  \r\n&quot;I''ll Never Give Up I''m Fighting To Win&quot; shirts featuring our original \r\nbraided style awareness ribbon.  This unique blue ribbon design also  \r\nsignifies advocacy for other causes such as Ankylosing Spondylitis, ARDS\r\n (Acute respiratory distress syndrome), Arthritis, Chronic Fatigue \r\nSyndrome, Dysautonomia, Erb''s Palsy, Guillain Barre Syndrome, \r\nHistiocytosis, Huntington''s Disease, Myositis,  Rectal Cancer, Reye''s \r\nSyndrome, Sjogren''s Syndrome, etc.  Ideal for awareness events, support \r\ngroups or anytime to take a stand for your cause.  &lt;br&gt;&lt;br&gt;This is a \r\nGildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor ladies and men. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; \r\nSIZES/Printing:  Please check sizing chart prior to placing order. It is\r\n found in the image thumbnails above. You can also read about the \r\nprinting process found in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. 2+ shirts get shipped by U.S. Priority Mail.  \r\nBusiness days excludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any \r\nrequests, questions or concerns, please send us a message BEFORE placing\r\n order and prior to placing unfavorable reviews.  Our goal is that \r\nyou''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Colon Cancer', '', ''),
+(216, 1, 'Lung Cancer I''ll Never Give Up I''m Fighting To Win Shirts', 'Stand defiant against Lung Cancer and other pearl white ribbon causes \r\nwith  &quot;I''ll Never Give Up I''m Fighting To Win&quot; shirts featuring our \r\noriginal braided style awareness ribbon.  This unique white ribbon \r\ndesign also  signifies advocacy for other causes such as Bone Cancer, \r\nBone Disease, Emphysema, Lung Disease, Mesothelioma, Osteoporosis, \r\nPostpartum Depression, Retinoblastoma, SCID (Severe combined \r\nimmunodeficiency) and Scoliosis.  Ideal for awareness events, support \r\ngroups or anytime to take a stand for your cause.  &lt;br&gt;&lt;br&gt;This is a \r\nGildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor ladies and men. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; \r\nSIZES/Printing:  Please check sizing chart prior to placing order. It is\r\n found in the image thumbnails above. You can also read about the \r\nprinting process found in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. 2+ shirts get shipped by U.S. Priority Mail.  \r\nBusiness days excludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any \r\nrequests, questions or concerns, please send us a message BEFORE placing\r\n order and prior to placing unfavorable reviews.  Our goal is that \r\nyou''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Lung Cancer', '', ''),
+(217, 1, 'I''ll Never Give Up I''m Fighting To Win Shirts for Blood Cancer, Heart Disease, AIDS, Vasculitis and Stroke Awareness', 'Stand defiant against Blood Cancer and other red ribbon causes with  \r\n&quot;I''ll Never Give Up I''m Fighting To Win&quot; shirts featuring our original \r\nbraided style awareness ribbon.  Ideal for awareness events, support \r\ngroups or anytime to take a stand for your cause.  This unique red \r\nribbon design also  signifies advocacy for other causes such as AIDS, \r\nCardiovascular Disease, Epidermolysis Bullosa, Heart Disease, \r\nHemophilia, High Blood Pressure , HIV, Myeloproliferative Neoplasms, \r\nPulmonary Embolism, Stroke Disease and Vasculitis.&lt;br&gt;&lt;br&gt;This is a \r\nGildan classic fit t-shirt available from Small to size 3XL in styles \r\nfor ladies and men. The shirt is made from preshrunk 100% Cotton Jersey \r\nand weighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is \r\nprinted using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; \r\nSIZES/Printing:  Please check sizing chart prior to placing order. It is\r\n found in the image thumbnails above. You can also read about the \r\nprinting process found in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. 2+ shirts get shipped by U.S. Priority Mail.  \r\nBusiness days excludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any \r\nrequests, questions or concerns, please send us a message BEFORE placing\r\n order and prior to placing unfavorable reviews.  Our goal is that \r\nyou''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Blood Cancer', '', ''),
+(218, 1, 'Brain Cancer Shirts I''ll Never Give Up I''m Fighting To Win (Grey Ribbon Brain Tumor, Diabetes, Parkinson''s Disease)', 'Stand defiant against Brain Cancer and other causes with  &quot;I''ll Never \r\nGive Up I''m Fighting To Win&quot; shirts featuring our original braided style\r\n awareness ribbon.  Ideal for awareness events, support groups or \r\nanytime to take a stand for your cause.  This unique grey ribbon design \r\nalso  signifies  advocacy for other causes such as Asthma, Brain \r\nDisorders, Brain Tumor, Diabetes, Neurological Disorders and Parkinson''s\r\n Disease&lt;br&gt;&lt;br&gt;This is a Gildan classic fit t-shirt available from \r\nSmall to size 3XL in styles for ladies and men. The shirt is made from \r\npreshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck and \r\nshoulders. NOTE: Shirt is printed using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;\r\n SIZES/Printing:  Please check sizing chart prior to placing order. It \r\nis found in the image thumbnails above. You can also read about the \r\nprinting process found in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. 2+ shirts get shipped by U.S. Priority Mail.  \r\nBusiness days excludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any \r\nrequests, questions or concerns, please send us a message BEFORE placing\r\n order and prior to placing unfavorable reviews.  Our goal is that \r\nyou''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Brain Cancer', '', ''),
+(219, 1, 'Melanoma and Skin Cancer Shirts I''ll Never Give Up I''m Fighting To Win', 'Stand defiant against Melanoma and Skin Cancer with  &quot;I''ll Never Give Up\r\n I''m Fighting To Win&quot; shirts featuring our original braided style \r\nawareness ribbon.  Ideal for awareness events, support groups or anytime\r\n to take a stand for your cause.&lt;br&gt;&lt;br&gt; This is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed using direct to \r\ngarment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please check sizing \r\nchart prior to placing order. It is found in the image thumbnails above.\r\n You can also read about the printing process found in the image \r\nthumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation \r\nperiod has expired, we will process and prepare your order for shipment \r\nanywhere between 5 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. 2+ shirts get \r\nshipped by U.S. Priority Mail.  Business days excludes weekends and \r\ncertain holidays.   &lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please \r\nsend us a message BEFORE placing order and prior to placing unfavorable \r\nreviews.  Our goal is that you''re happy with your shirt. Thank you for \r\nyour consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.', '', 'Melanoma', '', ''),
+(220, 1, 'Straight Outta Chemo Purple Shirts', 'A must have for cancer warriors! Straight Outta Chemo Purple Shirt is a \r\nbold and funny slogan perfect to wear during, before and after \r\nchemotherapy treatment.  Makes a great gift for the cancer warrior with a\r\n sense of humor.   The text in the design is slightly distressed making \r\nit super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and men. The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders. NOTE: Shirt is printed on demand using \r\ndirect to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please \r\ncheck sizing chart prior to placing order. It is found in the image \r\nthumbnails above. You can also read about the printing process found in \r\nthe image thumbnails&lt;br&gt;&lt;br&gt;Note regarding shipping:  After the 24 hour \r\ncancellation period has expired, we will process and print your order \r\nanywhere between 3 to 5 Business Days following payment clearance.  We \r\nship by USPS First Class Mail with delivery confirmation.  Business days\r\n excludes weekends and certain holidays.  &lt;br&gt;&lt;br&gt;Any questions or \r\nconcerns, please send us a message before placing order and prior to \r\nplacing unfavorable reviews.  Our goal is that you will be happy with \r\nyour shirt. Thank you for your consideration.            \r\n        ', '', 'Cancer Awareness', '', ''),
+(221, 1, 'Colon Cancer Picked The Wrong Chick Shirt', 'Wear it with a fighter attitude with our line of Colon Cancer Picked The\r\n Wrong Chick shirts featuring our originally illustrated (copyrighted) \r\nchick wearing a head scarf and a blue awareness ribbon to support her \r\ncause and raise awareness.  Makes a perfect gift for the warrior in your\r\n life.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit ladies t-shirt \r\n(feminine inspired pattern) available from size small to size 3XL.  The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders.  NOTE: It is printed using direct to \r\ngarment method.&lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please check sizing \r\nchart prior to placing order. It is found in the image thumbnails above.\r\n You can also read about the printing process found in the image \r\nthumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation \r\nperiod has expired, we will process and print your order anywhere \r\nbetween 5 to 7 Business Days following payment clearance. We ship by \r\nUSPS First Class Mail with delivery confirmation. Business days excludes\r\n weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, \r\nplease send us a message before placing order and prior to placing \r\nunfavorable reviews. Our goal is that you will be happy with your shirt.\r\n Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  © Chick Illustration is Our Copyright.  All Rights Reserved.', '', 'Colon Cancer', '', ''),
+(222, 1, 'Red Ribbon For My Hero Shirts for Heart Disease, Stroke Awareness, Vasculitis and More', 'For My Hero Slogan Shirt for causes such as AIDS, Blood Cancer, Heart \r\nDisease, HIV, Stroke and Vasculitis Awareness.  Get the shirt with this \r\nempowering message spotlighting our original heart white ribbon outline.\r\n The shirt is printed on a red shirt that is attention-getting for your \r\ncause. Ideal for walks, support events, and any occasion to wear your \r\nsupport.  &lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt available \r\nfrom Small to size 3XL in styles for ladies and men. The shirt is made \r\nfrom preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck \r\nand shoulders. NOTE: Shirt is printed on demand using direct to garment \r\nprinters. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please check sizing chart \r\nprior to placing order. It is found in the image thumbnails above. You \r\ncan also read about the printing process found in the image thumbnails&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nBEFORE placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:   ©All Rights Reserved. The Copyright notice on shirt will NOT appear on it.            \r\n        ', '', 'Blood Cancer', '', ''),
+(223, 1, 'Melanoma Cancer Wrong Chick Shirt', 'Wear it with a fighter attitude with our line of Melanoma Cancer Picked \r\nThe Wrong Chick shirts featuring our originally illustrated \r\n(copyrighted) chick wearing a head scarf and a black awareness ribbon to\r\n support her cause and raise awareness.  Makes a perfect gift for the \r\nwarrior in your life.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit ladies \r\nt-shirt (feminine inspired pattern) available from size small to size \r\n3XL.  The shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0\r\n oz. It has taped neck and shoulders.  NOTE: Shirts are printed using \r\nthe direct to garment printing method.&lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  \r\nPlease check sizing chart prior to placing order. It is found in the \r\nimage thumbnails above. You can also read about the printing process \r\nfound in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 \r\nhour cancellation period has expired, we will process and prepare your \r\norder for shipment anywhere between 5 to 7 Business Days following \r\npayment clearance. We ship by USPS First Class Mail with delivery \r\nconfirmation. Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message before placing order \r\nand prior to placing unfavorable reviews. Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;NOTE:  © Chick Illustration is Our Copyright.  All Rights Reserved.            \r\n        ', '', 'Melanoma', '', ''),
+(224, 1, 'Multiple Myeloma Strongest Among Us T-Shirt', 'Multiple Myeloma Awareness T-Shirt With Powerful Quote:  The Strongest \r\nAmong Us Are The Ones Who Smile Through The Silent Pain, Cry Behind The \r\nClosed Doors and Fight Battles Nobody Knows About.  Design features an \r\nawareness ribbon with eye-catching text.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; \r\nSIZES/Printing:  Please check sizing chart prior to placing order. It is\r\n found in the image thumbnails above. You can also read about the \r\nprinting process found in the image thumbnails&lt;br&gt;&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        ', '', 'Multiple Myeloma', '', ''),
+(225, 1, 'Esophageal Cancer Strongest Among Us T-Shirt', 'Esophageal Cancer Awareness T-Shirt With Powerful Quote:  The Strongest \r\nAmong Us Are The Ones Who Smile Through The Silent Pain, Cry Behind The \r\nClosed Doors and Fight Battles Nobody Knows About.  Design features an \r\nawareness ribbon with eye-catching text.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\non demand using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; \r\nSIZES/Printing:  Please check sizing chart prior to placing order. It is\r\n found in the image thumbnails above. You can also read about the \r\nprinting process found in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews. Our goal \r\nis that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        ', '', 'Esophageal Cancer', '', ''),
+(226, 1, 'I Love Someone With Skin Cancer To The Moon and Back and To Infinity and Beyond Shirts', 'Show and wear your support with I Love Someone With Skin Cancer To The \r\nMoon and Back and To Infinity and Beyond shirts featuring a unique \r\ndecorative design with hearts, a moon and a twist to our original black \r\nawareness ribbon.&lt;br&gt;&lt;br&gt;This black shirt is a Gildan classic fit \r\nt-shirt available from Small to size 3XL in styles for ladies and men. \r\nThe shirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. \r\nIt has taped neck and shoulders. NOTE: Shirt is printed after processing\r\n using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  \r\nPlease check sizing chart prior to placing order. It is found in the \r\nimage thumbnails above. You can also read about the printing process \r\nfound in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 \r\nhour cancellation period has expired, we will process and prepare your \r\norder for shipment anywhere between 5 to 7 Business Days following \r\npayment clearance. We ship by USPS First Class Mail with delivery \r\nconfirmation. Business days excludes weekends and certain holidays. &lt;br&gt;&lt;br&gt;Any\r\n requests, questions or concerns, please send us a message BEFORE \r\nplacing order and prior to placing unfavorable reviews.  Our goal is \r\nthat you''re happy with your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Ribbon Design is Copyrighted.            \r\n        ', '', 'Skin Cancer', '', ''),
+(227, 1, 'Teal Tribal Warrior Ribbon Shirts', 'Teal Awareness Heart Ribbon Shirts for causes such as Gynecologic \r\nCancer, Interstitial Cystitis, Myasthenia Gravis, Ovarian Cancer, PCOS \r\n(Polycystic ovary syndrome), Polycystic Kidney Dsease, Peritoneal \r\nCancer, Scleroderma and Tourette Syndrome.   This original empowering \r\ndesign features words like Faith, Peace, Courage, Love, Hope, \r\nDetermination, Strength, Believe and Never Give Up in the shape of a \r\nheart.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt available from \r\nSmall to size 3XL in styles for ladies and men. The shirt is made from \r\npreshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck and \r\nshoulders. NOTE: Shirt is printed after processing using direct to \r\ngarment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please check sizing \r\nchart prior to placing order. It is found in the image thumbnails above.\r\n You can also read about the printing process found in the image \r\nthumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation \r\nperiod has expired, we will process and prepare your order for shipment \r\nanywhere between 5 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. Business days \r\nexcludes weekends and certain holidays.  &lt;br&gt;&lt;br&gt;Any requests, questions\r\n or concerns, please send us a message BEFORE placing order and prior to\r\n placing unfavorable reviews.  Our goal is that you''re happy with your \r\nshirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Heart Design is Copyrighted.            \r\n        ', '', 'Ovarian Cancer', '', ''),
+(228, 1, 'Grey Awareness Ribbon Heart Shirts', 'Grey Awareness Heart Ribbon Shirts for causes such as Brain Cancer, \r\nBrain Tumor, Diabetes, Parkinson''s Disease and Asthma Awareness.   This \r\noriginal empowering design features words like Faith, Peace, Courage, \r\nLove, Hope, Determination, Strength, Believe and Never Give Up in the \r\nshape of a heart.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt \r\navailable from Small to size 3XL in styles for ladies and men. The shirt\r\n is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It has \r\ntaped neck and shoulders. NOTE: Shirt is printed after processing using \r\ndirect to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please \r\ncheck sizing chart prior to placing order. It is found in the image \r\nthumbnails above. You can also read about the printing process found in \r\nthe image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour \r\ncancellation period has expired, we will process and prepare your order \r\nfor shipment anywhere between 5 to 7 Business Days following payment \r\nclearance. We ship by USPS First Class Mail with delivery confirmation. \r\nBusiness days excludes weekends and certain holidays.   Currently, rush \r\nshipping is not available, so please plan ahead.&lt;br&gt;&lt;br&gt;Any requests, \r\nquestions or concerns, please send us a message BEFORE placing order and\r\n prior to placing unfavorable reviews.  Our goal is that you''re happy \r\nwith your shirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Heart Design is Copyrighted.            \r\n        ', '', 'Brain Cancer', '', ''),
+(229, 1, 'Thyroid Cancer Awareness Heart Ribbon Shirts', 'Thyroid Cancer Awareness Heart Ribbon Shirts with an empowering design \r\nfeaturing words such as Faith, Peace, Courage, Love, Hope, \r\nDetermination, Strength, Believe and Never Give Up in the shape of a \r\nheart.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt available from \r\nSmall to size 3XL in styles for ladies and men. The shirt is made from \r\npreshrunk 100% Cotton Jersey and weighs 6.0 oz. It has taped neck and \r\nshoulders. NOTE: Shirt is printed after processing using direct to \r\ngarment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please check sizing \r\nchart prior to placing order. It is found in the image thumbnails above.\r\n You can also read about the printing process found in the image \r\nthumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation \r\nperiod has expired, we will process and prepare your order for shipment \r\nanywhere between 5 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. Business days \r\nexcludes weekends and certain holidays.   Currently, rush shipping is \r\nnot available, so please plan ahead.&lt;br&gt;&lt;br&gt;Any requests, questions or \r\nconcerns, please send us a message BEFORE placing order and prior to \r\nplacing unfavorable reviews.  Our goal is that you''re happy with your \r\nshirt. Thank you for your consideration.&lt;br&gt;&lt;br&gt;© Awareness Heart Design is Copyrighted.            \r\n        ', '', 'Thyroid Cancer', '', ''),
+(230, 1, 'Yellow Awareness Heart Ribbon Shirts for Endometriosis, Ewing Sarcoma, Spina Bifida Awareness and More', 'Yellow Awareness Heart Ribbon Shirts for causes such as Adenosarcoma, \r\nEndometriosis, Ewing Sarcoma, Osteosarcoma, Sarcoma, Spina Bifida and \r\nTesticular Cancer.  This original empowering design features words like \r\nFaith, Peace, Courage, Love, Hope, Determination, Strength, Believe and \r\nNever Give Up in the shape of a heart.&lt;br&gt;&lt;br&gt;This shirt is a Gildan \r\nclassic fit t-shirt available from Small to size 3XL in styles for \r\nladies and men. The shirt is made from preshrunk 100% Cotton Jersey and \r\nweighs 6.0 oz. It has taped neck and shoulders. NOTE: Shirt is printed \r\nafter processing using direct to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; \r\nSIZES/Printing:  Please check sizing chart prior to placing order. It is\r\n found in the image thumbnails above. You can also read about the \r\nprinting process found in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Business days excludes weekends and certain \r\nholidays. &lt;br&gt;&lt;br&gt;Any requests, questions or concerns, please send us a \r\nmessage BEFORE placing order and prior to placing unfavorable reviews.  \r\nOur goal is that you''re happy with your shirt. Thank you for your \r\nconsideration.&lt;br&gt;&lt;br&gt;Awareness Heart Design is Copyrighted.            \r\n        ', '', 'Endometriosis', '', ''),
+(231, 1, 'Straight Outta Chemo Tall Shirts For Men', '&lt;p&gt;Straight Outta Chemo Shirts for Men (TALL SIZES) is a bold and funny \r\nslogan perfect to wear as a cancer survivor.  Makes a great gift for the\r\n cancer warrior with a sense of humor.   The text in the design is \r\nslightly distressed making it super-cool to wear.  **We do have regular \r\nsizes too in a separate listing. Convo us if you can''t find it**&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit t-shirt for *TALL MEN* sizes available \r\nfrom XL to size 3XL in styles for men. The shirt is made from preshrunk \r\n100% Cotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. \r\nNOTE: Shirt is printed during processing time using direct to garment \r\nprinters. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing prior to placing order available in the image thumbnails)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        &lt;/p&gt;', '', 'Cancer Awareness', '', ''),
+(232, 1, 'Straight Outta Cancer Tall Shirts', 'Straight Outta Cancer Shirt for men (TALL SIZES) is a bold and funny \r\nslogan perfect to wear as a cancer survivor.  Makes a great gift for the\r\n cancer warrior with a sense of humor.   The text in the design is \r\nslightly distressed making it super-cool to wear.  **We do have regular \r\nsizes too in a separate listing. Convo us if you can''t find it**&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit t-shirt for *TALL MEN* sizes available \r\nfrom XL to size 3XL in styles for men. The shirt is made from preshrunk \r\n100% Cotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. \r\nNOTE: Shirt is printed during processing time using direct to garment \r\nprinters. &lt;br&gt;&lt;br&gt;SIZES:  (Please check sizing prior to placing order available in the image thumbnails)&lt;br&gt;&lt;br&gt;Note\r\n regarding shipping:  After the 24 hour cancellation period has expired,\r\n we will process and print your order anywhere between 5 to 7 Business \r\nDays following payment clearance.  We ship by USPS First Class Mail with\r\n delivery confirmation.  Business days excludes weekends and certain \r\nholidays.  &lt;br&gt;&lt;br&gt;Any questions or concerns, please send us a message \r\nbefore placing order and prior to placing unfavorable reviews.  Our goal\r\n is that you will be happy with your shirt. Thank you for your \r\nconsideration.            \r\n        ', '', 'Cancer Awareness', '', ''),
+(234, 1, 'Straight Outta Cancer Black Shirts', 'A must have for cancer warriors! Straight Outta Cancer Black Shirt is a \r\nbold and funny slogan perfect to wear during, before and after \r\nchemotherapy treatment.  Makes a great gift for the cancer warrior with a\r\n sense of humor.   The text in the design is slightly distressed making \r\nit super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and men. The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders. NOTE: Shirt is using direct to garment \r\nprinters. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please check sizing chart \r\nprior to placing order. It is found in the image thumbnails above. You \r\ncan also read about the printing process found in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Two or more shirts get shipped by U.S. Priority \r\nmail.  Business days excludes weekends and certain holidays.    &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message before placing order \r\nand prior to placing unfavorable reviews.  Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        ', '', 'Cancer Awareness', '', ''),
+(235, 1, 'Straight Outta Cancer Colon Cancer and Rectal Cancer Shirts', '&lt;p&gt;A must have for cancer warriors! Straight Outta Cancer  Blue Shirt is a \r\nbold and funny slogan perfect to wear during, before and after \r\nchemotherapy treatment.  Makes a great gift for the cancer warrior with a\r\n sense of humor.   The text in the design is slightly distressed making \r\nit super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and men. The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders. NOTE: Shirt is printed on demand using \r\ndirect to garment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please \r\ncheck sizing chart prior to placing order. It is found in the image \r\nthumbnails above. You can also read about the printing process found in \r\nthe image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour \r\ncancellation period has expired, we will process and prepare your order \r\nfor shipment anywhere between 5 to 7 Business Days following payment \r\nclearance. We ship by USPS First Class Mail with delivery confirmation. \r\nTwo or more shirts get shipped by U.S. Priority mail.  Business days \r\nexcludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any questions or \r\nconcerns, please send us a message before placing order and prior to \r\nplacing unfavorable reviews.  Our goal is that you will be happy with \r\nyour shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Colon Cancer', '', ''),
+(237, 1, 'Straight Outta Cancer Shirts for Blood Cancer Survivors', '&lt;p&gt;A must have for cancer warriors! Straight Outta Cancer Red Shirt is a \r\nbold and funny slogan perfect to wear during, before and after \r\nchemotherapy treatment.  Makes a great gift for the cancer warrior with a\r\n sense of humor.   The text in the design is slightly distressed making \r\nit super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and men. The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders. NOTE: Shirts are printed using the direct \r\nto garment printing method.&lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please \r\ncheck sizing chart prior to placing order. It is found in the image \r\nthumbnails above. You can also read about the printing process found in \r\nthe image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour \r\ncancellation period has expired, we will process and prepare your order \r\nfor shipment anywhere between 5 to 7 Business Days following payment \r\nclearance. We ship by USPS First Class Mail with delivery confirmation. \r\nTwo or more shirts get shipped by U.S. Priority mail.  Business days \r\nexcludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any questions or \r\nconcerns, please send us a message before placing order and prior to \r\nplacing unfavorable reviews.  Our goal is that you will be happy with \r\nyour shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Cancer Awareness', '', '');
+INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+(238, 1, 'Straight Outta Cancer Yellow Shirts for Sarcoma Survivors', 'A must have for cancer warriors! Straight Outta Cancer Yellow Shirt is a\r\n bold and funny slogan perfect to wear during, before and after \r\nchemotherapy treatment.  Makes a great gift for the cancer warrior with a\r\n sense of humor.   The text in the design is slightly distressed making \r\nit super-cool to wear.   &lt;br&gt;&lt;br&gt;NOTE: yellow shirts vary in color hue for women in men.&lt;br&gt;&lt;br&gt;This\r\n shirt is a Gildan classic fit t-shirt available from Small to size 3XL \r\nin styles for ladies and men. The shirt is made from preshrunk 100% \r\nCotton Jersey and weighs 6.0 oz. It has taped neck and shoulders. NOTE: \r\nShirts are printed using the direct to garment printing method.&lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt;\r\n SIZES/Printing:  Please check sizing chart prior to placing order. It \r\nis found in the image thumbnails above. You can also read about the \r\nprinting process found in the image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping:\r\n After the 24 hour cancellation period has expired, we will process and \r\nprepare your order for shipment anywhere between 5 to 7 Business Days \r\nfollowing payment clearance. We ship by USPS First Class Mail with \r\ndelivery confirmation. Two or more shirts get shipped by U.S. Priority \r\nmail.  Business days excludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any\r\n questions or concerns, please send us a message before placing order \r\nand prior to placing unfavorable reviews.  Our goal is that you will be \r\nhappy with your shirt. Thank you for your consideration.            \r\n        ', '', 'Cancer Awareness', '', ''),
+(239, 1, 'Straight Outta Cancer Light Gray Shirts For Brain Cancer Survivors', '&lt;p&gt;A must have for cancer warriors! Straight Outta Cancer Gray Shirt is a \r\nbold and funny slogan perfect to wear during, before and after \r\nchemotherapy treatment.  Makes a great gift for the cancer warrior with a\r\n sense of humor.   The text in the design is slightly distressed making \r\nit super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and men. The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders. NOTE: Shirts are printed using the direct \r\nto garment printing method.&lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please \r\ncheck sizing chart prior to placing order. It is found in the image \r\nthumbnails above. You can also read about the printing process found in \r\nthe image thumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour \r\ncancellation period has expired, we will process and prepare your order \r\nfor shipment anywhere between 5 to 7 Business Days following payment \r\nclearance. We ship by USPS First Class Mail with delivery confirmation. \r\nTwo or more shirts get shipped by U.S. Priority mail.  Business days \r\nexcludes weekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any questions or \r\nconcerns, please send us a message before placing order and prior to \r\nplacing unfavorable reviews.  Our goal is that you will be happy with \r\nyour shirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Cancer Awareness', '', ''),
+(240, 1, 'Straight Outta Cancer Green Shirts For Adrenal Cancer, Bile Duct Cancer and Kidney Cancer Survivors', '&lt;p&gt;A must have for cancer warriors! Straight Outta Cancer Green Shirt is a \r\nbold and funny slogan perfect to wear during, before and after \r\nchemotherapy treatment.  Makes a great gift for the cancer warrior with a\r\n sense of humor.   The text in the design is slightly distressed making \r\nit super-cool to wear.&lt;br&gt;&lt;br&gt;This shirt is a Gildan classic fit t-shirt\r\n available from Small to size 3XL in styles for ladies and men. The \r\nshirt is made from preshrunk 100% Cotton Jersey and weighs 6.0 oz. It \r\nhas taped neck and shoulders. NOTE: Shirt is printed  using direct to \r\ngarment printers. &lt;br&gt;&lt;br&gt;&amp;gt;&amp;gt; SIZES/Printing:  Please check sizing \r\nchart prior to placing order. It is found in the image thumbnails above.\r\n You can also read about the printing process found in the image \r\nthumbnails&lt;br&gt;&lt;br&gt;Processing/Shipping: After the 24 hour cancellation \r\nperiod has expired, we will process and prepare your order for shipment \r\nanywhere between 5 to 7 Business Days following payment clearance. We \r\nship by USPS First Class Mail with delivery confirmation. Two or more \r\nshirts get shipped by U.S. Priority mail.  Business days excludes \r\nweekends and certain holidays.   &lt;br&gt;&lt;br&gt;Any questions or concerns, \r\nplease send us a message before placing order and prior to placing \r\nunfavorable reviews.  Our goal is that you will be happy with your \r\nshirt. Thank you for your consideration.            \r\n        &lt;/p&gt;', '', 'Cancer Awareness', '', '');
 
 -- --------------------------------------------------------
 
@@ -2727,7 +2832,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_image` (
   `product_id` int(11) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=2564 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2754 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product_image`
@@ -2737,7 +2842,7 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2446, 154, 'catalog/TS-HL-P-00001/il_570xN.848994057_lm0k.jpg', 0),
 (2445, 153, 'catalog/TS-HL-W-00014/il_570xN.849226086_cktv.jpg', 0),
 (2443, 151, 'catalog/TS-L-W-00009/il_570xN.857113113_sh80.jpg', 0),
-(2438, 150, 'catalog/TS-HL-W-00011/il_570xN.859942049_tdeh.jpg', 0),
+(2564, 150, 'catalog/TS-HL-W-00011/il_570xN.859942049_tdeh.jpg', 0),
 (2437, 149, 'catalog/TS-L-B-00002/il_570xN.857375688_muix.jpg', 0),
 (2436, 148, 'catalog/TS-HL-W-00011/il_570xN.859942049_tdeh.jpg', 0),
 (2439, 147, 'catalog/TS-HL-W-00013/il_570xN.857351232_15zs.jpg', 0),
@@ -2817,7 +2922,98 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2554, 197, 'catalog/TS-L-W-00022/il_570xN.884812039_mc36.jpg', 0),
 (2555, 197, 'catalog/TS-L-W-00022/il_570xN.885047032_45un.jpg', 0),
 (2561, 198, 'catalog/TS-APC-B-00002/il_570xN.883686613_6qv4.jpg', 0),
-(2560, 198, 'catalog/TS-APC-B-00002/il_570xN.883686603_ao0t.jpg', 0);
+(2560, 198, 'catalog/TS-APC-B-00002/il_570xN.883686603_ao0t.jpg', 0),
+(2566, 200, 'catalog/TS-PRC-W-00001/il_570xN.893274048_jtbx.jpg', 0),
+(2565, 200, 'catalog/TS-PRC-W-00001/il_570xN.893033065_gcfc.jpg', 0),
+(2567, 201, 'catalog/TS-ME-W-00001/il_570xN.873588488_7zwq.jpg', 0),
+(2569, 202, 'catalog/TS-ME-SC-W-00001/il_570xN.893070345_fu1h.jpg', 0),
+(2570, 202, 'catalog/TS-ME-SC-W-00001/il_570xN.893311596_5mze.jpg', 0),
+(2571, 203, 'catalog/TS-COL-W-00001/il_570xN.893311596_5mze.jpg', 0),
+(2572, 203, 'catalog/TS-COL-W-00001/il_570xN.893070345_fu1h.jpg', 0),
+(2576, 204, 'catalog/TS-BLC-B-00002/il_570xN.893311596_5mze.jpg', 0),
+(2575, 204, 'catalog/TS-BLC-B-00002/il_570xN.893070345_fu1h.jpg', 0),
+(2580, 205, 'catalog/TS-LUC-B-00002/il_570xN.893311596_5mze.jpg', 0),
+(2579, 205, 'catalog/TS-LUC-B-00002/il_570xN.893070345_fu1h.jpg', 0),
+(2584, 206, 'catalog/TS-BRC-B-00002/il_570xN.893311596_5mze.jpg', 0),
+(2583, 206, 'catalog/TS-BRC-B-00002/il_570xN.893070345_fu1h.jpg', 0),
+(2586, 207, 'catalog/TS-BRC-W-00002/il_570xN.893025727_k39b.jpg', 0),
+(2587, 207, 'catalog/TS-BRC-W-00002/il_570xN.893026087_mx6a.jpg', 0),
+(2591, 208, 'catalog/TS-CAC-W-00001/il_570xN.893311596_5mze.jpg', 0),
+(2590, 208, 'catalog/TS-CAC-W-00001/il_570xN.893070345_fu1h.jpg', 0),
+(2595, 209, 'catalog/TS-BRC-W-00003/il_570xN.893070345_fu1h.jpg', 0),
+(2594, 209, 'catalog/TS-BRC-W-00003/il_570xN.893311596_5mze.jpg', 0),
+(2599, 210, 'catalog/TS-LUC-W-00001/il_570xN.893070345_fu1h.jpg', 0),
+(2598, 210, 'catalog/TS-LUC-W-00001/il_570xN.893311596_5mze.jpg', 0),
+(2603, 211, 'catalog/TS-BLC-W-00001/il_570xN.893311596_5mze.jpg', 0),
+(2602, 211, 'catalog/TS-BLC-W-00001/il_570xN.893070345_fu1h.jpg', 0),
+(2607, 212, 'catalog/TS-COL-W-00002/il_570xN.893311596_5mze.jpg', 0),
+(2606, 212, 'catalog/TS-COL-W-00002/il_570xN.893070345_fu1h.jpg', 0),
+(2608, 213, 'catalog/TS-OC-W-00002/il_570xN.893070345_fu1h.jpg', 0),
+(2609, 213, 'catalog/TS-OC-W-00002/il_570xN.893311596_5mze.jpg', 0),
+(2610, 214, 'catalog/TS-OC-W-00003/il_570xN.893070345_fu1h.jpg', 0),
+(2611, 214, 'catalog/TS-OC-W-00003/il_570xN.893311596_5mze.jpg', 0),
+(2615, 215, 'catalog/TS-COL-W-00003/il_570xN.893311596_5mze.jpg', 0),
+(2614, 215, 'catalog/TS-COL-W-00003/il_570xN.893070345_fu1h.jpg', 0),
+(2619, 216, 'catalog/TS-LUC-W-00002/il_570xN.893311596_5mze.jpg', 0),
+(2618, 216, 'catalog/TS-LUC-W-00002/il_570xN.893070345_fu1h.jpg', 0),
+(2623, 217, 'catalog/TS-BLC-W-00002/il_570xN.893311596_5mze.jpg', 0),
+(2622, 217, 'catalog/TS-BLC-W-00002/il_570xN.893070345_fu1h.jpg', 0),
+(2627, 218, 'catalog/TS-BRC-W-00004/il_570xN.893311596_5mze.jpg', 0),
+(2626, 218, 'catalog/TS-BRC-W-00004/il_570xN.893070345_fu1h.jpg', 0),
+(2629, 219, 'catalog/TS-ME-W-00002/il_570xN.893070345_fu1h.jpg', 0),
+(2630, 219, 'catalog/TS-ME-W-00002/il_570xN.893311596_5mze.jpg', 0),
+(2631, 220, 'catalog/TS-CAA-P-00001/il_570xN.859259108_os3o.jpg', 0),
+(2632, 220, 'catalog/TS-CAA-P-00001/il_570xN.893067917_5p8d.jpg', 0),
+(2633, 220, 'catalog/TS-CAA-P-00001/il_570xN.893220250_9u3u.jpg', 0),
+(2637, 221, 'catalog/TS-COL-W-00004/il_570xN.893309446_qnog.jpg', 0),
+(2636, 221, 'catalog/TS-COL-W-00004/il_570xN.893220348_eaym.jpg', 0),
+(2638, 222, 'catalog/TS-BLC-R-00001/il_570xN.892980161_ketc.jpg', 0),
+(2639, 222, 'catalog/TS-BLC-R-00001/il_570xN.893309496_f6k2.jpg', 0),
+(2641, 223, 'catalog/TS-ME-W-00003/il_570xN.892980389_nuix.jpg', 0),
+(2642, 223, 'catalog/TS-ME-W-00003/il_570xN.893309544_50e7.jpg', 0),
+(2643, 224, 'catalog/TS-MM-W-00001/il_570xN.873589030_r8kj.jpg', 0),
+(2644, 224, 'catalog/TS-MM-W-00001/il_570xN.892981217_tgmx.jpg', 0),
+(2645, 224, 'catalog/TS-MM-W-00001/il_570xN.893068785_28cg.jpg', 0),
+(2646, 225, 'catalog/TS-EC-W-00001/il_570xN.873585960_qahg.jpg', 0),
+(2647, 225, 'catalog/TS-EC-W-00001/il_570xN.893068775_3qsm.jpg', 0),
+(2648, 225, 'catalog/TS-EC-W-00001/il_570xN.893222528_buds.jpg', 0),
+(2652, 226, 'catalog/TS-SKC-B-00001/il_570xN.893070217_csjg.jpg', 0),
+(2651, 226, 'catalog/TS-SKC-B-00001/il_570xN.892983229_lr73.jpg', 0),
+(2656, 227, 'catalog/TS-OC-B-00002/il_570xN.893313312_95fd.jpg', 0),
+(2655, 227, 'catalog/TS-OC-B-00002/il_570xN.893227706_iljr.jpg', 0),
+(2660, 228, 'catalog/TS-BRC-B-00003/il_570xN.893227954_2zdo.jpg', 0),
+(2659, 228, 'catalog/TS-BRC-B-00003/il_570xN.893072271_57e9.jpg', 0),
+(2664, 229, 'catalog/TS-TIC-B-00001/il_570xN.893313696_7rpw.jpg', 0),
+(2663, 229, 'catalog/TS-TIC-B-00001/il_570xN.892987281_t7ea.jpg', 0),
+(2668, 230, 'catalog/TS-END-B-00001/il_570xN.893314182_q2i9.jpg', 0),
+(2667, 230, 'catalog/TS-END-B-00001/il_570xN.893228478_2vj1.jpg', 0),
+(2712, 231, 'catalog/TS-CAA-G-00001/il_570xN.883874194_ll22.jpg', 0),
+(2711, 231, 'catalog/TS-CAA-G-00001/il_570xN.883645251_ezlg.jpg', 0),
+(2710, 231, 'catalog/TS-CAA-G-00001/il_570xN.883881168_ktp5.jpg', 0),
+(2709, 231, 'catalog/TS-CAA-G-00001/il_570xN.893228574_lv44.jpg', 0),
+(2720, 232, 'catalog/TS-CAA-G-00002/il_570xN.893228628_bcnp.jpg', 0),
+(2719, 232, 'catalog/TS-CAA-G-00002/il_570xN.883874194_ll22.jpg', 0),
+(2718, 232, 'catalog/TS-CAA-G-00002/il_570xN.883874140_4t2w.jpg', 0),
+(2717, 232, 'catalog/TS-CAA-G-00002/il_570xN.883638231_kwle.jpg', 0),
+(2721, 75, 'catalog/TS-CAA-BL-00001/il_570xN.893229538_h6r6.jpg', 0),
+(2722, 75, 'catalog/TS-CAA-BL-00001/il_570xN.893314752_rune.jpg', 0),
+(2726, 234, 'catalog/TS-CAA-B-00001/il_570xN.892989605_onoq.jpg', 0),
+(2725, 234, 'catalog/TS-CAA-B-00001/il_570xN.881888728_47xk.jpg', 0),
+(2727, 234, 'catalog/TS-CAA-B-00001/il_570xN.893314852_boya.jpg', 0),
+(2731, 235, 'catalog/TS-COL-BL-00003/il_570xN.892989839_dwt8.jpg', 0),
+(2730, 235, 'catalog/TS-COL-BL-00003/il_570xN.881675661_316o.jpg', 0),
+(2732, 235, 'catalog/TS-COL-BL-00003/il_570xN.893315052_mxrl.jpg', 0),
+(2742, 238, 'catalog/TS-CAA-Y-00001/il_570xN.893074193_stce.jpg', 0),
+(2741, 238, 'catalog/TS-CAA-Y-00001/il_570xN.881915068_rcyw.jpg', 0),
+(2738, 237, 'catalog/TS-CAA-R-00001/il_570xN.893315272_toyt.jpg', 0),
+(2737, 237, 'catalog/TS-CAA-R-00001/il_570xN.893315250_e3y9.jpg', 0),
+(2743, 238, 'catalog/TS-CAA-Y-00001/il_570xN.893315286_oujx.jpg', 0),
+(2747, 239, 'catalog/TS-CAA-G-00003/il_570xN.893074141_qc6i.jpg', 0),
+(2746, 239, 'catalog/TS-CAA-G-00003/il_570xN.881883192_3nef.jpg', 0),
+(2748, 239, 'catalog/TS-CAA-G-00003/il_570xN.893315434_ods0.jpg', 0),
+(2752, 240, 'catalog/TS-CAA-GR-00001/il_570xN.892999785_lieq.jpg', 0),
+(2751, 240, 'catalog/TS-CAA-GR-00001/il_570xN.881915540_9bgh.jpg', 0),
+(2753, 240, 'catalog/TS-CAA-GR-00001/il_570xN.893315520_ghx0.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -2831,7 +3027,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_option` (
   `option_id` int(11) NOT NULL,
   `value` text NOT NULL,
   `required` tinyint(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=376 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=420 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product_option`
@@ -2841,7 +3037,7 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 (240, 64, 11, '', 1),
 (239, 63, 11, '', 1),
 (238, 62, 11, '', 1),
-(237, 61, 11, '', 1),
+(412, 233, 11, '', 1),
 (235, 59, 11, '', 1),
 (234, 58, 11, '', 1),
 (233, 57, 11, '', 1),
@@ -2853,7 +3049,7 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 (244, 68, 11, '', 1),
 (245, 69, 11, '', 1),
 (247, 71, 11, '', 1),
-(248, 72, 11, '', 1),
+(376, 200, 11, '', 1),
 (249, 73, 11, '', 1),
 (250, 74, 11, '', 1),
 (251, 75, 11, '', 1),
@@ -2974,7 +3170,47 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 (371, 195, 11, '', 1),
 (372, 196, 11, '', 1),
 (373, 197, 11, '', 1),
-(374, 198, 11, '', 1);
+(374, 198, 11, '', 1),
+(377, 201, 11, '', 1),
+(378, 202, 11, '', 1),
+(379, 203, 11, '', 1),
+(380, 204, 11, '', 1),
+(381, 205, 11, '', 1),
+(382, 206, 11, '', 1),
+(383, 207, 11, '', 1),
+(384, 208, 11, '', 1),
+(385, 209, 11, '', 1),
+(386, 210, 11, '', 1),
+(387, 211, 11, '', 1),
+(388, 212, 11, '', 1),
+(389, 213, 11, '', 1),
+(390, 214, 11, '', 1),
+(391, 215, 11, '', 1),
+(392, 216, 11, '', 1),
+(393, 217, 11, '', 1),
+(394, 218, 11, '', 1),
+(395, 219, 11, '', 1),
+(396, 220, 11, '', 1),
+(397, 221, 11, '', 1),
+(398, 222, 11, '', 1),
+(399, 223, 11, '', 1),
+(400, 224, 11, '', 1),
+(401, 225, 11, '', 1),
+(402, 226, 11, '', 1),
+(403, 227, 11, '', 1),
+(404, 228, 11, '', 1),
+(405, 229, 11, '', 1),
+(406, 230, 11, '', 1),
+(409, 231, 14, '', 1),
+(407, 231, 11, '', 1),
+(411, 232, 11, '', 1),
+(410, 232, 14, '', 1),
+(413, 234, 11, '', 1),
+(414, 235, 11, '', 1),
+(417, 238, 11, '', 1),
+(416, 237, 11, '', 1),
+(418, 239, 11, '', 1),
+(419, 240, 11, '', 1);
 
 -- --------------------------------------------------------
 
@@ -2996,7 +3232,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_option_value` (
   `points_prefix` varchar(1) NOT NULL,
   `weight` decimal(15,8) NOT NULL,
   `weight_prefix` varchar(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=1769 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2252 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product_option_value`
@@ -3063,18 +3299,18 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (79, 235, 59, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (77, 235, 59, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (78, 235, 59, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(110, 237, 61, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(109, 237, 61, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(108, 237, 61, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(107, 237, 61, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(106, 237, 61, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
-(105, 237, 61, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
-(104, 237, 61, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(103, 237, 61, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(102, 237, 61, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(101, 237, 61, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(111, 237, 61, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
-(112, 237, 61, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2167, 412, 233, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2166, 412, 233, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2165, 412, 233, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2164, 412, 233, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2163, 412, 233, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2162, 412, 233, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2161, 412, 233, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2160, 412, 233, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2159, 412, 233, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2158, 412, 233, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2157, 412, 233, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2156, 412, 233, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (124, 238, 62, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (123, 238, 62, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (122, 238, 62, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
@@ -3183,18 +3419,18 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (230, 247, 71, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
 (231, 247, 71, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (232, 247, 71, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(244, 248, 72, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(243, 248, 72, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(242, 248, 72, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(241, 248, 72, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(240, 248, 72, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(239, 248, 72, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(238, 248, 72, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(237, 248, 72, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(236, 248, 72, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(235, 248, 72, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(234, 248, 72, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(233, 248, 72, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1769, 376, 200, 11, 60, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(1770, 376, 200, 11, 59, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(1771, 376, 200, 11, 58, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(1772, 376, 200, 11, 46, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(1773, 376, 200, 11, 47, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1774, 376, 200, 11, 48, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1775, 376, 200, 11, 51, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(1776, 376, 200, 11, 52, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(1777, 376, 200, 11, 53, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(1778, 376, 200, 11, 55, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(1779, 376, 200, 11, 56, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(1780, 376, 200, 11, 57, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
 (256, 249, 73, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (255, 249, 73, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (254, 249, 73, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
@@ -3219,18 +3455,18 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (259, 250, 74, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
 (258, 250, 74, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (257, 250, 74, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(280, 251, 75, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(279, 251, 75, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(278, 251, 75, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(277, 251, 75, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(276, 251, 75, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
-(275, 251, 75, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
-(274, 251, 75, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(273, 251, 75, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(272, 251, 75, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(271, 251, 75, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(270, 251, 75, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
 (269, 251, 75, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(270, 251, 75, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(271, 251, 75, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(272, 251, 75, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(273, 251, 75, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(274, 251, 75, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(275, 251, 75, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(276, 251, 75, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(277, 251, 75, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(278, 251, 75, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(279, 251, 75, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(280, 251, 75, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (292, 252, 76, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
 (291, 252, 76, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
 (290, 252, 76, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
@@ -3730,9 +3966,9 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (804, 295, 119, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
 (803, 295, 119, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
 (802, 295, 119, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(801, 295, 119, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(800, 295, 119, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+');
+(801, 295, 119, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+');
 INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
+(800, 295, 119, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
 (799, 295, 119, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
 (798, 295, 119, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
 (797, 295, 119, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
@@ -4096,18 +4332,18 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (1159, 325, 149, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (1158, 325, 149, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
 (1157, 325, 149, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
-(1169, 326, 150, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(1170, 326, 150, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(1171, 326, 150, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(1172, 326, 150, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(1173, 326, 150, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(1174, 326, 150, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
-(1175, 326, 150, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(1176, 326, 150, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(1177, 326, 150, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(1178, 326, 150, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
-(1179, 326, 150, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (1180, 326, 150, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1179, 326, 150, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1178, 326, 150, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1177, 326, 150, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1176, 326, 150, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1175, 326, 150, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1174, 326, 150, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1173, 326, 150, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1172, 326, 150, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1171, 326, 150, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1170, 326, 150, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1169, 326, 150, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
 (1216, 329, 153, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (1215, 329, 153, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
 (1209, 329, 153, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
@@ -4444,9 +4680,9 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (1543, 357, 181, 11, 58, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
 (1542, 357, 181, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
 (1541, 357, 181, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
-(1564, 358, 182, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
-(1563, 358, 182, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+');
+(1564, 358, 182, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+');
 INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
+(1563, 358, 182, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
 (1562, 358, 182, 11, 58, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
 (1561, 358, 182, 11, 46, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
 (1560, 358, 182, 11, 47, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
@@ -4648,7 +4884,451 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (1748, 374, 198, 11, 53, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
 (1747, 374, 198, 11, 55, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
 (1746, 374, 198, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
-(1745, 374, 198, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+');
+(1745, 374, 198, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1781, 377, 201, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1782, 377, 201, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1783, 377, 201, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1784, 377, 201, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1785, 377, 201, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1786, 377, 201, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1787, 377, 201, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1788, 377, 201, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1789, 377, 201, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1790, 377, 201, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1791, 377, 201, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1792, 377, 201, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1804, 378, 202, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1803, 378, 202, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1802, 378, 202, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1801, 378, 202, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1800, 378, 202, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1799, 378, 202, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1798, 378, 202, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1797, 378, 202, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1796, 378, 202, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1795, 378, 202, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1794, 378, 202, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1793, 378, 202, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1816, 379, 203, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1815, 379, 203, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1814, 379, 203, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1813, 379, 203, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1812, 379, 203, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1811, 379, 203, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1810, 379, 203, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1809, 379, 203, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1808, 379, 203, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1807, 379, 203, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1806, 379, 203, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1805, 379, 203, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1828, 380, 204, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1827, 380, 204, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1826, 380, 204, 11, 55, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1825, 380, 204, 11, 53, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1824, 380, 204, 11, 52, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1823, 380, 204, 11, 51, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1822, 380, 204, 11, 48, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1821, 380, 204, 11, 47, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1820, 380, 204, 11, 46, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1819, 380, 204, 11, 58, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1818, 380, 204, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1817, 380, 204, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1840, 381, 205, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1839, 381, 205, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1838, 381, 205, 11, 55, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1837, 381, 205, 11, 53, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1836, 381, 205, 11, 52, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1835, 381, 205, 11, 51, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1834, 381, 205, 11, 48, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1833, 381, 205, 11, 47, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1832, 381, 205, 11, 46, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1831, 381, 205, 11, 58, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1830, 381, 205, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1829, 381, 205, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1852, 382, 206, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1851, 382, 206, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1850, 382, 206, 11, 55, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1849, 382, 206, 11, 53, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1848, 382, 206, 11, 52, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1847, 382, 206, 11, 51, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1846, 382, 206, 11, 48, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1845, 382, 206, 11, 47, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(1844, 382, 206, 11, 46, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1843, 382, 206, 11, 58, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1842, 382, 206, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1841, 382, 206, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(1864, 383, 207, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1863, 383, 207, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1862, 383, 207, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1861, 383, 207, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1860, 383, 207, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1859, 383, 207, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1858, 383, 207, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1857, 383, 207, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1856, 383, 207, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1855, 383, 207, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1854, 383, 207, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1853, 383, 207, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1876, 384, 208, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1875, 384, 208, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1874, 384, 208, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1873, 384, 208, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1872, 384, 208, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1871, 384, 208, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1870, 384, 208, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1869, 384, 208, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1868, 384, 208, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1867, 384, 208, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1866, 384, 208, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1865, 384, 208, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1888, 385, 209, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1887, 385, 209, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1886, 385, 209, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1885, 385, 209, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1884, 385, 209, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1883, 385, 209, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1882, 385, 209, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1881, 385, 209, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1880, 385, 209, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1879, 385, 209, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1878, 385, 209, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1877, 385, 209, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1900, 386, 210, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1899, 386, 210, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1898, 386, 210, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1897, 386, 210, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1896, 386, 210, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1895, 386, 210, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1894, 386, 210, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1893, 386, 210, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1892, 386, 210, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1891, 386, 210, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1890, 386, 210, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1889, 386, 210, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1912, 387, 211, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1911, 387, 211, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1910, 387, 211, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1909, 387, 211, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1908, 387, 211, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1907, 387, 211, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1906, 387, 211, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1905, 387, 211, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1904, 387, 211, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1903, 387, 211, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1902, 387, 211, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1901, 387, 211, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1924, 388, 212, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1923, 388, 212, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1922, 388, 212, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1921, 388, 212, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1920, 388, 212, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1919, 388, 212, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1918, 388, 212, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1917, 388, 212, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1916, 388, 212, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1915, 388, 212, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1914, 388, 212, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1913, 388, 212, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1936, 389, 213, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1935, 389, 213, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1934, 389, 213, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1933, 389, 213, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1932, 389, 213, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1931, 389, 213, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1930, 389, 213, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1929, 389, 213, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1928, 389, 213, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1927, 389, 213, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1926, 389, 213, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1925, 389, 213, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1948, 390, 214, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1947, 390, 214, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1946, 390, 214, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1945, 390, 214, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1944, 390, 214, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1943, 390, 214, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1942, 390, 214, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1941, 390, 214, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1940, 390, 214, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1939, 390, 214, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1938, 390, 214, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1937, 390, 214, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1960, 391, 215, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1959, 391, 215, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1958, 391, 215, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1957, 391, 215, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1956, 391, 215, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1955, 391, 215, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1954, 391, 215, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1953, 391, 215, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1952, 391, 215, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1951, 391, 215, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1950, 391, 215, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1949, 391, 215, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1972, 392, 216, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1971, 392, 216, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1970, 392, 216, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1969, 392, 216, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1968, 392, 216, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1967, 392, 216, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1966, 392, 216, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1965, 392, 216, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1964, 392, 216, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1963, 392, 216, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1962, 392, 216, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1961, 392, 216, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1984, 393, 217, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1983, 393, 217, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1982, 393, 217, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1981, 393, 217, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1980, 393, 217, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1979, 393, 217, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1978, 393, 217, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1977, 393, 217, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1976, 393, 217, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1975, 393, 217, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1974, 393, 217, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1973, 393, 217, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1996, 394, 218, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1995, 394, 218, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1994, 394, 218, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1993, 394, 218, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1992, 394, 218, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1991, 394, 218, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1990, 394, 218, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1989, 394, 218, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1988, 394, 218, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1987, 394, 218, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1986, 394, 218, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1985, 394, 218, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2008, 395, 219, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2007, 395, 219, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2006, 395, 219, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2005, 395, 219, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2004, 395, 219, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2003, 395, 219, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2002, 395, 219, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2001, 395, 219, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2000, 395, 219, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1999, 395, 219, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(1998, 395, 219, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(1997, 395, 219, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2020, 396, 220, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2019, 396, 220, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2018, 396, 220, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2017, 396, 220, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2016, 396, 220, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2015, 396, 220, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2014, 396, 220, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2013, 396, 220, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2012, 396, 220, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2011, 396, 220, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2010, 396, 220, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2009, 396, 220, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2032, 397, 221, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2031, 397, 221, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2030, 397, 221, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2029, 397, 221, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2028, 397, 221, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2027, 397, 221, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2026, 397, 221, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2025, 397, 221, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2024, 397, 221, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2023, 397, 221, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2022, 397, 221, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2021, 397, 221, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2044, 398, 222, 11, 57, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(2043, 398, 222, 11, 56, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(2042, 398, 222, 11, 55, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(2041, 398, 222, 11, 53, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(2040, 398, 222, 11, 52, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(2039, 398, 222, 11, 51, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(2038, 398, 222, 11, 48, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2037, 398, 222, 11, 47, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2036, 398, 222, 11, 46, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(2035, 398, 222, 11, 58, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(2034, 398, 222, 11, 59, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(2033, 398, 222, 11, 60, 30, 1, 20.9900, '+', 0, '+', 0.00000000, '+'),
+(2056, 399, 223, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2055, 399, 223, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2054, 399, 223, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2053, 399, 223, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2052, 399, 223, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2051, 399, 223, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2050, 399, 223, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2049, 399, 223, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2048, 399, 223, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2047, 399, 223, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2046, 399, 223, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2045, 399, 223, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2068, 400, 224, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2067, 400, 224, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2066, 400, 224, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2065, 400, 224, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2064, 400, 224, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2063, 400, 224, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2062, 400, 224, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2061, 400, 224, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2060, 400, 224, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2059, 400, 224, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2058, 400, 224, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2057, 400, 224, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2080, 401, 225, 11, 60, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2079, 401, 225, 11, 59, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2078, 401, 225, 11, 58, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2077, 401, 225, 11, 46, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2076, 401, 225, 11, 47, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2075, 401, 225, 11, 48, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2074, 401, 225, 11, 51, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2073, 401, 225, 11, 52, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2072, 401, 225, 11, 53, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2071, 401, 225, 11, 55, 30, 1, 19.9900, '+', 0, '+', 0.00000000, '+'),
+(2070, 401, 225, 11, 56, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2069, 401, 225, 11, 57, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2092, 402, 226, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2091, 402, 226, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2090, 402, 226, 11, 55, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2089, 402, 226, 11, 53, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2088, 402, 226, 11, 52, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2087, 402, 226, 11, 51, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2086, 402, 226, 11, 48, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2085, 402, 226, 11, 47, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2084, 402, 226, 11, 46, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2083, 402, 226, 11, 58, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2082, 402, 226, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2081, 402, 226, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2104, 403, 227, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2103, 403, 227, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2102, 403, 227, 11, 55, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2101, 403, 227, 11, 53, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2100, 403, 227, 11, 52, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2099, 403, 227, 11, 51, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2098, 403, 227, 11, 48, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2097, 403, 227, 11, 47, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2096, 403, 227, 11, 46, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2095, 403, 227, 11, 58, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2094, 403, 227, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2093, 403, 227, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2116, 404, 228, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2115, 404, 228, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2114, 404, 228, 11, 58, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2113, 404, 228, 11, 46, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2112, 404, 228, 11, 47, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2111, 404, 228, 11, 48, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2110, 404, 228, 11, 51, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2109, 404, 228, 11, 52, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2108, 404, 228, 11, 53, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2107, 404, 228, 11, 55, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2106, 404, 228, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2105, 404, 228, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2128, 405, 229, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2127, 405, 229, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2126, 405, 229, 11, 55, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2125, 405, 229, 11, 53, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2124, 405, 229, 11, 52, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2123, 405, 229, 11, 51, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2122, 405, 229, 11, 48, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2121, 405, 229, 11, 47, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2120, 405, 229, 11, 46, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2119, 405, 229, 11, 58, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2118, 405, 229, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2117, 405, 229, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2140, 406, 230, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2139, 406, 230, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2138, 406, 230, 11, 55, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2137, 406, 230, 11, 53, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2136, 406, 230, 11, 52, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2135, 406, 230, 11, 51, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2134, 406, 230, 11, 48, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2133, 406, 230, 11, 47, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2132, 406, 230, 11, 46, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2131, 406, 230, 11, 58, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2130, 406, 230, 11, 59, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2129, 406, 230, 11, 60, 30, 1, 22.9900, '+', 0, '+', 0.00000000, '+'),
+(2154, 411, 232, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2149, 409, 231, 14, 62, 0, 0, 0.0000, '+', 0, '+', 0.00000000, '+'),
+(2148, 409, 231, 14, 63, 0, 0, 0.0000, '+', 0, '+', 0.00000000, '+'),
+(2147, 409, 231, 14, 61, 0, 0, 0.0000, '+', 0, '+', 0.00000000, '+'),
+(2143, 407, 231, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2142, 407, 231, 11, 56, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2141, 407, 231, 11, 55, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2153, 411, 232, 11, 57, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2152, 410, 232, 14, 61, 0, 0, 0.0000, '+', 0, '+', 0.00000000, '+'),
+(2151, 410, 232, 14, 63, 0, 0, 0.0000, '+', 0, '+', 0.00000000, '+'),
+(2150, 410, 232, 14, 62, 0, 0, 0.0000, '+', 0, '+', 0.00000000, '+'),
+(2155, 411, 232, 11, 55, 30, 1, 24.9900, '+', 0, '+', 0.00000000, '+'),
+(2179, 413, 234, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2178, 413, 234, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2177, 413, 234, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2176, 413, 234, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2175, 413, 234, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2174, 413, 234, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2173, 413, 234, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2172, 413, 234, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2171, 413, 234, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2170, 413, 234, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2169, 413, 234, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2168, 413, 234, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2191, 414, 235, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2190, 414, 235, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2189, 414, 235, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2188, 414, 235, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2187, 414, 235, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2186, 414, 235, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2185, 414, 235, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2184, 414, 235, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2183, 414, 235, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2182, 414, 235, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2181, 414, 235, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2180, 414, 235, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2216, 417, 238, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2217, 417, 238, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2218, 417, 238, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2219, 417, 238, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2220, 417, 238, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2221, 417, 238, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2222, 417, 238, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2223, 417, 238, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2224, 417, 238, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2225, 417, 238, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2226, 417, 238, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2227, 417, 238, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2215, 416, 237, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2214, 416, 237, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2213, 416, 237, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2212, 416, 237, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2211, 416, 237, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2210, 416, 237, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2209, 416, 237, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2208, 416, 237, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2207, 416, 237, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2206, 416, 237, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2205, 416, 237, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2204, 416, 237, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2239, 418, 239, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2238, 418, 239, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2237, 418, 239, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2236, 418, 239, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2235, 418, 239, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2234, 418, 239, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2233, 418, 239, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2232, 418, 239, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2231, 418, 239, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2230, 418, 239, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2229, 418, 239, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2228, 418, 239, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2251, 419, 240, 11, 59, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2250, 419, 240, 11, 60, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2249, 419, 240, 11, 58, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2248, 419, 240, 11, 46, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2247, 419, 240, 11, 47, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2246, 419, 240, 11, 48, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2245, 419, 240, 11, 51, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2244, 419, 240, 11, 52, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2243, 419, 240, 11, 53, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2242, 419, 240, 11, 55, 30, 1, 21.9900, '+', 0, '+', 0.00000000, '+'),
+(2241, 419, 240, 11, 56, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+'),
+(2240, 419, 240, 11, 57, 30, 1, 23.9900, '+', 0, '+', 0.00000000, '+');
 
 -- --------------------------------------------------------
 
@@ -4723,7 +5403,6 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (57, 86),
 (58, 60),
 (59, 60),
-(61, 60),
 (62, 60),
 (63, 60),
 (64, 60),
@@ -4733,10 +5412,9 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (68, 68),
 (69, 60),
 (71, 60),
-(72, 60),
 (73, 60),
 (74, 60),
-(75, 60),
+(75, 98),
 (76, 60),
 (77, 73),
 (78, 60),
@@ -4854,7 +5532,53 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (195, 96),
 (196, 71),
 (197, 76),
-(198, 96);
+(198, 96),
+(200, 82),
+(201, 77),
+(202, 77),
+(202, 84),
+(203, 70),
+(204, 66),
+(204, 93),
+(205, 75),
+(206, 67),
+(207, 67),
+(208, 97),
+(209, 67),
+(210, 75),
+(211, 66),
+(212, 70),
+(213, 80),
+(214, 80),
+(215, 70),
+(216, 75),
+(217, 66),
+(218, 67),
+(219, 77),
+(220, 98),
+(221, 70),
+(222, 66),
+(223, 77),
+(224, 78),
+(225, 99),
+(226, 84),
+(227, 80),
+(228, 67),
+(229, 85),
+(230, 65),
+(231, 98),
+(232, 98),
+(233, 60),
+(234, 98),
+(235, 70),
+(237, 66),
+(237, 98),
+(238, 83),
+(238, 98),
+(239, 67),
+(239, 98),
+(240, 95),
+(240, 98);
 
 -- --------------------------------------------------------
 
@@ -4889,7 +5613,7 @@ INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUE
 (57, 0, 0),
 (56, 0, 0),
 (55, 0, 0),
-(61, 0, 0),
+(233, 0, 0),
 (62, 0, 0),
 (63, 0, 0),
 (64, 0, 0),
@@ -4899,7 +5623,7 @@ INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUE
 (68, 0, 0),
 (69, 0, 0),
 (71, 0, 0),
-(72, 0, 0),
+(200, 0, 0),
 (73, 0, 0),
 (74, 0, 0),
 (75, 0, 0),
@@ -5020,7 +5744,45 @@ INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUE
 (195, 0, 0),
 (196, 0, 0),
 (197, 0, 0),
-(198, 0, 0);
+(198, 0, 0),
+(201, 0, 0),
+(202, 0, 0),
+(203, 0, 0),
+(204, 0, 0),
+(205, 0, 0),
+(206, 0, 0),
+(207, 0, 0),
+(208, 0, 0),
+(209, 0, 0),
+(210, 0, 0),
+(211, 0, 0),
+(212, 0, 0),
+(213, 0, 0),
+(214, 0, 0),
+(215, 0, 0),
+(216, 0, 0),
+(217, 0, 0),
+(218, 0, 0),
+(219, 0, 0),
+(220, 0, 0),
+(221, 0, 0),
+(222, 0, 0),
+(223, 0, 0),
+(224, 0, 0),
+(225, 0, 0),
+(226, 0, 0),
+(227, 0, 0),
+(228, 0, 0),
+(229, 0, 0),
+(230, 0, 0),
+(231, 0, 0),
+(232, 0, 0),
+(234, 0, 0),
+(235, 0, 0),
+(238, 0, 0),
+(237, 0, 0),
+(239, 0, 0),
+(240, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -5043,7 +5805,6 @@ INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 (57, 0),
 (58, 0),
 (59, 0),
-(61, 0),
 (62, 0),
 (63, 0),
 (64, 0),
@@ -5053,7 +5814,6 @@ INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 (68, 0),
 (69, 0),
 (71, 0),
-(72, 0),
 (73, 0),
 (74, 0),
 (75, 0),
@@ -5174,7 +5934,47 @@ INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 (195, 0),
 (196, 0),
 (197, 0),
-(198, 0);
+(198, 0),
+(200, 0),
+(201, 0),
+(202, 0),
+(203, 0),
+(204, 0),
+(205, 0),
+(206, 0),
+(207, 0),
+(208, 0),
+(209, 0),
+(210, 0),
+(211, 0),
+(212, 0),
+(213, 0),
+(214, 0),
+(215, 0),
+(216, 0),
+(217, 0),
+(218, 0),
+(219, 0),
+(220, 0),
+(221, 0),
+(222, 0),
+(223, 0),
+(224, 0),
+(225, 0),
+(226, 0),
+(227, 0),
+(228, 0),
+(229, 0),
+(230, 0),
+(231, 0),
+(232, 0),
+(233, 0),
+(234, 0),
+(235, 0),
+(237, 0),
+(238, 0),
+(239, 0),
+(240, 0);
 
 -- --------------------------------------------------------
 
@@ -5653,7 +6453,7 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias` (
   `url_alias_id` int(11) NOT NULL,
   `query` varchar(255) NOT NULL,
   `keyword` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=1067 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1112 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_url_alias`
@@ -5662,10 +6462,11 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias` (
 INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (1032, 'category_id=92', ''),
 (858, 'information_id=4', 'about_us'),
-(1066, 'category_id=90', 'Cancer T-Shirts'),
+(1095, 'category_id=99', ''),
+(1067, 'category_id=90', 'Cancer T-Shirts'),
 (1044, 'category_id=93', ''),
 (1025, 'category_id=91', ''),
-(1006, 'product_id=150', ''),
+(1076, 'category_id=97', ''),
 (1001, 'category_id=86', 'Uterine Cancer'),
 (1000, 'category_id=85', 'Thyroid Cancer'),
 (999, 'category_id=84', 'Skin Cancer'),
@@ -5679,7 +6480,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (984, 'category_id=73', 'Leukemia'),
 (989, 'category_id=78', 'Multiple Myeloma'),
 (985, 'category_id=74', 'Liver Cancer'),
-(889, 'product_id=61', ''),
+(1104, 'product_id=233', ''),
 (983, 'category_id=72', 'Kidney Cancer'),
 (893, 'product_id=65', ''),
 (894, 'product_id=66', ''),
@@ -5697,7 +6498,8 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (982, 'category_id=71', 'Hodgkin''s Lymphoma'),
 (857, 'information_id=6', 'delivery'),
 (842, 'information_id=3', 'privacy'),
-(843, 'information_id=5', 'terms');
+(843, 'information_id=5', 'terms'),
+(1089, 'category_id=98', '');
 
 -- --------------------------------------------------------
 
@@ -10998,7 +11800,7 @@ ALTER TABLE `oc_banner`
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=157;
+  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=161;
 --
 -- AUTO_INCREMENT for table `oc_cart`
 --
@@ -11008,7 +11810,7 @@ ALTER TABLE `oc_cart`
 -- AUTO_INCREMENT for table `oc_category`
 --
 ALTER TABLE `oc_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=97;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=100;
 --
 -- AUTO_INCREMENT for table `oc_country`
 --
@@ -11178,12 +11980,12 @@ ALTER TABLE `oc_module`
 -- AUTO_INCREMENT for table `oc_option`
 --
 ALTER TABLE `oc_option`
-  MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+  MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `oc_option_value`
 --
 ALTER TABLE `oc_option_value`
-  MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=61;
+  MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=64;
 --
 -- AUTO_INCREMENT for table `oc_order`
 --
@@ -11238,7 +12040,7 @@ ALTER TABLE `oc_order_voucher`
 -- AUTO_INCREMENT for table `oc_product`
 --
 ALTER TABLE `oc_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=200;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=241;
 --
 -- AUTO_INCREMENT for table `oc_product_discount`
 --
@@ -11248,17 +12050,17 @@ ALTER TABLE `oc_product_discount`
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2564;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2754;
 --
 -- AUTO_INCREMENT for table `oc_product_option`
 --
 ALTER TABLE `oc_product_option`
-  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=376;
+  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=420;
 --
 -- AUTO_INCREMENT for table `oc_product_option_value`
 --
 ALTER TABLE `oc_product_option_value`
-  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1769;
+  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2252;
 --
 -- AUTO_INCREMENT for table `oc_product_reward`
 --
@@ -11343,7 +12145,7 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1067;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1112;
 --
 -- AUTO_INCREMENT for table `oc_user`
 --
