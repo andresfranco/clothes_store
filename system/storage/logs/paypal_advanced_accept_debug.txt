@@ -1,0 +1,61 @@
+GET: Array
+(
+    [route] => payment/paypal_advanced/accept
+    [AVSZIP] => Y
+    [STATE] => PA
+    [TYPE] => S
+    [PPREF] => 2KM14093V29576410
+    [PAYERID] => A6N2QLK6L5ALY
+    [BILLTOMIDDLENAME] => Mauricio
+    [EMAIL] => koloinotzente@gmail.com
+    [ADDRESSTOSHIP] => Panama
+    [METHOD] => P
+    [SHIPTOCOUNTRY] => PA
+    [TRANSTIME] => 2016-01-12 16:38:58
+    [INVOICE] => INV76
+    [STATETOSHIP] => PA
+    [TOKEN] => EC-3T296663LJ414223D
+    [SHIPTOSTATE] => PA
+    [BILLTOCITY] => Panama
+    [TAX] => 0.00
+    [PAYMENTTYPE] => instant
+    [AVSDATA] => YYY
+    [CITYTOSHIP] => Panama
+    [SECURETOKEN] => RPrVEdJfyTkWKeHRL9k1L3wev
+    [INVNUM] => INV76
+    [CITY] => Panama
+    [BILLTOSTREET] => Panama
+    [RESULT] => 0
+    [TRXTYPE] => S
+    [BILLTOEMAIL] => koloinotzente@gmail.com
+    [BILLTOLASTNAME] => Franco
+    [BILLTONAME] => Andres Franco
+    [SHIPTOCITY] => Panama
+    [LASTNAME] => Franco
+    [TENDER] => P
+    [PNREF] => BRPPCE866078
+    [PHONE] => 3902669
+    [BILLTOFIRSTNAME] => Andres
+    [AMT] => 0.03
+    [CORRELATIONID] => f026318492781
+    [PENDINGREASON] => completed
+    [NAMETOSHIP] => Andres Franco
+    [FEEAMT] => 0.03
+    [BILLTOCOUNTRY] => PA
+    [RESPMSG] => Approved
+    [COUNTRY] => PA
+    [SHIPTOSTREET] => Panama
+    [BILLTOSTATE] => PA
+    [FIRSTNAME] => Andres
+    [SECURETOKENID] => 56959c5c181b54.19143705
+    [AVSADDR] => Y
+    [BILLTOPHONE] => 3902669
+    [NAME] => Andres Franco
+    [COUNTRYTOSHIP] => PA
+    [ADDRESS] => Panama
+)
+
+POST: Array
+(
+)
+

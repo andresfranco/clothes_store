@@ -26,6 +26,8 @@ class ControllerPaymentPPProIframe extends Controller {
 		}
 
 		$data['checkout_method'] = $this->config->get('pp_pro_iframe_checkout_method');
+		
+
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/pp_pro_iframe.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/payment/pp_pro_iframe.tpl', $data);
