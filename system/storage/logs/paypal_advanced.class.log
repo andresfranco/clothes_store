@@ -838,3 +838,87 @@ Array
 
 RESULT=0&SECURETOKEN=PbGEZhb6cM02IRGBD21EXHgN4&SECURETOKENID=56959ff57b1932.56354955&RESPMSG=Approved
 ----------------------------------------------------------------------
+----------------------------------------------------------------------
+getSecureToken
+https://payflowpro.paypal.com
+Array
+(
+    [USER] => andresfranco
+    [VENDOR] => ribbonrevolution
+    [PARTNER] => PayPal
+    [PWD] => wedding2016$
+    [CREATESECURETOKEN] => Y
+    [TRXTYPE] => S
+    [AMT] => 0.06
+    [CURRENCY] => USD
+    [COMPANYNAME] => 
+    [BILLTOFIRSTNAME] => Andres
+    [BILLTOLASTNAME] => Franco
+    [BILLTOSTREET] => Panama
+    [BILLTOCITY] => Panama
+    [BILLTOSTATE] => PA
+    [BILLTOZIP] => 
+    [BILLTOCOUNTRY] => PA
+    [CUSTOM] => ORDID-79
+    [EMAIL] => koloinotzente@gmail.com
+    [PHONENUM] => 3902669
+    [INVNUM] => INV79
+    [RETURNURL] => http://localhost/store/paypal_advanced_accept.php
+    [ERRORURL] => http://localhost/store/paypal_advanced_declined.php
+    [CANCELURL] => http://localhost/store/paypal_advanced_cancel.php
+    [NOTIFYURL] => http://localhost/store/paypal_advanced_callback.php
+    [ADDROVERRIDE] => 1
+    [SHIPTOFIRSTNAME] => Andres
+    [SHIPTOLASTNAME] => Franco
+    [SHIPTOSTREET] => Panama
+    [SHIPTOCITY] => Panama
+    [SHIPTOSTATE] => PA
+    [SHIPTOZIP] => 
+    [SHIPTOCOUNTRY] => PA
+    [SECURETOKENID] => 5695b7eab4a5d6.84961531
+)
+
+RESULT=0&SECURETOKEN=T565d3yb57Euamh2MCrqH3AP6&SECURETOKENID=5695b7eab4a5d6.84961531&RESPMSG=Approved
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+getSecureToken
+https://payflowpro.paypal.com
+Array
+(
+    [USER] => andresfranco
+    [VENDOR] => ribbonrevolution
+    [PARTNER] => PayPal
+    [PWD] => wedding2016$
+    [CREATESECURETOKEN] => Y
+    [TRXTYPE] => S
+    [AMT] => 0.09
+    [CURRENCY] => USD
+    [COMPANYNAME] => 
+    [BILLTOFIRSTNAME] => Andres
+    [BILLTOLASTNAME] => Franco
+    [BILLTOSTREET] => Panama
+    [BILLTOCITY] => Panama
+    [BILLTOSTATE] => PA
+    [BILLTOZIP] => 
+    [BILLTOCOUNTRY] => PA
+    [CUSTOM] => ORDID-80
+    [EMAIL] => koloinotzente@gmail.com
+    [PHONENUM] => 3902669
+    [INVNUM] => INV80
+    [RETURNURL] => http://localhost/store/paypal_advanced_accept.php
+    [ERRORURL] => http://localhost/store/paypal_advanced_declined.php
+    [CANCELURL] => http://localhost/store/paypal_advanced_cancel.php
+    [NOTIFYURL] => http://localhost/store/paypal_advanced_callback.php
+    [ADDROVERRIDE] => 1
+    [SHIPTOFIRSTNAME] => Andres
+    [SHIPTOLASTNAME] => Franco
+    [SHIPTOSTREET] => Panama
+    [SHIPTOCITY] => Panama
+    [SHIPTOSTATE] => PA
+    [SHIPTOZIP] => 
+    [SHIPTOCOUNTRY] => PA
+    [SECURETOKENID] => 5696eeedaf59e1.19657072
+)
+
+RESULT=0&SECURETOKEN=Lf8dhrxREH068Rrx7qu97TAhy&SECURETOKENID=5696eeedaf59e1.19657072&RESPMSG=Approved
+----------------------------------------------------------------------

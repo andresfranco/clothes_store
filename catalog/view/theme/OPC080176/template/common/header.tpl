@@ -164,7 +164,7 @@
 <div class="nav-responsive"><span>Menu</span><div class="expandable"></div></div>
   <ul class="main-navigation">
     <li><a href ="index.php?route=common/home">Home</a></li>
-    <li><a href ="index.php?route=information/information&amp;information_id=4">About us</a></li>
+    <li><a href ="<?php echo $base; ?>about_us">About us</a></li>
     <?php foreach ($categories as $category) { ?>
     <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
       <?php if ($category['children']) { ?>
