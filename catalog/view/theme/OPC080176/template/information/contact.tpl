@@ -24,14 +24,14 @@
 		     <?php if ($image) { ?>
             <div class=""><img src="<?php echo $image; ?>" alt="<?php echo $store; ?>" title="<?php echo $store; ?>" class="img-thumbnail" /></div>
             <?php } ?>
-            <div class="address"><strong><?php echo $store; ?></strong><br />
+            <!--<div class="address"><strong><?php echo $store; ?></strong><br />
               <address>
               <?php echo $address; ?>
               </address>
               <?php if ($geocode) { ?>
               <a href="https://maps.google.com/maps?q=<?php echo urlencode($geocode); ?>&hl=<?php echo $geocode_hl; ?>&t=m&z=15" target="_blank" class="btn btn-info"><i class="fa fa-map-marker"></i> <?php echo $button_map; ?></a>
               <?php } ?>
-            </div>
+            </div> -->
             <div class="telephone"><strong><?php echo $text_telephone; ?></strong><br />
               <?php echo $telephone; ?>
 			  </div>
@@ -58,9 +58,9 @@
 			</div>
 			
 			<div class="right">
-		<div class="map">
+	<!--	<div class="map">
  <script type="text/javascript" src="http://www.webestools.com/google_map_gen.js?lati=34.090858&long=-117.889484&zoom=4&width=400&height=300&mapType=normal&map_btn_normal=yes&map_btn_satelite=yes&map_btn_mixte=yes&map_small=yes&marqueur=yes&info_bulle="></script>
- </div>
+ </div> -->
            
 			</div>
           </div>

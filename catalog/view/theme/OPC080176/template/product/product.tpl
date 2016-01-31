@@ -25,11 +25,9 @@
         <?php } ?>
         
 		<div class="<?php echo $class; ?>">
+   
 		<div class="product-info">
          <?php if ($thumb || $images) { ?>
-	
-	
-	
     <ul class="left product-image thumbnails">
       <?php if ($thumb) { ?>      
 	  <!-- Megnor Cloud-Zoom Image Effect Start -->
@@ -736,10 +734,24 @@ $('#button-review').on('click', function() {
 $(document).ready(function() {
 	$('.thumbnails').magnificPopup({
 		type:'image',
+    mainClass: 'mfp-with-zoom',
 		delegate: 'a',
 		gallery: {
 			enabled:true
-		}
+		},
+     
+    zoom: {
+    enabled: true, // By default it's false, so don't forget to enable it
+
+    duration: 300, // duration of the effect, in milliseconds
+    easing: 'ease-in-out', // CSS transition easing function
+     opener: function(openerElement) {
+      // openerElement is the element on which popup was initialized, in this case its <a> tag
+      // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+      return openerElement.is('img') ? openerElement : openerElement.find('img');
+    }
+
+    }
 	});
 });
 //--></script>

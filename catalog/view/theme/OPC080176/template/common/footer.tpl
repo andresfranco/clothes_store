@@ -24,9 +24,7 @@
       <div class="col-sm-3 column">
         <h5><?php echo $text_extra; ?></h5>
         <ul class="list-unstyled">
-          <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
-          <li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
-          <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
+         
           <li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
 		      <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
         </ul>
@@ -53,11 +51,7 @@
  <div id="bottomfooter">
   
   		<ul>
-		<li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
-
-  		 <li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
-   
-   		<li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>   
+		
     
 		<li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li> 
     
